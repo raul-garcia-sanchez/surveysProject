@@ -123,3 +123,9 @@
     border-color: #2691d9;
     transition: .5s;
 }
+
+.login .card .messageError {
+    text-align: center;
+    padding-bottom: 40px;
+    font-weight: bold;
+}

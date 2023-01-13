@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,24 +11,6 @@
 </head>
 
 <body class="login">
-
-    <div class="card">
-        <h1>Iniciar sessió</h1>
-        <form action="login.php" method="POST">
-            <div class="inputsLogin">
-                <input type="text" name="username" required>
-                <span></span>
-                <label>Usuari</label>
-            </div>
-            <div class="inputsLogin">
-                <input type="password" name="password" required>
-                <span></span>
-                <label>Contrasenya</label>
-            </div>
-            <div class="recoverPassword">Has oblidat la teva contrasenya?</div>
-            <input class="buttonSubmit" type="submit" value="Inciar sessió" name="submit">
-        </form>
-    </div>
 
     <?php
 
@@ -42,24 +25,52 @@
         exit;
     }
 
-    if(isset($_POST["submit"])) {
+    if (isset($_POST["submit"])) {
+        $errorMSG = "";
         $password = hash('sha256', $_POST["password"]);
-        echo $password;
-        $query = $pdo->prepare("select id, username, password, role from users where username = :username");
-        $query->bindParam(':username', $_POST["username"],PDO::PARAM_STR);
+        $query = $pdo->prepare("select id, username, password, role from users where username = :username and password = :password");
+        $query->bindParam(':username', $_POST["username"], PDO::PARAM_STR);
+        $query->bindParam(':password', $password, PDO::PARAM_STR);
         $query->execute();
 
-        while($row = $query->fetch(PDO::FETCH_NUM)){
-            if($_POST['username'] == $row[1] && $password == $row[2]){
-                echo "LOGIN CORRECTE";
-            }
-            else{
-                echo "LOGIN INCORRECTE";
-            }
+        $userExist = $query->fetch(PDO::FETCH_ASSOC);
+
+        if($userExist){
+            $_SESSION['user'] = $userExist;
+            header("Location:  dashboard.php");
+        }
+        else{
+            $errorMSG = "Usuari o contrasenya invàlids";
         }
     }
 
     ?>
+
+    <div class="card">
+        <h1>Iniciar sessió</h1>
+        <form action="" method="POST">
+            <div class="inputsLogin">
+                <input type="text" name="username" required>
+                <span></span>
+                <label>Usuari</label>
+            </div>
+            <div class="inputsLogin">
+                <input type="password" name="password" required>
+                <span></span>
+                <label>Contrasenya</label>
+            </div>
+            <div class="recoverPassword">Has oblidat la teva contrasenya?</div>
+            <input class="buttonSubmit" type="submit" value="Inciar sessió" name="submit">
+        </form>
+        <p class="messageError">
+            <?php
+            if (isset($errorMSG))
+                echo $errorMSG;
+            ?>
+        </p>
+    </div>
+
+
 
 
 </body>
