@@ -16,11 +16,26 @@
 } */
 
 /* CSS login.php */
-
-.login, .landingPage {
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color:#29b6f6 ;
+}
+footer{
+    position: absolute;
+    bottom: 0%;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color:#ff9800 ;
+}
+.login, .landingPage, .dashboard {
     margin: 0;
     padding: 0;
-    background-color: #29b6f6;
+    background-color: #f9f9f9;
     height: 100vh;
     overflow: hidden;
 }
@@ -74,7 +89,7 @@
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
 }
 
-.login .card h1 {
+.login .card h1, .dashboard .card>h1 {
     text-align: center;
     padding: 20px 0;
     border-bottom: 1px solid silver;
@@ -172,4 +187,31 @@
 .login .buttonSubmit:hover {
     border-color: #2691d9;
     transition: .5s;
+}
+
+.dashboard .card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1300px;
+    height: 450px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard .card .card-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 80%;
+}
+
+.dashboard .card .card-content button{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color:#e0e0e0    ;
 }
