@@ -18,12 +18,35 @@
     include './resources/auxFunctions.php';
     createHeader("Enquestes Admin");
     createFooter();
+    echo $_SESSION['user']["role"];
+    if ($_SESSION['user']["role"] == 1) {
+        echo "
+        <div class='card' id='dashboard-professor'>
+        <div class='card-content'>
+            <a href=''><button>
+                    <h3>Crear pregunta</h3>
+                </button></a>
+            <a href=''><button>
+                    <h3>Crear enquesta</h3>
+                </button></a>
+                <a href=''><button>
+                    <h3>Llistat de preguntes</h3>
+                </button></a>
+                <a href=''><button>
+                    <h3>Llistat d'enquestes</h3>
+                </button></a>
+        </div>
+    </div>
+        ";
+    }
 
     ?>
 
    
 
-    
+
+
+
 
 
 </body>

@@ -1,7 +1,7 @@
-<?php 
+<?php
 session_start();
-$_SESSION["rol"] = "Admin";
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -14,36 +14,38 @@ $_SESSION["rol"] = "Admin";
 </head>
 
 <body class="dashboard">
-    <?php 
+    <?php
     include './resources/auxFunctions.php';
     createHeader("Enquestes IETI");
-    echo $_SESSION["rol"];
-        if($_SESSION["rol"]=="Admin"){
-            echo '
+    createFooter();
+    echo $_SESSION['user']["role"];
+    if ($_SESSION['user']["role"] == 1) {
+        echo '
             <div class="card" id="dashboard-admin">
-            <h1>Dashboard Admin</h1>
                 <div class="card-content">
                     <a href=""><button><h1>Usuaris</h1></button></a>
-                    <a href=""><button><h1>Enquestes</h1></button></a>
+                    <a href="poll.php"><button><h1>Enquestes</h1></button></a>
                     <a href=""><button><h1>Estadistiques</h1></button></a>
                 </div>
             </div>
             ';
-             }else if($_SESSION["rol"]=="Professor"){
-                echo '
+    } else if ($_SESSION['user']["role"] == 3) {
+        echo '
                 <div class="card" id="dashboard-professor">
-                <h1>Dashboard Professor</h1>
                     <div class="card-content">
+                    <a href=""><button><h1>Perfil</h1></button></a>
                         <a href=""><button><h1>Estadistiques</h1></button></a>
                     </div>
                 </div>
             ';
-             } 
-             
-             createFooter();
-             ?>
+    }
+
+
+    ?>
 
     
+
+
 </body>
 
 </html>

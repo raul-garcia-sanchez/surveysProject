@@ -242,6 +242,7 @@ footer a{
 
 .dashboard{
     background-color: #f9f9f9;
+    height: 100vh;
 }
 
 .dashboard .card {
@@ -261,7 +262,7 @@ footer a{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    height: 80%;
+    height: 100%;
 }
 
 .dashboard .card .card-content button{
@@ -277,3 +278,50 @@ footer a{
     height: 220px;
     transition: .5s;
 }
+
+/* CSS poll.php */
+
+.poll{
+    background-color: #f9f9f9;
+    height: 100vh;
+}
+
+.poll .card {
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1300px;
+    height: auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
+}
+
+.poll .card .card-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.poll .card .card-content button{
+    width: auto;
+    height: 50px;
+    border-radius: 10px;
+    background-color:#e0e0e0;
+    cursor: pointer;  
+}
+
+.poll .card .card-content button:hover{
+    height: 60px;
+    transition: .5s;
+}
+
+.poll h3{
+    padding: 8px;
+}
+
