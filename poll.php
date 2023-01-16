@@ -28,10 +28,10 @@
                     <h3>Crear pregunta</h3>
                 </button>
                 <div id='botonesListar'>
-                <button onclick=''>
+                <button onclick='crearListadoPreguntas()'>
                     <h3>Llistat de preguntes</h3>
                 </button>
-                <button onclick=''>
+                <button onclick='crearListadoEnquestas()'>
                     <h3>Llistat d'enquestes</h3>
                 </button>
                 </div>
@@ -39,7 +39,7 @@
                     <h3>Crear enquesta</h3>
                 </button>
         </div>
-        <div id='contenidoPrincipal'></div>
+        <div id='contenidoPrincipal'>".printSurveys()."</div>
     </div>
         ";
     }

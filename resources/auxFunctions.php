@@ -22,4 +22,61 @@ function createFooter(){
     echo "</footer>";
 }
 
+function printSurveys()
+{
+    try {
+        $hostname = "127.0.0.1";
+        $dbname = "surveys_database";
+        $username = "root";
+        $pw = "admin2020";
+        $pdo = new PDO("mysql:host=$hostname;dbname=$dbname", "$username", "$pw");
+    } catch (PDOException $e) {
+        echo "Failed to get DB handle: " . $e->getMessage() . "\n";
+        exit;
+    }
+
+    $query = $pdo->prepare('select title from surveys;');
+    $query->execute();
+
+    $row = $query->fetch();
+    $texto = "";
+    $texto .= "<ul>";
+    while ($row) {
+        $texto .= "<li>" . $row["title"] . "</li>";
+        $row = $query->fetch();
+    }
+    $texto .= "</ul>";
+    unset($query);
+    unset($pdo);
+    return $texto;
+}
+
+function printQuestions()
+{
+    try {
+        $hostname = "127.0.0.1";
+        $dbname = "surveys_database";
+        $username = "root";
+        $pw = "admin2020";
+        $pdo = new PDO("mysql:host=$hostname;dbname=$dbname", "$username", "$pw");
+    } catch (PDOException $e) {
+        echo "Failed to get DB handle: " . $e->getMessage() . "\n";
+        exit;
+    }
+
+    $query = $pdo->prepare('select title from questions;');
+    $query->execute();
+
+    $row = $query->fetch();
+    $texto = "";
+    $texto .= "<ul>";
+    while ($row) {
+        $texto .= "<li>" . $row["title"] . "</li>";
+        $row = $query->fetch();
+    }
+    $texto .= "</ul>";
+    unset($query);
+    unset($pdo);
+    return $texto;
+}
 
