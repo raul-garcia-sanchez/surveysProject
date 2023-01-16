@@ -10,7 +10,7 @@
     <title>Iniciar sessió</title>
 </head>
 
-<body class="login">
+<body class="page-login">
 
     <?php
 
@@ -18,7 +18,7 @@
         $hostname = "127.0.0.1";
         $dbname = "surveys_database";
         $username = "root";
-        $pw = "";
+        $pw = "admin2020";
         $pdo = new PDO("mysql:host=$hostname;dbname=$dbname", "$username", "$pw");
     } catch (PDOException $e) {
         echo "Failed to get DB handle: " . $e->getMessage() . "\n";

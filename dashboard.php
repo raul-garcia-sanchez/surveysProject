@@ -13,11 +13,11 @@ session_start();
     <title>Bienvenido</title>
 </head>
 
-<body class="dashboard">
+<body class="page-dashboard">
+    <div class="global-container">
     <?php
     include './resources/auxFunctions.php';
     createHeader("Enquestes IETI");
-    createFooter();
     echo $_SESSION['user']["role"];
     if ($_SESSION['user']["role"] == 1) {
         echo '
@@ -40,11 +40,11 @@ session_start();
             ';
     }
 
+    createFooter();
 
     ?>
 
-    
-
+</div>
 
 </body>
 

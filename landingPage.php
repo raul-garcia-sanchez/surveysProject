@@ -9,8 +9,7 @@
     <title>Bienvenido</title>
 </head>
 
-<body class="landingPage">
-
+<body class="page-landingPage">
     <div class="card">
         <h1>Benvingut</h1>
         <div class="card-content">
