@@ -1,13 +1,15 @@
 <?php
 
-function createHeader($title){
+function createHeader($title)
+{
     echo "<header>";
-    echo "<h1>".$title."</h1>";
+    echo "<h1>" . $title . "</h1>";
     echo "<p><i class='fa fa-user' aria-hidden='true'></i>" . $_SESSION["user"]["username"] . "</p>";
     echo "</header>";
 }
 
-function createFooter(){
+function createFooter()
+{
     echo "<footer>";
     echo "<div class='textFooter'>";
     echo "<p>ENQUESTES IETI</p>";
@@ -22,4 +24,58 @@ function createFooter(){
     echo "</footer>";
 }
 
+function printSurveys()
+{
+    try {
+        $hostname = "127.0.0.1";
+        $dbname = "surveys_database";
+        $username = "root";
+        $pw = "";
+        $pdo = new PDO("mysql:host=$hostname;dbname=$dbname", "$username", "$pw");
+    } catch (PDOException $e) {
+        echo "Failed to get DB handle: " . $e->getMessage() . "\n";
+        exit;
+    }
 
+    $query = $pdo->prepare('select title from surveys;');
+    $query->execute();
+
+    $row = $query->fetch();
+
+    echo "<ul>";
+    while ($row) {
+        echo "<li>" . $row["title"] . "</li>";
+        $row = $query->fetch();
+    }
+    echo "</ul>";
+    unset($query);
+    unset($pdo);
+}
+
+function printQuestions()
+{
+    try {
+        $hostname = "127.0.0.1";
+        $dbname = "surveys_database";
+        $username = "root";
+        $pw = "";
+        $pdo = new PDO("mysql:host=$hostname;dbname=$dbname", "$username", "$pw");
+    } catch (PDOException $e) {
+        echo "Failed to get DB handle: " . $e->getMessage() . "\n";
+        exit;
+    }
+
+    $query = $pdo->prepare('select title from questions;');
+    $query->execute();
+
+    $row = $query->fetch();
+
+    echo "<ul>";
+    while ($row) {
+        echo "<li>" . $row["title"] . "</li>";
+        $row = $query->fetch();
+    }
+    echo "</ul>";
+    unset($query);
+    unset($pdo);
+}

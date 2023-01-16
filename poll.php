@@ -39,7 +39,8 @@
                     <h3>Crear enquesta</h3>
                 </button>
         </div>
-        <div id='contenidoPrincipal'></div>
+        <div id='contenidoPrincipal'>".printSurveys()."
+        </div>
     </div>
         ";
     }
