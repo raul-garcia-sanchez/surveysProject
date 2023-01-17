@@ -331,12 +331,6 @@ footer a {
     justify-content: center;
 }
 
-.page-poll ul {
-    display: none;
-}
-
-/* borraaarrrr */
-
 .page-poll .saveQuestion {
     width: 200px;
     height: 200px;
@@ -348,12 +342,18 @@ footer a {
     justify-content: center;
     align-items: center;
     margin-top: 5%;
+    font-size: 2em;
+    
+    font-weight: bold;
 }
 
 .page-poll .saveQuestion:hover {
     width: 220px;
     height: 220px;
     transition: .5s;
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
 }
 
 .page-poll #divRemovible {

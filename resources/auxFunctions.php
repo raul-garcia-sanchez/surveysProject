@@ -96,13 +96,15 @@ function addQuestion()
     }
 
     try {
-        $query = $pdo->prepare('INSERT INTO questions (id_survey, title, active) VALUES(?,?,?)');
+        $query = $pdo->prepare('INSERT INTO questions (id_survey, title, active, type) VALUES(?,?,?,?)');
         $idSurvey = 1;
         $titleQuestion = "Aprovaràn aquests nois el projecte?";
         $questionActive = 1;
+        $typeQuestion = 'text';
         $query->bindParam(1, $idSurvey);
         $query->bindParam(2, $titleQuestion);
         $query->bindParam(3, $questionActive);
+        $query->bindParam(4, $typeQuestion);
         $query->execute();
     } catch (Exception $e) {
         echo $e;

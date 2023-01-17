@@ -16,18 +16,25 @@ function crearQuestionarioPregunta(){
     let divInicial = $("<div>", {
         'id': 'divRemovible'
     }).append(
-        $("<h1>", {
-            'text': 'Crear Pregunta',
-            'class': 'titlePoll'
-        }
-        )
-    ).append(
-        $("<button>", {
-            'class': 'saveQuestion',
+        $("<form>", {
+            'method': 'POST'
         }).append(
             $("<h1>", {
-                'text': 'Guardar'
-            })
+                'text': 'Crear Pregunta',
+                'class': 'titlePoll'
+            }
+            )
+        ).append(
+            $("<input>", {
+                'class': 'saveQuestion',
+                'value': 'Guardar',
+                'type': 'submit',
+                'name': 'submitButtonSaveQuestion'
+            }).append(
+                $("<h1>", {
+                    'text': 'Guardar'
+                })
+            )
         )
     )
     $('#contenidoPrincipal').append(divInicial)

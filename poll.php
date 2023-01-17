@@ -42,6 +42,10 @@
     </div>
         ";
         }
+
+        if(isset($_POST['submitButtonSaveQuestion'])){
+            addQuestion();
+        }
         createFooter();
 
         ?>
