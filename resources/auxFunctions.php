@@ -39,13 +39,13 @@ function printSurveys()
     $query->execute();
 
     $row = $query->fetch();
-    $texto = "";
-    $texto .= "<ul>";
+    $texto = "<div id='divListSurveys' class='divLlistat'>";
+    $texto .= "<table><tr><th>Titol Enquesta</th><th>Operacions</th></tr>";
     while ($row) {
-        $texto .= "<li>" . $row["title"] . "</li>";
+        $texto .= "<tr><td>" . $row["title"] . "<td><i class='fa fa-pencil-square-o' aria-hidden='true'></i><i class='fa fa-trash' aria-hidden='true'></i></td></tr></td>";
         $row = $query->fetch();
     }
-    $texto .= "</ul>";
+    $texto .= "</table></div>";
     unset($query);
     unset($pdo);
     return $texto;
@@ -68,13 +68,13 @@ function printQuestions()
     $query->execute();
 
     $row = $query->fetch();
-    $texto = "";
-    $texto .= "<ul>";
+    $texto = "<div id='divListQuestions' class='divLlistat'>";
+    $texto .= "<table><tr><th>Titol Pregunta</th><th>Operacions</th></tr>";
     while ($row) {
-        $texto .= "<li>" . $row["title"] . "</li>";
+        $texto .= "<tr><td>" . $row["title"] . "<td></tr>";
         $row = $query->fetch();
     }
-    $texto .= "</ul>";
+    $texto .= "</table></div>";
     unset($query);
     unset($pdo);
     return $texto;

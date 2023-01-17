@@ -292,6 +292,7 @@ footer a{
 .page-poll .card {
     margin: 0 7.5% 20px;
     width: 85%;
+    min-height: 400px;
     height: auto;
     background: white;
     border-radius: 10px;
@@ -323,5 +324,34 @@ footer a{
 
 .page-poll h3{
     padding: 8px;
+}
+
+.page-poll #divListQuestions{
+    display: none;
+}
+
+.page-poll .divLlistat{
+    margin-top: 20px;
+}
+
+.page-poll table {
+    width: 80%;
+    margin: 0 10%;
+    text-align: left;
+    padding: 3px;
+}
+.page-poll table,.page-poll th,.page-poll td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 4px;
+  }
+
+.page-poll table th{
+    background-color: #c0c0c0;
+}
+
+.page-poll table .trashBtn{
+    color: red;
+    width: 20px;
 }
 

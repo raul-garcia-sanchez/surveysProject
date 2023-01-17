@@ -3,16 +3,10 @@ function eliminarPorId(textoId){
     elementoEliminar.remove();
 };
 
-function crearListadoPreguntas(){
-    eliminarPorId('divRemovible')
-};
-
-function crearListadoEnquestas(){
-    eliminarPorId('divRemovible')
-};
-
 function crearQuestionarioPregunta(){
     eliminarPorId('divRemovible')
+    $('.page-poll #divListSurveys').css('display', 'none')
+    $('.page-poll #divListQuestions').css('display', 'none')
     let divInicial = $("<div>",{
         'id':'divRemovible'
     }).append(
@@ -37,6 +31,8 @@ function crearQuestionarioPregunta(){
 
 function crearQuestionarioEncuesta(){
     eliminarPorId('divRemovible')
+    $('.page-poll #divListSurveys').css('display', 'none')
+    $('.page-poll #divListQuestions').css('display', 'none')
     let divInicial = $("<div>",{
         'id':'divRemovible'
     }).append(
@@ -58,3 +54,15 @@ function crearQuestionarioEncuesta(){
     )
     $('#contenidoPrincipal').append(divInicial)
 };
+
+function crearListadoPreguntas(){
+    eliminarPorId('divRemovible');
+    $('.page-poll #divListQuestions').css('display',' none')
+    $('.page-poll #divListSurveys').css('display', 'block')
+}
+
+function crearListadoEnquestas(){
+    eliminarPorId('divRemovible');
+    $('.page-poll #divListQuestions').css('display', 'block')
+    $('.page-poll #divListSurveys').css('display', 'none')
+}
