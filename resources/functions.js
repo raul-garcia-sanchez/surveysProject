@@ -13,24 +13,22 @@ function crearListadoEnquestas(){
 
 function crearQuestionarioPregunta(){
     eliminarPorId('divRemovible')
-    let divInicial = $("<div>",{
-        'id':'divRemovible'
+    let divInicial = $("<div>", {
+        'id': 'divRemovible'
     }).append(
-        $("<h3>",{
-            'text':'Crear Pregunta'}
+        $("<h1>", {
+            'text': 'Crear Pregunta',
+            'class': 'titlePoll'
+        }
         )
     ).append(
-        $("<div>",{
-            'class':'itemPregunta'
+        $("<button>", {
+            'class': 'saveQuestion',
         }).append(
-            $("<h4>",{
-                'text':'pregunta 1'
-            }) 
+            $("<h1>", {
+                'text': 'Guardar'
+            })
         )
-    ).append(
-        $("<h4>",{
-            'text':'pregunta 2'
-        })
     )
     $('#contenidoPrincipal').append(divInicial)
 };
