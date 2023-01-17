@@ -18,7 +18,7 @@
         $hostname = "127.0.0.1";
         $dbname = "surveys_database";
         $username = "root";
-        $pw = "admin2020";
+        $pw = "";
         $pdo = new PDO("mysql:host=$hostname;dbname=$dbname", "$username", "$pw");
     } catch (PDOException $e) {
         echo "Failed to get DB handle: " . $e->getMessage() . "\n";

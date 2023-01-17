@@ -1,13 +1,15 @@
 <?php
 
-function createHeader($title){
+function createHeader($title)
+{
     echo "<header>";
-    echo "<h1>".$title."</h1>";
+    echo "<h1>" . $title . "</h1>";
     echo "<p><i class='fa fa-user' aria-hidden='true'></i>" . $_SESSION["user"]["username"] . "</p>";
     echo "</header>";
 }
 
-function createFooter(){
+function createFooter()
+{
     echo "<footer>";
     echo "<div class='textFooter'>";
     echo "<p>ENQUESTES IETI</p>";
@@ -28,7 +30,7 @@ function printSurveys()
         $hostname = "127.0.0.1";
         $dbname = "surveys_database";
         $username = "root";
-        $pw = "admin2020";
+        $pw = "";
         $pdo = new PDO("mysql:host=$hostname;dbname=$dbname", "$username", "$pw");
     } catch (PDOException $e) {
         echo "Failed to get DB handle: " . $e->getMessage() . "\n";
@@ -57,7 +59,7 @@ function printQuestions()
         $hostname = "127.0.0.1";
         $dbname = "surveys_database";
         $username = "root";
-        $pw = "admin2020";
+        $pw = "";
         $pdo = new PDO("mysql:host=$hostname;dbname=$dbname", "$username", "$pw");
     } catch (PDOException $e) {
         echo "Failed to get DB handle: " . $e->getMessage() . "\n";
@@ -80,3 +82,34 @@ function printQuestions()
     return $texto;
 }
 
+function addQuestion()
+{
+    try {
+        $hostname = "127.0.0.1";
+        $dbname = "surveys_database";
+        $username = "root";
+        $pw = "";
+        $pdo = new PDO("mysql:host=$hostname;dbname=$dbname", "$username", "$pw");
+    } catch (PDOException $e) {
+        echo "Failed to get DB handle: " . $e->getMessage() . "\n";
+        exit;
+    }
+
+    try {
+        $query = $pdo->prepare('INSERT INTO questions (id_survey, title, active, type) VALUES(?,?,?,?)');
+        $idSurvey = 1;
+        $titleQuestion = "Aprovaràn aquests nois el projecte?";
+        $questionActive = 1;
+        $typeQuestion = 'text';
+        $query->bindParam(1, $idSurvey);
+        $query->bindParam(2, $titleQuestion);
+        $query->bindParam(3, $questionActive);
+        $query->bindParam(4, $typeQuestion);
+        $query->execute();
+    } catch (Exception $e) {
+        echo $e;
+    }
+
+    unset($query);
+    unset($pdo);
+}

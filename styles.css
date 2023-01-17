@@ -43,15 +43,15 @@ footer {
     margin-top: 20px;
 }
 
-footer div.textFooter:first-child{
+footer div.textFooter:first-child {
     font-weight: bold;
 }
 
-footer .polices{
+footer .polices {
     text-align: center;
 }
 
-footer a{
+footer a {
     color: white;
 }
 
@@ -193,7 +193,7 @@ footer a{
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
 }
 
-.page-landingPage .card .card-content{
+.page-landingPage .card .card-content {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -236,11 +236,12 @@ footer a{
 
 /* CSS dashboard.php */
 
-.page-dashboard{
+.page-dashboard {
     background-color: #ff9800;
     height: 100vh;
 }
-.page-dashboard .global-container{
+
+.page-dashboard .global-container {
     background-color: #f9f9f9;
     height: auto;
 }
@@ -263,15 +264,15 @@ footer a{
     height: 100%;
 }
 
-.page-dashboard .card .card-content button{
+.page-dashboard .card .card-content button {
     width: 200px;
     height: 200px;
     border-radius: 10px;
-    background-color:#e0e0e0;
+    background-color: #e0e0e0;
     cursor: pointer;
 }
 
-.page-dashboard .card .card-content button:hover{
+.page-dashboard .card .card-content button:hover {
     width: 220px;
     height: 220px;
     transition: .5s;
@@ -279,12 +280,12 @@ footer a{
 
 /* CSS poll.php */
 
-.page-poll .global-container{
+.page-poll .global-container {
     background-color: #f9f9f9;
     height: auto;
 }
 
-.page-poll{
+.page-poll {
     background-color: #ff9800;
     height: 100%;
 }
@@ -294,6 +295,7 @@ footer a{
     width: 85%;
     min-height: 400px;
     height: auto;
+    min-height: 400px;
     background: white;
     border-radius: 10px;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
@@ -309,21 +311,25 @@ footer a{
     padding-bottom: 20px;
 }
 
-.page-poll .card .card-content button{
+.page-poll .card .card-content button {
     width: auto;
     height: 50px;
     border-radius: 10px;
-    background-color:#e0e0e0;
-    cursor: pointer;  
+    background-color: #e0e0e0;
+    cursor: pointer;
 }
 
-.page-poll .card .card-content button:hover{
+.page-poll .card .card-content button:hover {
     height: 60px;
     transition: .5s;
 }
 
-.page-poll h3{
+.page-poll .titlePoll {
     padding: 8px;
+    text-align: center;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
 }
 
 .page-poll #divListQuestions{
@@ -371,3 +377,32 @@ footer a{
     border: 1px;
 }
 
+.page-poll .saveQuestion {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: #e0e0e0;
+    cursor: pointer;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    font-size: 2em;
+    
+    font-weight: bold;
+}
+
+.page-poll .saveQuestion:hover {
+    width: 220px;
+    height: 220px;
+    transition: .5s;
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.page-poll #divRemovible {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}

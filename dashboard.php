@@ -19,7 +19,7 @@ session_start();
     include './resources/auxFunctions.php';
     createHeader("Enquestes IETI");
     echo $_SESSION['user']["role"];
-    if ($_SESSION['user']["role"] == 1) {
+    if ($_SESSION['user']["role"] == "admin") {
         echo '
             <div class="card" id="dashboard-admin">
                 <div class="card-content">
@@ -29,7 +29,7 @@ session_start();
                 </div>
             </div>
             ';
-    } else if ($_SESSION['user']["role"] == 3) {
+    } else if ($_SESSION['user']["role"] == "teacher") {
         echo '
                 <div class="card" id="dashboard-professor">
                     <div class="card-content">
