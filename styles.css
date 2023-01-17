@@ -350,8 +350,24 @@ footer a{
     background-color: #c0c0c0;
 }
 
-.page-poll table .trashBtn{
+.page-poll table .thOperations{
+    width: 20%;
+}
+
+
+.page-poll table .fa-trash{
     color: red;
-    width: 20px;
+    font-size: 25px;
+}
+
+.page-poll table .fa-pencil-square-o{
+    font-size: 25px;
+}
+
+.page-poll table .tdOperations{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: 1px;
 }
 
