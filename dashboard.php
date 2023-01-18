@@ -18,7 +18,6 @@ session_start();
     <?php
     include './resources/auxFunctions.php';
     createHeader("Enquestes IETI");
-    echo $_SESSION['user']["role"];
     if ($_SESSION['user']["role"] == "admin") {
         echo '
             <div class="card" id="dashboard-admin">

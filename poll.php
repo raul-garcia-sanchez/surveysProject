@@ -16,8 +16,7 @@
     <div class="global-container">
         <?php
         include './resources/auxFunctions.php';
-        createHeader("Enquestes Admin");
-        echo $_SESSION['user']["role"];
+        createHeader("Enquestes IETI");
         if ($_SESSION['user']["role"] == "admin") {
             echo "
         <div class='card' id='dashboard-professor'>
