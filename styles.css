@@ -84,7 +84,7 @@ footer a {
 .page-login {
     margin: 0;
     padding: 0;
-    background-color: #29b6f6;
+    background-color: #e0dfdf;
     height: 100vh;
     overflow: hidden;
 }
@@ -200,7 +200,7 @@ footer a {
 .page-landingPage {
     margin: 0;
     padding: 0;
-    background-color:  #f9f9f9;;
+    background-color:  #e0dfdf;;
     height: 100vh;
     overflow: hidden;
 }
@@ -271,7 +271,7 @@ footer a {
 }
 
 .page-dashboard .global-container {
-    background-color: #f9f9f9;
+    background-color: #e0dfdf;
     height: auto;
 }
 
@@ -310,7 +310,7 @@ footer a {
 /* CSS poll.php */
 
 .page-poll .global-container {
-    background-color: #f9f9f9;
+    background-color: #e0dfdf;
     height: auto;
 }
 
@@ -352,7 +352,7 @@ footer a {
 }
 
 .page-poll .card .card-content button:hover {
-    height: 60px;
+    padding: 40px;
     transition: .5s;
 }
 
@@ -421,7 +421,6 @@ footer a {
     align-items: center;
     margin-top: 5%;
     font-size: 2em;
-    
     font-weight: bold;
 }
 
@@ -448,4 +447,8 @@ footer a {
 .page-poll .divLlistat{
     height: auto;
     margin: auto 0;
+}
+.page-poll #errorMessage{
+    margin-top: 30px;
+    font-weight: bold;
 }

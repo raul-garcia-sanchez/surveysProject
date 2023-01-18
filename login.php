@@ -7,12 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Iniciar sessió</title>
 </head>
 
 <body class="page-login">
 
     <?php
+
+    include './resources/auxFunctions.php';
+    printHeaderBeforeLogin("Enquestes IETI");
 
     try {
         $hostname = "127.0.0.1";
@@ -35,11 +39,10 @@
 
         $userExist = $query->fetch(PDO::FETCH_ASSOC);
 
-        if($userExist){
+        if ($userExist) {
             $_SESSION['user'] = $userExist;
             header("Location:  dashboard.php");
-        }
-        else{
+        } else {
             $errorMSG = "Usuari o contrasenya invàlids";
         }
     }
@@ -69,6 +72,13 @@
             ?>
         </p>
     </div>
+
+
+    <?php
+
+    printFooterBeforeLogin();
+
+    ?>
 
 </body>
 

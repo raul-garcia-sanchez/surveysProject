@@ -15,7 +15,6 @@
 <body class="page-poll">
     <div class="global-container">
         <?php
-
         include './resources/auxFunctions.php';
         createHeader("Enquestes Admin");
         echo $_SESSION['user']["role"];
@@ -38,14 +37,16 @@
                     <h3>Crear enquesta</h3>
                 </button>
         </div>
-        <div id='contenidoPrincipal'>" . printSurveys().printQuestions() . "</div>
-    </div>
-        ";
+        <div id='contenidoPrincipal'>" . printSurveys().printQuestions() . "</div>";
+        if (isset($_POST['submitButtonSaveQuestion'])) {
+            addQuestion();
+            $message = "Pregunta afegida correctament";
+            echo "<p id='errorMessage' align='center'> $message</p>";
+        }
+        echo "</div>";
         }
 
-        if(isset($_POST['submitButtonSaveQuestion'])){
-            addQuestion();
-        }
+            
         createFooter();
 
         ?>
