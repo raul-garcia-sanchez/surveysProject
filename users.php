@@ -8,13 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Perfil</title>
+    <title>Enquestes</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 
-<body class="page-perfil">
+<body class="page-users">
     <div class="global-container">
-        <h1>Perfil</h1>
+        <h1>Users</h1>
         <a href="dashboard.php"><button>Tornar enrere</button></a>
     </div>
     <script src="./resources/functions.js"></script>
