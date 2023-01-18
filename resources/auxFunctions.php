@@ -67,7 +67,7 @@ function printSurveys()
     $texto = "<div id='divListSurveys' class='divLlistat'>";
     $texto .= "<table><tr><th class='thTittle'>Titol Enquesta</th><th class='thOperations'>Operacions</th></tr>";
     while ($row) {
-        $texto .= "<tr><td>" . $row["title"] . "<td class='tdOperations'><i class='fa fa-pencil-square-o' aria-hidden='true'></i><i class='fa fa-trash' aria-hidden='true'></i></td></tr></td>";
+        $texto .= "<tr><td>" . $row["title"] . "<td class='tdOperations'><i class='fa fa-pencil-square-o' aria-hidden='true'></i><i class='fa fa-trash-o' aria-hidden='true'></i></td></tr></td>";
         $row = $query->fetch();
     }
     $texto .= "</table></div>";
@@ -96,7 +96,7 @@ function printQuestions()
     $texto = "<div id='divListQuestions' class='divLlistat'>";
     $texto .= "<table><tr><th class='thTittle'>Titol Pregunta</th><th class='thOperations'>Operacions</th></tr>";
     while ($row) {
-        $texto .= "<tr><td>" . $row["title"] . "<td class='tdOperations'><i class='fa fa-pencil-square-o' aria-hidden='true'></i><i class='fa fa-trash' aria-hidden='true'></i></td></tr></td>";
+        $texto .= "<tr><td>" . $row["title"] . "<td class='tdOperations'><i class='fa fa-pencil-square-o' aria-hidden='true'></i><i class='fa fa-trash-o' aria-hidden='true'></i></td></tr></td>";
         $row = $query->fetch();
     }
     $texto .= "</table></div>";
