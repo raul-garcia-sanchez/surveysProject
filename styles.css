@@ -218,17 +218,6 @@ footer a {
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
 }
 
-/* .page-landingPage .card .card-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-.page-landingPage .card .card-content div{
-    height: auto;
-    margin: auto 0;
-} */
-
 .page-landingPage .card .card-content {
     display: flex;
     flex-direction: column;
@@ -405,16 +394,19 @@ footer a {
 
 .page-poll table .thOperations{
     width: 20%;
+    text-align: center;
 }
 
 
-.page-poll table .fa-trash{
+.page-poll table .fa-trash-o{
     color: red;
     font-size: 25px;
+    cursor: pointer;
 }
 
 .page-poll table .fa-pencil-square-o{
     font-size: 25px;
+    cursor: pointer;
 }
 
 .page-poll table .tdOperations{
@@ -448,12 +440,12 @@ footer a {
     font-weight: bold;
 }
 
-.page-poll #divRemovible {
+.page-poll #divToRemove {
     padding-top: 40px;
     padding-bottom: 40px;
 }
 
-.page-poll #contenidoPrincipal{
+.page-poll #principalContent{
     display: flex;
     min-height: 450px;
     flex-direction: column;

@@ -22,22 +22,22 @@
             echo "
         <div class='card' id='dashboard-professor'>
         <div class='card-content'>
-                <button onclick='crearQuestionarioPregunta()'>
+                <button onclick='formAddQuestion()'>
                     <h3>Crear pregunta</h3>
                 </button>
                 
-                <button onclick='crearListadoPreguntas()'>
+                <button onclick='printListQuestions()'>
                     <h3>Llistat de preguntes</h3>
                 </button>
-                <button onclick='crearListadoEnquestas()'>
+                <button onclick='printListSurveys()'>
                     <h3>Llistat d'enquestes</h3>
                 </button>
                 
-                <button onclick='crearQuestionarioEncuesta()'>
+                <button onclick='formAddSurvey()'>
                     <h3>Crear enquesta</h3>
                 </button>
         </div>
-        <div id='contenidoPrincipal'>" . printSurveys() . printQuestions() . "</div>";
+        <div id='principalContent'>" . printSurveys() . printQuestions() . "</div>";
             if (isset($_POST['submitButtonSaveQuestion'])) {
                 addQuestion();
                 $message = "Pregunta afegida correctament";
