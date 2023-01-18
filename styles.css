@@ -449,6 +449,6 @@ footer a {
     margin: auto 0;
 }
 .page-poll #errorMessage{
-    margin-top: 30px;
+   padding-bottom: 10px;
     font-weight: bold;
 }

@@ -37,16 +37,14 @@
                     <h3>Crear enquesta</h3>
                 </button>
         </div>
-        <div id='contenidoPrincipal'>" . printSurveys().printQuestions() . "</div>";
-        if (isset($_POST['submitButtonSaveQuestion'])) {
-            addQuestion();
-            $message = "Pregunta afegida correctament";
-            echo "<p id='errorMessage' align='center'> $message</p>";
+        <div id='contenidoPrincipal'>" . printSurveys() . printQuestions() . "</div>";
+            if (isset($_POST['submitButtonSaveQuestion'])) {
+                addQuestion();
+                $message = "Pregunta afegida correctament";
+                echo "<p id='errorMessage' align='center'> $message</p>";
+            }
+            echo "</div>";
         }
-        echo "</div>";
-        }
-
-            
         createFooter();
 
         ?>
