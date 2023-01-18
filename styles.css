@@ -7,7 +7,7 @@
     font-family: "Arial", sans-serif;
 }
 
-header {
+.afterLogin {
     width: 100%;
     height: 80px;
     background-color: #29b6f6;
@@ -16,6 +16,18 @@ header {
     align-items: center;
     padding-left: 40px;
     padding-right: 40px;
+}
+
+.beforeLogin {
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 100%;
+    height: 80px;
+    background-color: #29b6f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 header h1 {
@@ -32,7 +44,7 @@ header p {
     color: white;
 }
 
-footer {
+.footerAfterLogin {
     width: 100%;
     height: 80px;
     background-color: #ff9800;
@@ -41,6 +53,18 @@ footer {
     align-items: center;
     color: white;
     margin-top: 20px;
+}
+
+.footerBeforeLogin {
+    width: 100%;
+    height: 80px;
+    background-color: #ff9800;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    bottom: 0;
+    position: absolute;
 }
 
 footer div.textFooter:first-child {
@@ -176,7 +200,7 @@ footer a {
 .page-landingPage {
     margin: 0;
     padding: 0;
-    background-color: #29b6f6;
+    background-color:  #f9f9f9;;
     height: 100vh;
     overflow: hidden;
 }
@@ -187,7 +211,8 @@ footer a {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 70%;
-    height: 45%;
+    min-height: 60%;
+    height: auto;
     background: white;
     border-radius: 10px;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
@@ -197,7 +222,6 @@ footer a {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 70%;
 }
 
 .page-landingPage .buttonGoLogin {
@@ -250,7 +274,7 @@ footer a {
     top: 50%;
     margin: 0 7.5%;
     width: 85%;
-    height: 450px;
+    height: 600px;
     background: white;
     border-radius: 10px;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
@@ -293,9 +317,8 @@ footer a {
 .page-poll .card {
     margin: 0 7.5% 20px;
     width: 85%;
-    min-height: 400px;
+    min-height: 600px;
     height: auto;
-    min-height: 400px;
     background: white;
     border-radius: 10px;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
@@ -317,6 +340,10 @@ footer a {
     border-radius: 10px;
     background-color: #e0e0e0;
     cursor: pointer;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .page-poll .card .card-content button:hover {

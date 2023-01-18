@@ -14,7 +14,7 @@ function crearQuestionarioPregunta(){
             'method': 'POST'
         }).append(
             $("<h1>", {
-                'text': 'Crear Pregunta',
+                'text': 'Premi el botó per afegir una pregunta',
                 'class': 'titlePoll'
             }
             )

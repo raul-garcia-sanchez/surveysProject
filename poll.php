@@ -26,14 +26,14 @@
                 <button onclick='crearQuestionarioPregunta()'>
                     <h3>Crear pregunta</h3>
                 </button>
-                <div id='botonesListar'>
+                
                 <button onclick='crearListadoPreguntas()'>
                     <h3>Llistat de preguntes</h3>
                 </button>
                 <button onclick='crearListadoEnquestas()'>
                     <h3>Llistat d'enquestes</h3>
                 </button>
-                </div>
+                
                 <button onclick='crearQuestionarioEncuesta()'>
                     <h3>Crear enquesta</h3>
                 </button>
