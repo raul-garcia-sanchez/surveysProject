@@ -433,3 +433,14 @@ footer a {
     padding-top: 40px;
     padding-bottom: 40px;
 }
+
+.page-poll #contenidoPrincipal{
+    display: flex;
+    min-height: 450px;
+    flex-direction: column;
+}
+
+.page-poll .divLlistat{
+    height: auto;
+    margin: auto 0;
+}

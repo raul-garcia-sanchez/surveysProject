@@ -41,33 +41,38 @@ function crearQuestionarioEncuesta(){
     let divInicial = $("<div>",{
         'id':'divRemovible'
     }).append(
-        $("<h3>",{
-            'text':'Crear Enquesta'}
-        )
-    ).append(
-        $("<div>",{
-            'class':'itemPregunta'
+        $("<form>", {
+            'method': 'POST'
         }).append(
-            $("<h4>",{
-                'text':'Encuesta 1'
-            }) 
+            $("<h1>", {
+                'text': 'Premi el botó per afegir una enquesta',
+                'class': 'titlePoll'
+            }
+            )
+        ).append(
+            $("<input>", {
+                'class': 'saveQuestion',
+                'value': 'Guardar',
+                'type': 'submit',
+                'name': 'submitButtonSaveSurvey'
+            }).append(
+                $("<h1>", {
+                    'text': 'Guardar'
+                })
+            )
         )
-    ).append(
-        $("<h4>",{
-            'text':'Encuesta 2'
-        })
     )
     $('#contenidoPrincipal').append(divInicial)
 };
 
 function crearListadoPreguntas(){
     eliminarPorId('divRemovible');
-    $('.page-poll #divListQuestions').css('display',' none')
-    $('.page-poll #divListSurveys').css('display', 'block')
+    $('.page-poll #divListQuestions').css('display', 'block')
+    $('.page-poll #divListSurveys').css('display', 'none')
 }
 
 function crearListadoEnquestas(){
     eliminarPorId('divRemovible');
-    $('.page-poll #divListQuestions').css('display', 'block')
-    $('.page-poll #divListSurveys').css('display', 'none')
+    $('.page-poll #divListQuestions').css('display',' none')
+    $('.page-poll #divListSurveys').css('display', 'block')
 }
