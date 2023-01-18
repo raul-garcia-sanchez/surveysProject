@@ -20,8 +20,10 @@
     <div class="card">
         <h1>Benvingut</h1>
         <div class="card-content">
+            <div id="contenido">
             <h1>Pàgina de creació d'enquestes sobre <br> el professorat</h1>
             <center><a href="login.php"><button class="buttonGoLogin">Iniciar sessió</button></a></center>
+            </div>
         </div>
     </div>
 

@@ -224,6 +224,11 @@ footer a {
     justify-content: space-around;
 }
 
+.page-landingPage .card .card-content div{
+    height: auto;
+    margin: auto 0;
+}
+
 .page-landingPage .buttonGoLogin {
     width: 35%;
     height: 60px;
