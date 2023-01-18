@@ -218,7 +218,7 @@ footer a {
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
 }
 
-.page-landingPage .card .card-content {
+/* .page-landingPage .card .card-content {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -227,6 +227,21 @@ footer a {
 .page-landingPage .card .card-content div{
     height: auto;
     margin: auto 0;
+} */
+
+.page-landingPage .card .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 550px;
+}
+
+.page-landingPage .card .card-content div{
+    margin: auto 0;
+}
+
+.page-landingPage .card .card-content div button{
+    margin-top: 40px;
 }
 
 .page-landingPage .buttonGoLogin {
