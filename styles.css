@@ -222,11 +222,15 @@ footer a {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    min-height: 550px;
 }
 
 .page-landingPage .card .card-content div{
-    height: auto;
     margin: auto 0;
+}
+
+.page-landingPage .card .card-content div button{
+    margin-top: 40px;
 }
 
 .page-landingPage .buttonGoLogin {
