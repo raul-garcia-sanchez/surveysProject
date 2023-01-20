@@ -1,5 +1,9 @@
-<?php session_start(); ?>
-<!DOCTYPE html>
+<?php session_start();
+include './resources/auxFunctions.php';
+if (isset($_POST['submitButtonSaveQuestion']) && isset($_POST['selectTypeQuestion']) && isset($_SESSION['user']['username'])) {
+    addQuestion();
+}
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -15,7 +19,8 @@
 <body class="page-poll">
     <div class="global-container">
         <?php
-        include './resources/auxFunctions.php';
+        echo var_dump($_POST);
+
         createHeader("Enquestes IETI");
         if ($_SESSION['user']["role"] == "admin") {
             echo "
@@ -38,7 +43,6 @@
         </div>
         <div id='principalContent'>" . printSurveys() . printQuestions() . "</div>";
             if (isset($_POST['submitButtonSaveQuestion'])) {
-                addQuestion();
                 $message = "Pregunta afegida correctament";
                 echo "<p id='errorMessage' align='center'> $message</p>";
             }

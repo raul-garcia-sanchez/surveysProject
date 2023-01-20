@@ -445,8 +445,13 @@ i{
 }
 
 .page-poll #divToRemove {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    border: 1px solid black;
+    width: 70%;
+    margin: 40px 15% 0;
+    border-radius: 10px;
+    background-color: #adadad;
 }
 
 .page-poll #principalContent{
@@ -462,4 +467,23 @@ i{
 .page-poll #errorMessage{
    padding-bottom: 10px;
     font-weight: bold;
+}
+
+.page-poll #divToRemove form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 30%;
+    margin: 0 35%;
+
+}
+
+.page-poll #divToRemove form #questionInput{
+    height: 35px;
+    font-size: 28px;
+}
+.page-poll #divToRemove form #selectTypeQuestion{
+    height: 35px;
+    font-size: 28px;
 }

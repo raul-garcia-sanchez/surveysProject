@@ -10,29 +10,54 @@ function formAddQuestion() {
   let initialDiv = $("<div>", {
     id: "divToRemove",
   }).append(
-    $("<form>", {
-      method: "POST",
-    })
-      .append(
         $("<h1>", {
-          text: "Premi el botó per afegir una pregunta",
+          text: "Creació de pregunta",
           class: "titlePoll",
-        })
-      )
-      .append(
+        }))
+        .append(
+            $("<form>", {
+              method: "POST",
+              id:"formQuestion"
+            }).append(
         $("<input>", {
-          class: "saveQuestion",
-          value: "Guardar",
-          type: "submit",
-          name: "submitButtonSaveQuestion",
-        }).append(
-          $("<h1>", {
-            text: "Guardar",
-          })
+          id: "questionInput",
+          type: "text",
+          name: "questionInput",
+        }
+        )).append(
+            $("<select>", {
+                id: "selectTypeQuestion",
+                onChange: createButton(),
+                name: 'selectTypeQuestion',
+            }
+        ).append(
+            $("<option>", {
+                text: "Tipus de pregunta",
+                disabled: 'disabled',
+                selected:'selected',
+            }
         )
-      )
-  );
+        ).append(
+            $("<option>", {
+                text: "Pregunta oberta",
+                value: 'text',
+            }
+            )
+        ).append(
+            $("<option>", {
+                text: "Pregunta numerica",
+                value: 'number',
+            }
+            )
+        )))           
+  ;
   $("#principalContent").append(initialDiv);
+  $('#selectTypeQuestion').change(function(){
+    createButton()
+})
+    $('#questionInput').on('keyup',function(){
+        createButton()
+    })
 }
 
 function formAddSurvey() {
@@ -81,3 +106,23 @@ function printListSurveys() {
   $(".page-poll #divListQuestions").css("display", " none");
   $(".page-poll #divListSurveys").css("display", "block");
 }
+
+function createButton(){
+    if(($('#questionInput').val()=="")|| $('#selectTypeQuestion option:selected').text()=='Tipus de pregunta'){
+        $('#submitButtonSaveQuestion').remove()
+    }else{
+        $('#submitButtonSaveQuestion').remove()
+        $('#formQuestion').append(
+            $("<input>", {
+              class: "saveQuestion",
+              value: "Guardar",
+              type: "submit",
+              name: "submitButtonSaveQuestion",
+              id: "submitButtonSaveQuestion"
+            }).append(
+              $("<h1>", {
+                text: "Guardar",
+              })
+            ))
+    }
+    }
