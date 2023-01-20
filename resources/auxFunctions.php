@@ -4,9 +4,14 @@ function createHeader($title)
 {
     echo "<header class='afterLogin'>";
     echo "<h1>" . $title . "</h1>";
-    echo "<p><i class='fa fa-user' aria-hidden='true'></i>" . $_SESSION["user"]["username"] . "</p>";
+    echo "<div class='userDiv'><p><i class='fa fa-user' aria-hidden='true'></i>" . $_SESSION["user"]["username"] . "</p>";
+    echo "<form action='login.php' method='post'>";
+    echo "<input type='submit' value='Logout' name='logout' class='logoutSubmit'>";
+    echo "</form>";
+    echo "</div>";
     echo "</header>";
 }
+
 
 function printHeaderBeforeLogin($title)
 {

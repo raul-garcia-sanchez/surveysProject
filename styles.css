@@ -44,6 +44,44 @@ header p {
     color: white;
 }
 
+.userDiv {
+    display: flex;
+    align-items: baseline;
+}
+.userDiv .logoutSubmit {
+    margin-left: 20px;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #e0e0e0;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: medium;
+}
+
+.userDiv .logoutSubmit:hover {
+    width: 110px;
+    height: 45px;
+    transition: .5s;
+}
+
+/*
+.page-dashboard .card .card-content button {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: #e0e0e0;
+    cursor: pointer;
+}
+
+.page-dashboard .card .card-content button:hover {
+    width: 220px;
+    height: 220px;
+    transition: .5s;
+}
+*/
+
+
 .footerAfterLogin {
     width: 100%;
     height: 80px;
@@ -390,7 +428,7 @@ i{
     border: 1px solid black;
     border-collapse: collapse;
     padding: 4px;
-  }
+}
 
 .page-poll table th{
     background-color: #c0c0c0;
@@ -460,6 +498,6 @@ i{
     margin: auto 0;
 }
 .page-poll #errorMessage{
-   padding-bottom: 10px;
+    padding-bottom: 10px;
     font-weight: bold;
 }

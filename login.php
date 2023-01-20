@@ -1,5 +1,9 @@
-<?php session_start(); ?>
-<!DOCTYPE html>
+<?php session_start();
+    if(isset($_POST["logout"])){
+        session_destroy();
+        unset($_POST["logout"]);
+    }
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
