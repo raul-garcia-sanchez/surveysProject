@@ -19,10 +19,10 @@
     printHeaderBeforeLogin("Enquestes IETI");
 
     try {
-        $hostname = "127.0.0.1";
+        $hostname = "20.107.55.123";
         $dbname = "surveys_database";
-        $username = "root";
-        $pw = "";
+        $username = "database_survey_user";
+        $pw = "surv3ys_d@t2b@s3 database";
         $pdo = new PDO("mysql:host=$hostname;dbname=$dbname", "$username", "$pw");
     } catch (PDOException $e) {
         echo "Failed to get DB handle: " . $e->getMessage() . "\n";
