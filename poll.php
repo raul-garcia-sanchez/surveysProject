@@ -52,3 +52,6 @@
 </body>
 
 </html>
+<?php
+    appendLog("S", "The page " . $_SERVER['PHP_SELF'] . " has loaded successfully by user " . $_SESSION['user']["username"]);
+?>

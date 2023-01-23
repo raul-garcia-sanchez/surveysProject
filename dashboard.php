@@ -32,7 +32,7 @@ session_start();
         echo '
                 <div class="card" id="dashboard-professor">
                     <div class="card-content">
-                    <a href="profile.php"><button><h1>Perfil</h1></button></a>
+                        <a href="profile.php"><button><h1>Perfil</h1></button></a>
                         <a href="stats.php"><button><h1>Estadistiques</h1></button></a>
                     </div>
                 </div>
@@ -48,3 +48,6 @@ session_start();
 </body>
 
 </html>
+<?php
+    appendLog("S", "The page " . $_SERVER['PHP_SELF'] . " has loaded successfully by user " . $_SESSION['user']["username"]);
+?>

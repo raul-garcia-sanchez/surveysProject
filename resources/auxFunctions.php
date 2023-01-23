@@ -12,7 +12,6 @@ function createHeader($title)
     echo "</header>";
 }
 
-
 function printHeaderBeforeLogin($title)
 {
     echo "<header class='beforeLogin'>";
@@ -60,13 +59,22 @@ function printSurveys()
         $username = "database_survey_user";
         $pw = "surv3ys_d@t2b@s3 database";
         $pdo = new PDO("mysql:host=$hostname;dbname=$dbname", "$username", "$pw");
+        appendLog("S", "Successful connection to the database");
     } catch (PDOException $e) {
         echo "Failed to get DB handle: " . $e->getMessage() . "\n";
+        appendLog("E", "Failed to get DB handle: " . $e->getMessage());
         exit;
     }
 
-    $query = $pdo->prepare('select title from surveys;');
-    $query->execute();
+    try {
+        $queryText = 'select title from surveys;';
+        $query = $pdo->prepare($queryText);
+        $query->execute();
+        appendLog("S", "Query executed successfully - '" . $queryText . "'");
+    } catch (PDOException $e) {
+        appendLog("E", "Failed to execute the query - '".$queryText."': " . $e->getMessage());
+    }
+    
 
     $row = $query->fetch();
     $texto = "<div id='divListSurveys' class='divLlistat'>";
@@ -89,14 +97,22 @@ function printQuestions()
         $username = "database_survey_user";
         $pw = "surv3ys_d@t2b@s3 database";
         $pdo = new PDO("mysql:host=$hostname;dbname=$dbname", "$username", "$pw");
+        appendLog("S", "Successful connection to the database");
     } catch (PDOException $e) {
         echo "Failed to get DB handle: " . $e->getMessage() . "\n";
+        appendLog("E", "Failed to get DB handle: " . $e->getMessage());
         exit;
     }
 
-    $query = $pdo->prepare('select title from questions;');
-    $query->execute();
-
+    try {
+        $queryText = 'select title from questions;';
+        $query = $pdo->prepare($queryText);
+        $query->execute();
+        appendLog("S", "Query executed successfully - '" . $queryText . "'");
+    } catch (PDOException $e) {
+        appendLog("E", "Failed to execute the query - '".$queryText."': " . $e->getMessage());
+    }
+    
     $row = $query->fetch();
     $texto = "<div id='divListQuestions' class='divLlistat'>";
     $texto .= "<table><tr><th class='thTittle'>Titol Pregunta</th><th class='thOperations'>Operacions</th></tr>";
@@ -118,8 +134,10 @@ function addQuestion()
         $username = "database_survey_user";
         $pw = "surv3ys_d@t2b@s3 database";
         $pdo = new PDO("mysql:host=$hostname;dbname=$dbname", "$username", "$pw");
+        appendLog("S", "Successful connection to the database");
     } catch (PDOException $e) {
         echo "Failed to get DB handle: " . $e->getMessage() . "\n";
+        appendLog("E", "Failed to get DB handle: " . $e->getMessage());
         exit;
     }
 
@@ -129,15 +147,37 @@ function addQuestion()
         $titleQuestion = "Aprovaràn aquests nois el projecte?";
         $questionActive = 1;
         $typeQuestion = 'text';
+
         $query->bindParam(1, $idSurvey);
         $query->bindParam(2, $titleQuestion);
         $query->bindParam(3, $questionActive);
         $query->bindParam(4, $typeQuestion);
         $query->execute();
-    } catch (Exception $e) {
+        $queryText = "INSERT INTO questions (id_survey, title, active, type) VALUES($idSurvey,'$titleQuestion',$questionActive,'$typeQuestion')";
+        appendLog("S", "Successfully added question with title '" . $titleQuestion . "' and type '" . $typeQuestion . "' - '" . $queryText . "'");
+    } catch (PDOException $e) {
         echo $e;
+        //Añadir a futuro
+        //appendLog("E", "Successfully added question with title '" . $titleQuestion . "' and type '" . $typeQuestion . "' - '" . $queryText . "'");
     }
 
     unset($query);
     unset($pdo);
+}
+
+function appendLog($messageTypeInitial,$message){
+    $today = date("Y-m-d");
+    $log = $messageTypeInitial . " - " . date("G:i:s") . " - " . getClientIP() . " - ". $message . "\n";
+    file_put_contents("logs/" . $today . ".txt", $log, FILE_APPEND);
+}
+
+function getClientIP(){
+    if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+        $ip = $_SERVER['HTTP_CLIENT_IP'];
+    } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+        $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    } else {
+        $ip = $_SERVER['REMOTE_ADDR'];
+    }
+    return $ip;
 }

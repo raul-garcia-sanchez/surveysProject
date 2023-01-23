@@ -1,7 +1,16 @@
 <?php session_start();
+include './resources/auxFunctions.php';
     if(isset($_POST["logout"])){
-        session_destroy();
-        unset($_POST["logout"]);
+        try{
+            $user = $_SESSION["user"]["username"];
+            session_destroy();
+            unset($_POST["logout"]);
+            appendLog("S", "User " . $user . " has successfully logout");
+        }catch (Exception $e){
+            $user = $_SESSION["user"]["username"];
+            appendLog("E", $e->getMessage());
+        }
+        
     }
 ?><!DOCTYPE html>
 <html lang="en">
@@ -18,8 +27,6 @@
 <body class="page-login">
 
     <?php
-
-    include './resources/auxFunctions.php';
     printHeaderBeforeLogin("Enquestes IETI");
 
     try {
@@ -28,8 +35,10 @@
         $username = "database_survey_user";
         $pw = "surv3ys_d@t2b@s3 database";
         $pdo = new PDO("mysql:host=$hostname;dbname=$dbname", "$username", "$pw");
+        appendLog("S", "Successful connection to the database");
     } catch (PDOException $e) {
         echo "Failed to get DB handle: " . $e->getMessage() . "\n";
+        appendLog("E", "Failed to get DB handle: " . $e->getMessage());
         exit;
     }
 
@@ -45,9 +54,12 @@
 
         if ($userExist) {
             $_SESSION['user'] = $userExist;
+            appendLog("S", "The user successfully connected with the username " . $_POST["username"] . " and the encrypted password ".$password);
             header("Location:  dashboard.php");
+            die();
         } else {
             $errorMSG = "Usuari o contrasenya invàlids";
+            appendLog("W", "The user tried to connect with the username " . $_POST["username"] . " and the encrypted password ".$password);
         }
     }
 
@@ -87,3 +99,6 @@
 </body>
 
 </html>
+<?php
+    appendLog("S", "The page " . $_SERVER['PHP_SELF'] . " has loaded successfully");
+?>

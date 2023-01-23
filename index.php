@@ -30,9 +30,12 @@
     <?php
 
     printFooterBeforeLogin();
-
+    
     ?>
 
 </body>
 
 </html>
+<?php
+    appendLog("S", "The page " . $_SERVER['PHP_SELF'] . " has loaded successfully");
+?>
