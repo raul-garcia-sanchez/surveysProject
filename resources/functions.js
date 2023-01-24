@@ -2,7 +2,7 @@ function removeById(textId) {
   let elementToRemove = $("#" + textId);
   elementToRemove.remove();
 }
-
+var arrayOpciones = [];
 function formAddQuestion() {
   removeById("divToRemove");
   $(".page-poll #divListSurveys").css("display", "none");
@@ -23,11 +23,12 @@ function formAddQuestion() {
           id: "questionInput",
           type: "text",
           name: "questionInput",
+          placeholder:'Titol de la pregunta'
         }
         )).append(
             $("<select>", {
                 id: "selectTypeQuestion",
-                onChange: createButton(),
+                onChange: createButtonSubmit(),
                 name: 'selectTypeQuestion',
             }
         ).append(
@@ -49,14 +50,39 @@ function formAddQuestion() {
                 value: 'number',
             }
             )
-        )))           
+        ).append(
+          $("<option>", {
+              text: "Opcio Simple",
+              value: 'op_s',
+          }
+          )
+        )
+        ))           
   ;
   $("#principalContent").append(initialDiv);
   $('#selectTypeQuestion').change(function(){
-    createButton()
+    arrayOpciones = [];
+    if($('#selectTypeQuestion option:selected').text()=='Opcio Simple'){
+      $('#formQuestion').append(
+        $('<div>',{
+          id:'divOptions'
+        })
+      )
+      $('#submitButtonSaveQuestion').remove()
+      createButtonAddOption();
+    }else{
+      $('#buttonAddOption').remove()
+      $('#divOptions').remove()
+      createButtonSubmit()
+    }
 })
     $('#questionInput').on('keyup',function(){
-        createButton()
+      if($('#selectTypeQuestion option:selected').text()=='Opcio Simple'){
+        createButtonAddOption();
+        createButtonSubmit()
+      }else{
+        createButtonSubmit()
+      }
     })
 }
 
@@ -107,7 +133,7 @@ function printListSurveys() {
   $(".page-poll #divListSurveys").css("display", "block");
 }
 
-function createButton(){
+function createButtonSubmit(){
     if(($('#questionInput').val()=="")|| $('#selectTypeQuestion option:selected').text()=='Tipus de pregunta'){
         $('#submitButtonSaveQuestion').remove()
     }else{
@@ -126,3 +152,71 @@ function createButton(){
             ))
     }
     }
+
+function createButtonAddOption(){
+  if(($('#questionInput').val()=="")|| $('#selectTypeQuestion option:selected').text()=='Tipus de pregunta'){
+    $('#buttonAddOption').remove()
+  }else{
+    $('#buttonAddOption').remove()
+    $('#formQuestion').append(
+        $("<button>", {
+          class: "buttonAddOption",
+          value: "buttonAddOption",
+          id: "buttonAddOption"
+        }).append(
+          $("<h1>", {
+            text: "+",
+          })
+        ))
+    $('#buttonAddOption').on('click',crearInputPregunta)
+  }
+}
+
+function crearInputPregunta(){
+  $('#buttonAddOption').remove()
+  $('.inpOption:last').attr('readonly',true)
+  $('.inpOption:last').attr('onmousedown','return false')
+  $('#divOptions').append(
+    $('<div>',{
+      class:'divOption',
+    }).append
+    (
+      $('<input>',{
+        class:'inpOption',
+        style:'width:96%;'
+      })))
+  if($('.inpOption').length>1){
+    $('.divOption:nth-last-child(2)').append(
+      $('<button>',{
+        text:'X',
+        onclick:'eliminarDiv(event)',
+        display:'inline',
+        type:'button'
+      })
+    )
+  }
+  $('.inpOption:last').on('keyup',function(){
+    if($('.inpOption:last').val() != ""){
+      createButtonAddOption();
+    }else{
+      $('#buttonAddOption').remove()
+    }
+    if($('.inpOption').length<2){
+      $('#submitButtonSaveQuestion').remove()
+    }else{
+      $('#submitButtonSaveQuestion').remove()
+      $('.inpOption:last').on('keyup',function(){
+        if($('.inpOption:last').val()!=""&&$('.inpOption').length>1){
+          createButtonSubmit()
+        }
+        })
+    }
+  })
+}
+
+function eliminarDiv(event){
+  $(event.target).parent().remove()
+  if($('.inpOption').length<3){
+    $('#submitButtonSaveQuestion').remove()
+  }
+}

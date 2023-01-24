@@ -19,7 +19,6 @@ if (isset($_POST['submitButtonSaveQuestion']) && isset($_POST['selectTypeQuestio
 <body class="page-poll">
     <div class="global-container">
         <?php
-        echo var_dump($_POST);
 
         createHeader("Enquestes IETI");
         if ($_SESSION['user']["role"] == "admin") {
