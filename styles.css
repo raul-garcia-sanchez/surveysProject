@@ -417,7 +417,7 @@ i{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    border: 1px;
+    border: 0.5px solid black;
 }
 
 .page-poll .saveQuestion {

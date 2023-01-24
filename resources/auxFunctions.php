@@ -118,17 +118,37 @@ function addQuestion()
         exit;
     }
 
-    try {
-        $questionText = $_POST['questionInput'];
-        $questionType = $_POST['selectTypeQuestion'];
-        $surveyEmail = $_SESSION['user']['username'];
-        $query = $pdo->prepare('INSERT INTO questions (id_survey, title, active, type) VALUES((Select id from users where username = "'.$surveyEmail.'"),?,1,?)');
-        $query->bindParam(1, $questionText); 
-        $query->bindParam(2, $questionType);
-        $query->execute();
-    } catch (Exception $e) {
-        echo $e;
+    $questionType = $_POST['selectTypeQuestion'];
+    if($questionType == "text" || $questionType == "number" || $questionType == "opcioSimple"){
+        try {
+            $questionText = $_POST['questionInput'];
+            $query = $pdo->prepare('INSERT INTO questions (id_survey, title, active, type) VALUES(1,?,1,?)');
+            $query->bindParam(1, $questionText); 
+            $query->bindParam(2, $questionType);
+            $query->execute();
+            $queryText = 'INSERT INTO questions (id_survey, title, active, type) VALUES(1,'.$questionText.',1,'.$questionType.')';
+        } catch (Exception $e) {
+            echo $e;
+        }
     }
+    if($questionType == "opcioSimple"){
+        $i = 0;
+        while(isset($_POST[$i])){
+            try {
+                $questionText = $_POST['questionInput'];
+                $subQuery = 'select id from questions where title = "'.$questionText.'" and type = "'.$questionType.'";';
+
+                $query = $pdo->prepare('INSERT INTO options (option, id_question) VALUES(?,('.$subQuery.'))');
+                $query->bindParam(1, $questionText); 
+                $query->execute();
+                $queryText = 'INSERT INTO options (option, id_question) VALUES(('.$subQuery.'),'.$questionText.')';
+            } catch (Exception $e) {
+                echo $e;
+            }
+        }
+        
+    }
+    
 
     unset($query);
     unset($pdo);

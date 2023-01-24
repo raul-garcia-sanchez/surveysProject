@@ -53,7 +53,7 @@ function formAddQuestion() {
         ).append(
           $("<option>", {
               text: "Opcio Simple",
-              value: 'op_s',
+              value: 'opcioSimple',
           }
           )
         )
@@ -208,6 +208,7 @@ function crearInputPregunta(){
       $('.inpOption:last').on('keyup',function(){
         if($('.inpOption:last').val()!=""&&$('.inpOption').length>1){
           createButtonSubmit()
+          addNameInputs()
         }
         })
     }
@@ -216,7 +217,15 @@ function crearInputPregunta(){
 
 function eliminarDiv(event){
   $(event.target).parent().remove()
+  addNameInputs()
   if($('.inpOption').length<3){
     $('#submitButtonSaveQuestion').remove()
   }
+}
+
+function addNameInputs(){
+  $(".inpOption").each(function(index){
+    $(this).attr("name",index)
+    console.log($(this))
+  })
 }
