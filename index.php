@@ -11,7 +11,7 @@
 </head>
 
 <body class="page-landingPage">
-
+    <div id="divAlertas"></div>
     <?php
     include './resources/auxFunctions.php';
     printHeaderBeforeLogin("Enquestes IETI");

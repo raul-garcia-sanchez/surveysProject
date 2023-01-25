@@ -10,9 +10,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Enquestes</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="resources/functions.js"></script>
 </head>
 
 <body class="page-poll">
+<div id="divAlertas"></div>
     <div class="global-container">
         <?php
         include './resources/auxFunctions.php';
@@ -45,7 +47,6 @@
             echo "</div>";
         }
         createFooter();
-
         ?>
     </div>
     <script src="./resources/functions.js"></script>

@@ -13,6 +13,7 @@
 </head>
 
 <body class="page-perfil">
+<div id="divAlertas"></div>
     <div class="global-container">
         <h1>Professors</h1>
         <a href="dashboard.php"><button>Tornar enrere</button></a>

@@ -14,6 +14,7 @@ session_start();
 </head>
 
 <body class="page-dashboard">
+<div id="divAlertas"></div>
     <div class="global-container">
     <?php
     include './resources/auxFunctions.php';

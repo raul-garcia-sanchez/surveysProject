@@ -181,3 +181,7 @@ function getClientIP(){
     }
     return $ip;
 }
+
+function printAlertJs($message,$type){
+    echo '<script>alertCss("'.$message.'","'.$type.'")</script>';
+}
