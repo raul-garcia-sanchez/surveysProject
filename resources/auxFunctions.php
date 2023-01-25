@@ -136,12 +136,11 @@ function addQuestion()
         while(isset($_POST[strval($i)])){
             try {
                 $questionText = $_POST['questionInput'];
-                $subQuery = 'select id from questions where title = "'.$questionText.'" and type = "'.$questionType.'";';
-
-                $query = $pdo->prepare('INSERT INTO options (option, id_question) VALUES(?,('.$subQuery.'))');
+                $subQuery = 'select id from questions where title = "'.$questionText.'" and type = "'.$questionType.'" limit 1';
+                $query = $pdo->prepare("INSERT INTO options (option_text,id_question) VALUES(?,(".$subQuery."))");
                 $query->bindParam(1, $_POST[strval($i)]); 
                 $query->execute();
-                $queryText = 'INSERT INTO options (option, id_question) VALUES(('.$subQuery.'),'.$questionText.')';
+                $queryText = 'INSERT INTO options (option, id_question) VALUES('.$questionText.',('.$subQuery.'))';
             } catch (Exception $e) {
                 echo $e;
             }
