@@ -133,18 +133,19 @@ function addQuestion()
     }
     if($questionType == "opcioSimple"){
         $i = 0;
-        while(isset($_POST[$i])){
+        while(isset($_POST[strval($i)])){
             try {
                 $questionText = $_POST['questionInput'];
                 $subQuery = 'select id from questions where title = "'.$questionText.'" and type = "'.$questionType.'";';
 
                 $query = $pdo->prepare('INSERT INTO options (option, id_question) VALUES(?,('.$subQuery.'))');
-                $query->bindParam(1, $questionText); 
+                $query->bindParam(1, $_POST[strval($i)]); 
                 $query->execute();
                 $queryText = 'INSERT INTO options (option, id_question) VALUES(('.$subQuery.'),'.$questionText.')';
             } catch (Exception $e) {
                 echo $e;
             }
+            $i += 1;
         }
         
     }
