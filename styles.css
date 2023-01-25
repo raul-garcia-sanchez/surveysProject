@@ -434,6 +434,10 @@ i{
     background-color: #c0c0c0;
 }
 
+.page-poll table tr:nth-child(2n+1) {
+    background: #e7e7e7;
+}
+
 .page-poll table .thOperations{
     width: 20%;
     text-align: center;
