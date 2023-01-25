@@ -518,10 +518,13 @@ i{
 }
 
 .divAlerta button{
-    position: absolute;
-    top: 15px;
-    right: 10px;
+    position: inherit;
+    margin-top: 0px;
     background-color: #29b5f600;
     width: 19px;
     border-radius: 5px;
+}
+
+.divAlerta h4{
+    margin: 0 38% 0;
 }

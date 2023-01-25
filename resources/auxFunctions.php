@@ -61,6 +61,7 @@ function printSurveys()
         $pdo = new PDO("mysql:host=$hostname;dbname=$dbname", "$username", "$pw");
         appendLog("S", "Successful connection to the database");
     } catch (PDOException $e) {
+        printAlertJs("Hi ha hagut un problema en connectar-te amb la base de dades",'e');
         echo "Failed to get DB handle: " . $e->getMessage() . "\n";
         appendLog("E", "Failed to get DB handle: " . $e->getMessage());
         exit;
@@ -73,6 +74,7 @@ function printSurveys()
         appendLog("S", "Query executed successfully - '" . $queryText . "'");
     } catch (PDOException $e) {
         appendLog("E", "Failed to execute the query - '".$queryText."': " . $e->getMessage());
+        printAlertJs("Hi ha hagut un problema en connectar-te amb la base de dades",'e');
     }
     
 
@@ -86,6 +88,7 @@ function printSurveys()
     $texto .= "</table></div>";
     unset($query);
     unset($pdo);
+    printAlertJs("S'ha carregat correctament el llistat d'enquestes",'i');
     return $texto;
 }
 
@@ -163,6 +166,7 @@ function addQuestion()
 
     unset($query);
     unset($pdo);
+    printAlertJs("S'ha creat correctament la questio",'s');
 }
 
 function appendLog($messageTypeInitial,$message){

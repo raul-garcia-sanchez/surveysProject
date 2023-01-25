@@ -73,6 +73,7 @@ function printListQuestions() {
   removeById("divToRemove");
   $(".page-poll #divListQuestions").css("display", "block");
   $(".page-poll #divListSurveys").css("display", "none");
+  alertCss("S'ha carregat correctament el llistat de preguntes",'i');
 }
 
 function printListSurveys() {
@@ -80,6 +81,7 @@ function printListSurveys() {
   removeById("divToRemove");
   $(".page-poll #divListQuestions").css("display", " none");
   $(".page-poll #divListSurveys").css("display", "block");
+  alertCss("S'ha carregat correctament el llistat de enquestes",'i');
 }
 
 function alertCss(message,type){
