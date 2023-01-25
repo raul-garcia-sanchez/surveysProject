@@ -1,0 +1,31 @@
+S - 18:50:11 - 127.0.0.1 - User raul@gmail.com has successfully logout
+S - 18:50:12 - 127.0.0.1 - Successful connection to the database
+S - 18:50:12 - 127.0.0.1 - The page /login.php has loaded successfully
+S - 18:59:34 - 127.0.0.1 - Successful connection to the database
+S - 18:59:35 - 127.0.0.1 - The user successfully connected with the username raul@gmail.com and the encrypted password bbb0b5b15842af2a3f42072a418c908e8a63caab2120d15cfea68e433cfe68dd
+S - 18:59:35 - 127.0.0.1 - The page /dashboard.php has loaded successfully by user raul@gmail.com
+S - 18:59:36 - 127.0.0.1 - Successful connection to the database
+S - 18:59:36 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 18:59:36 - 127.0.0.1 - Successful connection to the database
+S - 18:59:36 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 18:59:36 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 18:59:43 - 127.0.0.1 - Successful connection to the database
+S - 18:59:43 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 18:59:43 - 127.0.0.1 - Successful connection to the database
+S - 18:59:43 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 18:59:43 - 127.0.0.1 - Successful connection to the database
+S - 18:59:43 - 127.0.0.1 - Successfully added question with title 'Aprovaràn aquests nois el projecte?' and type 'text' - 'INSERT INTO questions (id_survey, title, active, type) VALUES(1,'Aprovaràn aquests nois el projecte?',1,'text')'
+S - 18:59:43 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 19:04:03 - 127.0.0.1 - User raul@gmail.com has successfully logout
+S - 19:04:03 - 127.0.0.1 - Successful connection to the database
+S - 19:04:03 - 127.0.0.1 - The page /login.php has loaded successfully
+S - 19:35:47 - 127.0.0.1 - The page /index.php has loaded successfully
+S - 20:15:23 - 127.0.0.1 - The page /index.php has loaded successfully
+S - 20:15:24 - 127.0.0.1 - Successful connection to the database
+S - 20:15:24 - 127.0.0.1 - The page /login.php has loaded successfully
+S - 20:15:25 - 127.0.0.1 - Successful connection to the database
+S - 20:15:25 - 127.0.0.1 - The user successfully connected with the username raul@gmail.com and the encrypted password bbb0b5b15842af2a3f42072a418c908e8a63caab2120d15cfea68e433cfe68dd
+S - 20:15:25 - 127.0.0.1 - The page /dashboard.php has loaded successfully by user raul@gmail.com
+S - 20:17:23 - 127.0.0.1 - Successful connection to the database
+S - 20:17:23 - 127.0.0.1 - The page /login.php has loaded successfully
+S - 20:17:39 - 127.0.0.1 - The page /index.php has loaded successfully

@@ -11,7 +11,7 @@
 </head>
 
 <body class="page-landingPage">
-
+    <div id="divAlertas"></div>
     <?php
     include './resources/auxFunctions.php';
     printHeaderBeforeLogin("Enquestes IETI");
@@ -30,10 +30,12 @@
     <?php
 
     printFooterBeforeLogin();
-
+    
     ?>
-
 
 </body>
 
 </html>
+<?php
+    appendLog("S", "The page " . $_SERVER['PHP_SELF'] . " has loaded successfully");
+?>

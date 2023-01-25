@@ -13,6 +13,7 @@
 </head>
 
 <body class="page-users">
+<div id="divAlertas"></div>
     <div class="global-container">
         <h1>Estadistiques</h1>
         <a href="dashboard.php"><button>Tornar enrere</button></a>
@@ -21,3 +22,6 @@
 </body>
 
 </html>
+<?php
+    appendLog("S", "The page " . $_SERVER['PHP_SELF'] . " has loaded successfully by user " . $_SESSION['user']["username"]);
+?>
