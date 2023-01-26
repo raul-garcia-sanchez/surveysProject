@@ -176,6 +176,7 @@ function createButtonAddOption(){
 
 function crearInputPregunta(){
   $('#buttonAddOption').remove()
+  $('#submitButtonSaveQuestion').remove()
   $('.inpOption:last').attr('readonly',true)
   $('.inpOption:last').attr('onmousedown','return false')
   $('#divOptions').append(
@@ -187,7 +188,7 @@ function crearInputPregunta(){
         class:'inpOption',
         style:'width:96%;'
       })))
-  if($('.inpOption').length>1){
+  if($('.inpOption').length>0){
     $('.divOption:nth-last-child(2)').append(
       $('<button>',{
         text:'X',
@@ -220,7 +221,7 @@ function crearInputPregunta(){
 function eliminarDiv(event){
   $(event.target).parent().remove()
   addNameInputs()
-  if($('.inpOption').length<3){
+  if($('.inpOption').length<=2){
     $('#submitButtonSaveQuestion').remove()
   }
 }
