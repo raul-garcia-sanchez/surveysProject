@@ -13,6 +13,7 @@ CREATE TABLE `invitations` (
 
 CREATE TABLE `options` (
   `id` int(11) NOT NULL,
+  `option_text` varchar(256) NOT NULL,
   `id_question` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -69,10 +70,10 @@ CREATE TABLE `surveys` (
 
 
 INSERT INTO `surveys` (`id`, `creator`, `title`, `startDate`, `finishDate`) VALUES
-(1, 1,'Enquesta sobre Raúl', '2023-01-16 18:12:20', 1676564543),
-(2, 1,'Enquesta sobre Unai', '2023-01-16 18:15:25', 1676564543),
-(3, 1,'Enquesta de prova', '2023-01-16 18:16:15', 1676564543),
-(4, 1,'Enquesta sobre Iker', '2023-01-16 18:16:15', 1676564543);
+(1, 1,'Enquesta sobre Raúl', '2023-01-16 18:12:20', '2023-01-16 19:12:20'),
+(2, 1,'Enquesta sobre Unai', '2023-01-16 18:15:25', '2023-01-16 19:15:25'),
+(3, 1,'Enquesta de prova', '2023-01-16 18:16:15', '2023-01-16 19:16:15'),
+(4, 1,'Enquesta sobre Iker', '2023-01-16 18:16:15', '2023-01-16 19:16:15');
 
 
 CREATE TABLE `students` (
