@@ -156,7 +156,7 @@ function addQuestion()
 
             $queryText = 'INSERT INTO questions (id_survey, title, active, type) VALUES(1,'.$questionText.',1,'.$questionType.')';
             appendLog("S", "Successful insertion of the question: ".$questionText." - ".$queryText);
-        } catch (Exception $e) {
+        } catch (PDOException $e) {
             $queryText = 'INSERT INTO questions (id_survey, title, active, type) VALUES(1,'.$questionText.',1,'.$questionType.')';
             printAlertJs("No s'ha pogut afegir la questio a la base de dades",'e');
             appendLog("E", "Failed to add question ".$questionText." in the database: " . $e->getMessage() . " - ". $queryText);
@@ -178,23 +178,37 @@ function addQuestion()
                 $query->execute();
 
                 appendLog("S", "Successful insertion of the option: ".$_POST[strval($i)]." - ".$queryText);
-            } catch (Exception $e) {
-                printAlertJs("No s'ha pogut afegir la opcio Nº $i a la base de dades",'e');
+            } catch (PDOException $e) {
+                printAlertJs("No s'ha pogut afegir la opcio Nº $i a la base de dades, eliminant tota la pregunta",'e');
                 $subQuery = 'select id from questions where title = "'.$questionText.'" and type = "'.$questionType.'" limit 1';
                 $queryText = 'INSERT INTO options (option, id_question) VALUES('.$questionText.',('.$subQuery.'))';
                 appendLog("E", "Failed to add option ".$_POST[strval($i)]." in the database: " . $e->getMessage() . " - ". $queryText);
 
-                for ($i; $i > 0;$i--){
-                    $query = $pdo->prepare("delete from questions where option_text = '' and id_question = ()");
-                    $query->bindParam(1, $_POST[strval($i)]); 
-                    $query->execute();
+                for ($i; $i >= 0;$i--){
+                    try{
+                        $queryText = "delete from questions where option_text = ".$_POST[strval($i)]." and id_question = (".$subQuery.")";
+                        $query = $pdo->prepare("delete from questions where option_text = ? and id_question = (select id from questions where title = ? and type = ? limit 1)");
+                        $query->bindParam(1, $_POST[strval($i)]);
+                        $query->bindParam(2, $questionText);
+                        $query->bindParam(3, $questionType);
+                        $query->execute();
+
+                        appendLog("S", "Successful drop of the option: ".$_POST[strval($i)]." - ".$queryText);
+                    } catch (PDOException $e) {
+                        appendLog("E", "Failed to drop option ".$_POST[strval($i)]." to the database: " . $e->getMessage() . " - ". $queryText);
+                    }
                 }
                 
-
-                $query = $pdo->prepare("delete from question where title = ? and type = ''");
-                $query->bindParam(1, $_POST[strval($i)]); 
-                $query->execute();
-                return;
+                try{
+                    $queryText = "delete from question where title = '".$questionText."' and type = '" . $questionType . "'";
+                    $query = $pdo->prepare("delete from question where title = ? and type = '".$questionType."'");
+                    $query->bindParam(1, $questionText); 
+                    $query->execute();
+                    appendLog("S", "Successful drop of the question: ".$questionText." - ".$queryText);
+                    return;
+                } catch (PDOException $e) {
+                    appendLog("S", "Failed drop of the question ".$questionText."to de database:".$e->getMessage()." - ".$queryText);
+                }
             }
             $i += 1;
         }
