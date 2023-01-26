@@ -29,11 +29,10 @@ include './resources/auxFunctions.php';
 </head>
 
 <body class="page-login">
-<div id="divAlertas"></div>
 
     <?php
     printHeaderBeforeLogin("Enquestes IETI");
-
+    echo '<div id="divAlertas"></div>';
     try {
         $hostname = "20.107.55.123";
         $dbname = "surveys_database";

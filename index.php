@@ -16,7 +16,7 @@
     include './resources/auxFunctions.php';
     printHeaderBeforeLogin("Enquestes IETI");
     ?>
-
+    <div id="divAlertas"></div>
     <div class="card">
         <h1>Benvingut</h1>
         <div class="card-content">

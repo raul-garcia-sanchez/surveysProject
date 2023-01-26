@@ -18,13 +18,14 @@ if (isset($_POST['submitButtonSaveQuestion']) && isset($_POST['selectTypeQuestio
 </head>
 
 <body class="page-poll">
-<div id="divAlertas"></div>
     <div class="global-container">
         <?php
 
         createHeader("Enquestes IETI");
+        echo '<div id="divAlertas"></div>';
         if ($_SESSION['user']["role"] == "admin") {
-            echo "
+        echo '<div id="divAlertas"></div>';
+        echo "
         <div class='card' id='dashboard-professor'>
         <div class='card-content'>
                 <button onclick='formAddQuestion()'>
@@ -44,8 +45,7 @@ if (isset($_POST['submitButtonSaveQuestion']) && isset($_POST['selectTypeQuestio
         </div>
         <div id='principalContent'>" . printSurveys() . printQuestions() . "</div>";
             if (isset($_POST['submitButtonSaveQuestion'])) {
-                $message = "Pregunta afegida correctament";
-                echo "<p id='errorMessage' align='center'> $message</p>";
+                printAlertJs("Pregunta afegida correctament",'s');
             }
             echo "</div>";
         }

@@ -13,8 +13,8 @@
 </head>
 
 <body class="page-users">
-<div id="divAlertas"></div>
     <div class="global-container">
+    <div id="divAlertas"></div>
         <h1>Estadistiques</h1>
         <a href="dashboard.php"><button>Tornar enrere</button></a>
     </div>
