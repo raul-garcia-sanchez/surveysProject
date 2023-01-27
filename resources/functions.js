@@ -268,3 +268,12 @@ function eliminarAlerta(event){
   $(event.target).parent().remove()
 }
 
+function deleteById(id, type){
+  let str = id+","+type
+  $('#inpDeleteId').val(str)
+  $('#divEliminar').css('display','block')
+}
+
+function displayNoneForm(){
+  $('#divEliminar').css('display','none')
+}

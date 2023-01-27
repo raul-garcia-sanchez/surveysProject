@@ -530,7 +530,16 @@ i{
     font-size: 28px;
 }
 
-
+.page-poll #divEliminar{
+    position:absolute;
+    bottom:25%;
+    width: 100%;
+    background-color: rgb(255, 110, 110);
+    border-top: 10px solid red;
+    border-bottom: 10px solid red;
+    height: 50%;
+    display: none;
+}
 
 #divAlertas{
     width: 100%;
