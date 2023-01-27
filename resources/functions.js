@@ -91,11 +91,13 @@ function formAddSurvey() {
   removeById("divToRemove");
   $(".page-poll #divListSurveys").css("display", "none");
   $(".page-poll #divListQuestions").css("display", "none");
+
   let initialDiv = $("<div>", {
     id: "divToRemove",
   }).append(
     $("<form>", {
       method: "POST",
+      action: "poll.php"
     })
       .append(
         $("<h1>", {
@@ -104,19 +106,31 @@ function formAddSurvey() {
         })
       )
       .append(
-        $("<input>", {
-          class: "saveQuestion",
-          value: "Guardar",
+        $("<input>",{
+          id: "datetime",
+          type: "datetime-local",
+          name: "fechaInicio"
+        })
+      )
+      .append(
+        $("<input>",{
           type: "submit",
-          name: "submitButtonSaveSurvey",
-        }).append(
-          $("<h1>", {
-            text: "Guardar",
-          })
-        )
+          name: "prueba"
+        })
       )
   );
   $("#principalContent").append(initialDiv);
+
+  //Nos permite decorar el calendario
+  const datetimeInput = $("#datetime");
+  flatpickr(datetimeInput, {
+    enableTime: true,
+    time_24hr: true,
+    dateFormat: "Y-m-d H:i",
+    defaultDate: new Date()
+  });
+  
+
 }
 
 function printListQuestions() {

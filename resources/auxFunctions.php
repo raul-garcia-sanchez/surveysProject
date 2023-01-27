@@ -169,7 +169,7 @@ function addQuestion()
             try {
                 $questionText = $_POST['questionInput'];
                 $subQuery = 'select id from questions where title = "'.$questionText.'" and type = "'.$questionType.'" limit 1';
-                $queryText = 'INSERT INTO options (option, id_question) VALUES('.$questionText.',('.$subQuery.'))';
+                $queryText = 'INSERT INTO options (option_text, id_question) VALUES('.$_POST[strval($i)].',('.$subQuery.'))';
 
                 $query = $pdo->prepare("INSERT INTO options (option_text,id_question) VALUES(?,(select id from questions where title = ? and type = ? limit 1))");
                 $query->bindParam(1, $_POST[strval($i)]);
