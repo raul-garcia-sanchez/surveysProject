@@ -106,10 +106,44 @@ function formAddSurvey() {
         })
       )
       .append(
+        $("<label>",{
+          for: "inputSurveyText",
+          text: "Títol de l'enquesta"
+        })
+      )
+      .append(
         $("<input>",{
-          id: "datetime",
+          id: "inputSurveyText",
+          type: "text",
+          name: "inputSurveyText"
+        })
+      )
+      .append(
+        $("<label>",{
+          for: "inputStartDate",
+          text: "Data Inici Enquesta"
+        })
+      )
+      .append(
+        $("<input>",{
+          class: "datetime",
           type: "datetime-local",
-          name: "fechaInicio"
+          name: "inputStartDate",
+          id: "inputStartDate"
+        })
+      )
+      .append(
+        $("<label>",{
+          for: "inputEndDate",
+          text: "Data Final Enquesta"
+        })
+      )
+      .append(
+        $("<input>",{
+          class: "datetime",
+          type: "datetime-local",
+          name: "inputEndDate",
+          id: "inputEndDate"
         })
       )
       .append(
@@ -122,13 +156,16 @@ function formAddSurvey() {
   $("#principalContent").append(initialDiv);
 
   //Nos permite decorar el calendario
-  const datetimeInput = $("#datetime");
-  flatpickr(datetimeInput, {
-    enableTime: true,
-    time_24hr: true,
-    dateFormat: "Y-m-d H:i",
-    defaultDate: new Date()
-  });
+  const datetimeInputs = $(".datetime");
+  for (let i = 0; i < datetimeInputs.length; i++) {
+      flatpickr(datetimeInputs[i], {
+      enableTime: true,
+      time_24hr: true,
+      dateFormat: "Y-m-d H:i",
+      defaultDate: new Date()
+      });
+  }
+
   
 
 }

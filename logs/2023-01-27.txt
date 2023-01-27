@@ -95,3 +95,73 @@ S - 16:56:06 - 127.0.0.1 - Query executed successfully - 'select title from surv
 S - 16:56:06 - 127.0.0.1 - Successful connection to the database
 S - 16:56:06 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
 S - 16:56:06 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 17:36:08 - 127.0.0.1 - The page /poll.php has loaded successfully by user 
+S - 17:36:12 - 127.0.0.1 - The page /index.php has loaded successfully
+S - 17:36:13 - 127.0.0.1 - Successful connection to the database
+S - 17:36:17 - 127.0.0.1 - The page /login.php has loaded successfully
+S - 17:36:17 - 127.0.0.1 - Successful connection to the database
+S - 17:36:17 - 127.0.0.1 - The page /login.php has loaded successfully
+S - 17:36:19 - 127.0.0.1 - Successful connection to the database
+S - 17:36:19 - 127.0.0.1 - The user successfully connected with the username raul@gmail.com and the encrypted password bbb0b5b15842af2a3f42072a418c908e8a63caab2120d15cfea68e433cfe68dd - select id, username, password, role from users where username = 'raul@gmail.com' and password = 'bbb0b5b15842af2a3f42072a418c908e8a63caab2120d15cfea68e433cfe68dd'
+S - 17:36:19 - 127.0.0.1 - The page /dashboard.php has loaded successfully by user raul@gmail.com
+S - 17:36:22 - 127.0.0.1 - Successful connection to the database
+S - 17:36:22 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 17:36:23 - 127.0.0.1 - Successful connection to the database
+S - 17:36:23 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 17:36:23 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 17:46:12 - 127.0.0.1 - Successful connection to the database
+S - 17:46:12 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 17:46:12 - 127.0.0.1 - Successful connection to the database
+S - 17:46:12 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 17:46:12 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 17:49:42 - 127.0.0.1 - Successful connection to the database
+S - 17:49:42 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 17:49:43 - 127.0.0.1 - Successful connection to the database
+S - 17:49:43 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 17:49:43 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 17:55:39 - 127.0.0.1 - Successful connection to the database
+S - 17:55:39 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 17:55:39 - 127.0.0.1 - Successful connection to the database
+S - 17:55:39 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 17:55:39 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 17:56:35 - 127.0.0.1 - Successful connection to the database
+S - 17:56:35 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 17:56:35 - 127.0.0.1 - Successful connection to the database
+S - 17:56:35 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 17:56:35 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 18:00:20 - 127.0.0.1 - Successful connection to the database
+S - 18:00:20 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 18:00:20 - 127.0.0.1 - Successful connection to the database
+S - 18:00:20 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 18:00:20 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 18:00:34 - 127.0.0.1 - Successful connection to the database
+S - 18:00:34 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 18:00:35 - 127.0.0.1 - Successful connection to the database
+S - 18:00:35 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 18:00:35 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 18:33:55 - 127.0.0.1 - Successful connection to the database
+S - 18:33:55 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 18:33:55 - 127.0.0.1 - Successful connection to the database
+S - 18:33:55 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 18:33:55 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 18:35:21 - 127.0.0.1 - Successful connection to the database
+S - 18:35:21 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 18:35:21 - 127.0.0.1 - Successful connection to the database
+S - 18:35:21 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 18:35:21 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 18:35:29 - 127.0.0.1 - Successful connection to the database
+S - 18:35:29 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 18:35:29 - 127.0.0.1 - Successful connection to the database
+S - 18:35:29 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 18:35:29 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 18:36:33 - 127.0.0.1 - Successful connection to the database
+S - 18:36:33 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 18:36:33 - 127.0.0.1 - Successful connection to the database
+S - 18:36:33 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 18:36:33 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 18:38:21 - 127.0.0.1 - The page /poll.php has loaded successfully by user 
+S - 18:46:54 - 127.0.0.1 - Successful connection to the database
+S - 18:46:54 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 18:46:54 - 127.0.0.1 - Successful connection to the database
+S - 18:46:54 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 18:46:54 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com

@@ -60,6 +60,9 @@ if (isset($_POST['submitButtonSaveQuestion']) && isset($_POST['selectTypeQuestio
         createFooter();
         ?>
     </div>
+    <div id="DB">
+        
+    </div>
     <script src="./resources/functions.js"></script>
 </body>
 
