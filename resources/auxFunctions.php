@@ -241,3 +241,7 @@ function getClientIP(){
 function printAlertJs($message,$type){
     echo '<script>alertCss("'.$message.'","'.$type.'")</script>';
 }
+
+function printDataBase(){
+    
+}
