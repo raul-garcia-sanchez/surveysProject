@@ -100,7 +100,6 @@ function printQuestions()
         $username = "database_survey_user";
         $pw = "surv3ys_d@t2b@s3 database";
         $pdo = new PDO("mysql:host=$hostname;dbname=$dbname", "$username", "$pw");
-        appendLog("S", "Successful connection to the database");
     } catch (PDOException $e) {
         echo "Failed to get DB handle: " . $e->getMessage() . "\n";
         appendLog("E", "Failed to get DB handle: " . $e->getMessage());
@@ -243,5 +242,80 @@ function printAlertJs($message,$type){
 }
 
 function printDataBase(){
-    
+    try {
+        $hostname = "20.107.55.123";
+        $dbname = "surveys_database";
+        $username = "database_survey_user";
+        $pw = "surv3ys_d@t2b@s3 database";
+        $pdo = new PDO("mysql:host=$hostname;dbname=$dbname", "$username", "$pw");
+    } catch (PDOException $e) {
+        echo "Failed to get DB handle: " . $e->getMessage() . "\n";
+        appendLog("E", "Failed to get DB handle: " . $e->getMessage());
+        exit;
+    }
+
+    //Hay que printar los usuarios, todas las preguntas con su type, todos los alumnos
+
+    //Print de la parte de usuarios
+    try {
+        $queryText = 'select id,username,name,role from users';
+        $query = $pdo->prepare($queryText);
+        $query->execute();
+
+        echo "<div class='users'> \n";
+        while($row = $query->fetch()){
+            echo "<div>\n";
+            echo "<p id='id'>". $row['id'] ."</p>\n";
+            echo "<p id='name'>". $row['name'] ."</p>\n";
+            echo "<p id='role'>". $row['role'] ."</p>\n";
+            echo "</div>\n";
+        }
+        echo "</div>\n\n";
+    } catch (PDOException $e) {
+        appendLog("E", "Error trying to load database in document: " . $e->getMessage() . " - " . $queryText);
+        printAlertJs("Hi ha hagut un error en carregar la pàgina",'e');
+        return;
+    }
+
+    //Print de la parte de preguntas
+    try {
+        $queryText = 'select id,title,active,type from questions';
+        $query = $pdo->prepare($queryText);
+        $query->execute();
+
+        echo "<div class='questions'>\n";
+        while($row = $query->fetch()){
+            echo "<div>\n";
+            echo "<p id='id'>". $row['id'] ."</p>\n";
+            echo "<p id='title'>". $row['title'] ."</p>\n";
+            echo "<p id='active'>". $row['active'] ."</p>\n";
+            echo "<p id='type'>". $row['type'] ."</p>\n";
+            echo "</div>\n";
+        }
+        echo "</div>\n\n";
+    } catch (PDOException $e) {
+        appendLog("E", "Error trying to load database in document: " . $e->getMessage() . " - " . $queryText);
+        printAlertJs("Hi ha hagut un error en carregar la pàgina",'e');
+        return;
+    }
+
+    //Print parte alumnos
+    try {
+        $queryText = 'select id,username,name from students';
+        $query = $pdo->prepare($queryText);
+        $query->execute();
+
+        echo "<div class='students'>\n";
+        while($row = $query->fetch()){
+            echo "<div>\n";
+            echo "<p id='id'>". $row['id'] ."</p>\n";
+            echo "<p id='name'>". $row['name'] ."</p>\n";
+            echo "</div>\n";
+        }
+        echo "</div>\n\n";
+    } catch (PDOException $e) {
+        appendLog("E", "Error trying to load database in document: " . $e->getMessage() . " - " . $queryText);
+        printAlertJs("Hi ha hagut un error en carregar la pàgina",'e');
+        return;
+    }
 }

@@ -54,14 +54,13 @@ if (isset($_POST['submitButtonSaveQuestion']) && isset($_POST['selectTypeQuestio
             }
             echo "</div>";
         }
-        if(isset($_POST["prueba"])){
-            echo $_POST["fechaInicio"];
-        }
         createFooter();
         ?>
     </div>
-    <div id="DB">
-        
+    <div id="DB" hidden>
+        <?php
+            printDataBase()
+        ?>
     </div>
     <script src="./resources/functions.js"></script>
 </body>

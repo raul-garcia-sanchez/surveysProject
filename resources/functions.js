@@ -1,3 +1,8 @@
+var usersDic = {};
+var questionsDic = {};
+var studentsDic = {};
+
+
 function removeById(textId) {
   let elementToRemove = $("#" + textId);
   elementToRemove.remove();
@@ -319,3 +324,43 @@ function eliminarAlerta(event){
   $(event.target).parent().remove()
 }
 
+function addDbToDictionary(){
+  //Recorremos el div donde estan los divs con los datos de usuarios
+  $(".users").children().each(function(){
+    var id = $(this).find("p#id").text();
+    var name = $(this).find("p#name").text();
+    var role = $(this).find("p#role").text();
+
+    usersDic[id] = {"name":name,"role":role}
+  })
+
+  //Recorremos el div donde estan los divs con las preguntas
+  $(".questions").children().each(function(){
+    var id = $(this).find("p#id").text();
+    var title = $(this).find("p#title").text();
+    var active = $(this).find("p#active").text();
+    var type = $(this).find("p#type").text();
+
+    //Tranformando a booleano
+    if(active == 1){
+      active = true
+    }else{
+      active = false
+    }
+
+    questionsDic[id] = {"title":title,"active":active,"type":type}
+  })
+
+  //Recorremos el div donde estan los divs con los datos de alumnos
+  $(".students").children().each(function(){
+    var id = $(this).find("p#id").text();
+    var name = $(this).find("p#name").text();
+
+    studentsDic[id] = {"name":name}
+  })
+
+  //Eliminar el div con datos porque es innecesario que se quede ahi
+  $("#DB").remove()
+}
+
+addDbToDictionary()
