@@ -28,18 +28,18 @@ if (isset($_POST['submitButtonSaveQuestion']) && isset($_POST['selectTypeQuestio
         echo "
         <div class='card' id='dashboard-professor'>
         <div class='card-content'>
-                <button onclick='formAddQuestion()'>
+                <button class='buttonHover' onclick='formAddQuestion()'>
                     <h3>Crear pregunta</h3>
                 </button>
                 
-                <button onclick='printListQuestions()'>
+                <button class='buttonHover' onclick='printListQuestions()'>
                     <h3>Llistat de preguntes</h3>
                 </button>
-                <button onclick='printListSurveys()'>
+                <button class='buttonHover' onclick='printListSurveys()'>
                     <h3>Llistat d'enquestes</h3>
                 </button>
                 
-                <button onclick='formAddSurvey()'>
+                <button class='buttonHover' onclick='formAddSurvey()'>
                     <h3>Crear enquesta</h3>
                 </button>
         </div>

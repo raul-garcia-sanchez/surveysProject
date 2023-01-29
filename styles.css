@@ -67,9 +67,12 @@ header p {
 .userDiv .logoutSubmit:hover {
     width: 110px;
     height: 45px;
-    transition: .5s;
 }
 
+.buttonHover:hover{
+    transition: .5s;
+    transform: scale(1.1);
+}
 /*
 .page-dashboard .card .card-content button {
     width: 200px;
@@ -353,7 +356,6 @@ i{
 .page-login .buttonSubmit:hover {
     /* border-color: #2691d9; */
     border-color: #29b6f6;
-    transition: .5s;
 }
 
 .page-login .card .messageError {
@@ -377,7 +379,7 @@ i{
     width: 60%;
     margin-top: 5%;
     height: 60%;
-    background: rgba(255, 255, 255, 0.39);
+    background: rgb(255, 255, 255);
     border-radius: 10px;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
 }
@@ -411,8 +413,6 @@ i{
 
 .page-landingPage .buttonGoLogin:hover {
     border-color: #29b6f6;
-    transition: .5s;
-    width: 37%;
 }
 
 .page-landingPage .card h1 {
@@ -442,7 +442,7 @@ i{
 
 .page-dashboard .card {
     top: 50%;
-    margin: 0 7.5%;
+    margin: 3% 7.5%;
     width: 85%;
     height: 600px;
     background: white;
@@ -469,7 +469,6 @@ i{
 .page-dashboard .card .card-content button:hover {
     width: 220px;
     height: 220px;
-    transition: .5s;
 }
 
 /* CSS poll.php */
@@ -485,7 +484,7 @@ i{
 }
 
 .page-poll .card {
-    margin: 0 7.5% 20px;
+    margin: 2% 7.5%;
     width: 85%;
     min-height: 600px;
     height: auto;
@@ -518,7 +517,6 @@ i{
 
 .page-poll .card .card-content button:hover {
     padding: 40px;
-    transition: .5s;
 }
 
 .page-poll .titlePoll {
@@ -599,7 +597,6 @@ i{
 .page-poll .saveQuestion:hover {
     width: 220px;
     height: 220px;
-    transition: .5s;
     display: block;
     font-size: 2em;
     font-weight: bold;
