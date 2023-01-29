@@ -229,3 +229,16 @@ S - 14:17:06 - ::1 - Query executed successfully - 'select title from surveys;'
 S - 14:17:06 - ::1 - Successful connection to the database
 S - 14:17:06 - ::1 - Query executed successfully - 'select title from questions;'
 S - 14:17:06 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 14:27:58 - 127.0.0.1 - Successful connection to the database
+S - 14:27:58 - 127.0.0.1 - The page /app/surveysProject/login.php has loaded successfully
+S - 14:54:53 - ::1 - The page /app/surveysProject/index.php has loaded successfully
+S - 14:54:54 - ::1 - Successful connection to the database
+S - 14:54:54 - ::1 - The page /app/surveysProject/login.php has loaded successfully
+S - 14:54:56 - ::1 - Successful connection to the database
+S - 14:54:56 - ::1 - The user successfully connected with the username raul@gmail.com and the encrypted password bbb0b5b15842af2a3f42072a418c908e8a63caab2120d15cfea68e433cfe68dd - select id, username, password, role from users where username = 'raul@gmail.com' and password = 'bbb0b5b15842af2a3f42072a418c908e8a63caab2120d15cfea68e433cfe68dd'
+S - 14:54:56 - ::1 - The page /app/surveysProject/dashboard.php has loaded successfully by user raul@gmail.com
+S - 14:54:59 - ::1 - Successful connection to the database
+S - 14:54:59 - ::1 - Query executed successfully - 'select title from surveys;'
+S - 14:54:59 - ::1 - Successful connection to the database
+S - 14:54:59 - ::1 - Query executed successfully - 'select title from questions;'
+S - 14:54:59 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
