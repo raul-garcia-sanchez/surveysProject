@@ -495,13 +495,17 @@ i{
     align-items: flex-start;
     /*height: 100%;*/
     padding-top: 20px;
-    padding-bottom: 20px;
+}
+
+.page-poll .card #principalContent{
+    padding-bottom: 50px;
 }
 
 .page-poll .card .card-content button {
+    font-size: 22px;
     position: relative;
-    width: auto;
-    height: 50px;
+    width: 22%;
+    height: 80px;
     border-radius: 10px;
     background-color: #e0e0e0;
     cursor: pointer;

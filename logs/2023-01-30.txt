@@ -135,3 +135,74 @@ S - 15:59:17 - 127.0.0.1 - Query executed successfully - 'select title from surv
 S - 15:59:17 - 127.0.0.1 - Successful connection to the database
 S - 15:59:17 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
 S - 15:59:17 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:07:06 - 127.0.0.1 - The page /app/surveysProject/index.php has loaded successfully
+S - 18:08:33 - 127.0.0.1 - Successful connection to the database
+S - 18:08:33 - 127.0.0.1 - The page /app/surveysProject/login.php has loaded successfully
+S - 18:08:36 - 127.0.0.1 - Successful connection to the database
+S - 18:08:36 - 127.0.0.1 - The user successfully connected with the username raul@gmail.com and the encrypted password bbb0b5b15842af2a3f42072a418c908e8a63caab2120d15cfea68e433cfe68dd - select id, username, password, role from users where username = 'raul@gmail.com' and password = 'bbb0b5b15842af2a3f42072a418c908e8a63caab2120d15cfea68e433cfe68dd'
+S - 18:08:36 - 127.0.0.1 - The page /app/surveysProject/dashboard.php has loaded successfully by user raul@gmail.com
+S - 18:08:43 - 127.0.0.1 - Successful connection to the database
+S - 18:08:43 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 18:08:43 - 127.0.0.1 - Successful connection to the database
+S - 18:08:43 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 18:08:43 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:15:08 - 127.0.0.1 - Successful connection to the database
+S - 18:15:08 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 18:15:09 - 127.0.0.1 - Successful connection to the database
+S - 18:15:09 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 18:15:09 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:15:14 - 127.0.0.1 - Successful connection to the database
+S - 18:15:14 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 18:15:14 - 127.0.0.1 - Successful connection to the database
+S - 18:15:14 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 18:15:14 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:15:25 - 127.0.0.1 - Successful connection to the database
+S - 18:15:25 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 18:15:25 - 127.0.0.1 - Successful connection to the database
+S - 18:15:25 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 18:15:25 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:15:31 - 127.0.0.1 - Successful connection to the database
+S - 18:15:31 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 18:15:31 - 127.0.0.1 - Successful connection to the database
+S - 18:15:31 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 18:15:31 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:16:01 - 127.0.0.1 - Successful connection to the database
+S - 18:16:01 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 18:16:01 - 127.0.0.1 - Successful connection to the database
+S - 18:16:01 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 18:16:01 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:16:07 - 127.0.0.1 - Successful connection to the database
+S - 18:16:07 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 18:16:07 - 127.0.0.1 - Successful connection to the database
+S - 18:16:07 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 18:16:07 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:16:10 - 127.0.0.1 - Successful connection to the database
+S - 18:16:10 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 18:16:11 - 127.0.0.1 - Successful connection to the database
+S - 18:16:11 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 18:16:11 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:16:14 - 127.0.0.1 - Successful connection to the database
+S - 18:16:14 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 18:16:14 - 127.0.0.1 - Successful connection to the database
+S - 18:16:14 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 18:16:14 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:17:28 - 127.0.0.1 - Successful connection to the database
+S - 18:17:28 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 18:17:29 - 127.0.0.1 - Successful connection to the database
+S - 18:17:29 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 18:17:29 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:18:34 - 127.0.0.1 - Successful connection to the database
+S - 18:18:34 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 18:18:34 - 127.0.0.1 - Successful connection to the database
+S - 18:18:34 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 18:18:34 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:19:22 - 127.0.0.1 - Successful connection to the database
+S - 18:19:22 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 18:19:22 - 127.0.0.1 - Successful connection to the database
+S - 18:19:22 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 18:19:22 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:24:12 - 127.0.0.1 - Successful connection to the database
+S - 18:24:12 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 18:24:13 - 127.0.0.1 - Successful connection to the database
+S - 18:24:13 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 18:24:13 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
