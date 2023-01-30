@@ -117,65 +117,65 @@ function formAddSurvey() {
           type: "text",
           name: "inputSurveyText"
         })
-      )
-      .append(
-        $("<label>",{
-          for: "inputStartDate",
-          text: "Data Inici Enquesta"
-        })
-      )
-      .append(
-        $("<input>",{
-          class: "datetime",
-          type: "datetime-local",
-          name: "inputStartDate",
-          id: "inputStartDate"
-        })
-      )
-      .append(
-        $("<label>",{
-          for: "inputEndDate",
-          text: "Data Final Enquesta"
-        })
-      )
-      .append(
-        $("<input>",{
-          class: "datetime",
-          type: "datetime-local",
-          name: "inputEndDate",
-          id: "inputEndDate"
-        })
-      )
-      //TEACHERS
-      .append(
-        $("<div>",{
-          id: "divTeachers",
-          text: "Professors"
+      ).append(
+        $('<div>',{
+          id:'divDates'
         }).append(
           $("<div>",{
-            id: "inputTeachersForAdd",
+            id:'divStartDate'
+          }).append(
+            $("<label>",{
+              for: "inputStartDate",
+              text: "Data Inici Enquesta"
+            })
+          )
+          .append(
+            $("<input>",{
+              class: "datetime",
+              type: "datetime-local",
+              name: "inputStartDate",
+              id: "inputStartDate"
+            }))
+        ).append(
+          $("<div>",{
+            id:'divFinishDate'
+          })
+        .append(
+          $("<label>",{
+            for: "inputEndDate",
+            text: "Data Final Enquesta"
           })
         )
         .append(
-          $("<div>",{
-            id: "inputTeachersAdded"
+          $("<input>",{
+            class: "datetime",
+            type: "datetime-local",
+            name: "inputEndDate",
+            id: "inputEndDate"
           })
-        )
+        ))
       )
       //QUESTIONS
       .append(
         $("<div>",{
           id: "divQuestions",
-          text: "Preguntes"
         }).append(
           $("<div>",{
             id: "inputQuestionsForAdd",
-          })
+          }).append(
+            $('<label>',{
+              text:"Preguntes per l'enquesta"
+            })
+          )
         )
         .append(
           $("<div>",{
             id: "inputQuestionsAdded"
-          })
+          }).append(
+            $('<label>',{
+              text:"Preguntes de l'enquesta"
+            })
+          )
         )
       )
       //STUDENTS
