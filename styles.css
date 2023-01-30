@@ -541,6 +541,7 @@ i{
     border: 1px solid black;
     border-collapse: collapse;
     padding: 4px;
+    font-size: 20px;
 }
 
 .page-poll table th{

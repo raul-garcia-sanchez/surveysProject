@@ -4,6 +4,7 @@ function removeById(textId) {
 }
 var arrayOpciones = [];
 function formAddQuestion() {
+  displayNoneForm();
   removeById("divToRemove");
   $(".page-poll #divListSurveys").css("display", "none");
   $(".page-poll #divListQuestions").css("display", "none");
@@ -87,6 +88,7 @@ function formAddQuestion() {
 }
 
 function formAddSurvey() {
+  displayNoneForm();
   removeById("errorMessage");
   removeById("divToRemove");
   $(".page-poll #divListSurveys").css("display", "none");
@@ -120,19 +122,19 @@ function formAddSurvey() {
 }
 
 function printListQuestions() {
+  displayNoneForm();
   removeById("errorMessage");
   removeById("divToRemove");
   $(".page-poll #divListQuestions").css("display", "block");
   $(".page-poll #divListSurveys").css("display", "none");
-  alertCss("S'ha carregat correctament el llistat de preguntes",'i');
 }
 
 function printListSurveys() {
+  displayNoneForm();
   removeById("errorMessage");
   removeById("divToRemove");
   $(".page-poll #divListQuestions").css("display", " none");
   $(".page-poll #divListSurveys").css("display", "block");
-  alertCss("S'ha carregat correctament el llistat de enquestes",'i');
 }
 
 function createButtonSubmit(){

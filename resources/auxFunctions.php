@@ -88,7 +88,6 @@ function printSurveys()
     $texto .= "</table></div>";
     unset($query);
     unset($pdo);
-    printAlertJs("S'ha carregat correctament el llistat d'enquestes",'i');
     return $texto;
 }
 
