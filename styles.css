@@ -490,8 +490,8 @@ i{
     padding-top: 20px;
     padding-bottom: 60px;
     border: 1px solid black;
-    width: 70%;
-    margin: 40px 15% 0;
+    width: 80%;
+    margin: 40px 10% 0;
     border-radius: 10px;
     background-color: #adadad;
 }
@@ -511,14 +511,46 @@ i{
     font-weight: bold;
 }
 
+.page-poll #divToRemove .titlePoll{
+    font-size: 28px;
+    padding: 20px 0px 30px;
+}
+
 .page-poll #divToRemove form{
+    width: 80%;
+    margin: 0 10%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    width: 30%;
-    margin: 0 35%;
+}
 
+.page-poll #divToRemove form label{
+    font-size: 21px;
+    font-weight: bolder;
+    padding: 0px 0px 10px;
+    display: block;
+}
+
+.page-poll #divToRemove form input{
+    font-size: 21px;
+    height: 31px;
+    margin: 0px 0px 20px;
+    width: 100%;
+}
+
+.page-poll #divToRemove form #divStartDate{
+    width: 45%;
+    display: inline-block;
+    text-align: center;
+    margin: 20px;
+}
+
+.page-poll #divToRemove form #divFinishDate{
+    width: 45%;
+    display: inline-block;
+    text-align: center;
+    margin: 20px;
 }
 
 .page-poll #divToRemove form #questionInput{
@@ -539,12 +571,30 @@ i{
 }
 .page-poll #inputQuestionsForAdd, .page-poll #inputQuestionsAdded{
     border: solid black 1px;
-    border-radius: 5%;
-    width: 500px;
-    height: 400px;
+    border-radius: 5px;
+    margin: 10px;
+    width: 50%;
+    min-height: 150px;
+    background-color: #ffffff;
 }
 
+.page-poll #inputQuestionsForAdd label, .page-poll #inputQuestionsAdded label{
+    border-bottom: solid black 1px;
+    margin-top: 5px;
+}
 
+.page-poll #inputQuestionsForAdd input, .page-poll #inputQuestionsAdded input{
+    width: 90% !important;
+    margin: 20px 5% !important;
+}
+
+.page-poll #inputQuestionsForAdd input:hover{
+    background-color: greenyellow;
+}
+
+.page-poll #inputQuestionsAdded input:hover{
+    background-color: rgb(255, 102, 0);
+}
 
 #divAlertas{
     width: 100%;
