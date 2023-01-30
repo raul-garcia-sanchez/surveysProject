@@ -26,7 +26,7 @@ function createFooter()
     echo "<p>ENQUESTES IETI</p>";
     echo "</div>";
     echo "<div>";
-    echo "<p class='polices'><a href=''>Politica de Privacitat</a> - <a href=''>Politica de Cookies</a></p>";
+    echo "<p class='polices'><a href=''>Política de Privacitat</a> - <a href=''>Política de Cookies</a></p>";
     echo "<p>Institut Esteve Terrades I Illa - Carrer Bonavista, 70, 08940 Cornellà de Llobregat, Barcelona</p>";
     echo "</div>";
     echo "<div>";
@@ -42,7 +42,7 @@ function printFooterBeforeLogin()
     echo "<p>ENQUESTES IETI</p>";
     echo "</div>";
     echo "<div>";
-    echo "<p class='polices'><a href=''>Politica de Privacitat</a> - <a href=''>Politica de Cookies</a></p>";
+    echo "<p class='polices'><a href=''>Política de Privacitat</a> - <a href=''>Política de Cookies</a></p>";
     echo "<p>Institut Esteve Terrades I Illa - Carrer Bonavista, 70, 08940 Cornellà de Llobregat, Barcelona</p>";
     echo "</div>";
     echo "<div>";
@@ -118,7 +118,7 @@ function printQuestions()
     
     $row = $query->fetch();
     $texto = "<div id='divListQuestions' class='divLlistat'>";
-    $texto .= "<table><tr><th class='thTittle'>Titol Pregunta</th><th class='thOperations'>Operacions</th></tr>";
+    $texto .= "<table><tr><th class='thTittle'>Títol Pregunta</th><th class='thOperations'>Operacions</th></tr>";
     while ($row) {
         $texto .= "<tr><td>" . $row["title"] . "<td class='tdOperations'><i class='fa fa-pencil-square-o' aria-hidden='true'></i><i class='fa fa-trash-o' aria-hidden='true'></i></td></tr></td>";
         $row = $query->fetch();

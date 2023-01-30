@@ -186,7 +186,6 @@ function crearInputPregunta(){
     (
       $('<input>',{
         class:'inpOption',
-        style:'width:96%;'
       })))
   if($('.inpOption').length>0){
     $('.divOption:nth-last-child(2)').append(
@@ -194,7 +193,8 @@ function crearInputPregunta(){
         text:'X',
         onclick:'eliminarDiv(event)',
         display:'inline',
-        type:'button'
+        type:'button',
+        class:'buttonRemoveOption'
       })
     )
   }

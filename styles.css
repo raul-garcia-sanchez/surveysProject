@@ -466,11 +466,6 @@ i{
     cursor: pointer;
 }
 
-.page-dashboard .card .card-content button:hover {
-    width: 220px;
-    height: 220px;
-}
-
 /* CSS poll.php */
 
 .page-poll .global-container {
@@ -504,6 +499,7 @@ i{
 }
 
 .page-poll .card .card-content button {
+    position: relative;
     width: auto;
     height: 50px;
     border-radius: 10px;
@@ -515,14 +511,10 @@ i{
     align-items: center;
 }
 
-.page-poll .card .card-content button:hover {
-    padding: 40px;
-}
-
 .page-poll .titlePoll {
     padding: 8px;
     text-align: center;
-    font-size: 40px;
+    font-size: 30px;
     display: flex;
     justify-content: center;
 }
@@ -632,20 +624,35 @@ i{
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    width: 30%;
-    margin: 0 35%;
+    width: 70%;
+    margin: 0 15%;
 
 }
 
 .page-poll #divToRemove form #questionInput{
-    height: 35px;
+    height: 40px;
+    width: 100%;
     font-size: 28px;
+    text-align: center;
+    margin-bottom: 15px;
 }
 .page-poll #divToRemove form #selectTypeQuestion{
-    height: 35px;
+    height: 40px;
     font-size: 28px;
+    text-align: center;
 }
 
+.page-poll .inpOption{
+    margin-top: 2px;
+    width: 97%;
+    height: 30px;
+}
+
+.page-poll .buttonRemoveOption{
+    margin-top: 5px;
+    width: 3%;
+    height: 30px;
+}
 
 
 #divAlertas{
@@ -662,7 +669,7 @@ i{
 }
 
 .divAlerta button{
-    position: inherit;
+    position: relative;
     margin-top: 0px;
     background-color: #29b5f600;
     width: 19px;
