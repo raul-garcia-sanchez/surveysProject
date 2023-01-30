@@ -539,6 +539,47 @@ i{
     width: 100%;
 }
 
+.page-poll #divToRemove form #questionInput{
+    height: 35px;
+    font-size: 28px;
+}
+.page-poll #divToRemove form #selectTypeQuestion{
+    height: 35px;
+    font-size: 28px;
+}
+
+.page-poll #divQuestions, #divTeachers ,#divStudents{
+    display: flex;
+    flex-direction: row;
+}
+
+.page-poll form div>div{
+    border: solid black 1px;
+    border-radius: 5px;
+    margin: 10px;
+    width: 50%;
+    min-height: 150px;
+    background-color: #ffffff;
+}
+
+.page-poll form div>div label{
+    border-bottom: solid black 1px;
+    margin-top: 5px;
+}
+
+.page-poll form div>div input{
+    width: 90% !important;
+    margin: 20px 5% !important;
+}
+
+.page-poll .notAdded:hover{
+    background-color: greenyellow;
+}
+
+.page-poll .added:hover{
+    background-color: rgb(255, 102, 0);
+}
+
 .page-poll #divToRemove form #divStartDate{
     width: 45%;
     display: inline-block;
@@ -551,49 +592,6 @@ i{
     display: inline-block;
     text-align: center;
     margin: 20px;
-}
-
-.page-poll #divToRemove form #questionInput{
-    height: 35px;
-    font-size: 28px;
-}
-.page-poll #divToRemove form #selectTypeQuestion{
-    height: 35px;
-    font-size: 28px;
-}
-
-.page-poll form>div{
-    display: flex;
-    flex-direction: row;
-}
-.page-poll #divQuiestion{
-    border: solid 1px black
-}
-.page-poll form div div{
-    border: solid black 1px;
-    border-radius: 5px;
-    margin: 10px;
-    width: 50%;
-    min-height: 150px;
-    background-color: #ffffff;
-}
-
-.page-poll #inputQuestionsForAdd label, .page-poll #inputQuestionsAdded label{
-    border-bottom: solid black 1px;
-    margin-top: 5px;
-}
-
-.page-poll #inputQuestionsForAdd input, .page-poll #inputQuestionsAdded input{
-    width: 90% !important;
-    margin: 20px 5% !important;
-}
-
-.page-poll #inputQuestionsForAdd input:hover{
-    background-color: greenyellow;
-}
-
-.page-poll #inputQuestionsAdded input:hover{
-    background-color: rgb(255, 102, 0);
 }
 
 #divAlertas{

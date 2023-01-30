@@ -59,9 +59,6 @@ if (isset($_POST['submitButtonSaveQuestion']) && isset($_POST['selectTypeQuestio
         var usersDic = <?php createUsersDic()?>;
         var questionsDic = <?php createQuestionsDic()?>;
         var studentsDic = <?php createStudentsDic()?>;
-        
-
-        //export {usersDic,questionsDic,studentsDic} from "./resources/functions.js"
     </script>
     <script src="./resources/functions.js"></script>
 </body>

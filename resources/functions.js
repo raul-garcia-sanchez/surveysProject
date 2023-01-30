@@ -154,6 +154,28 @@ function formAddSurvey() {
             id: "inputEndDate"
           })
         ))
+      )//Teachers
+      .append(
+        $("<div>",{
+          id: "divTeachers",
+        }).append(
+          $("<div>",{
+            id: "inputTeachersForAdd",
+          }).append(
+            $('<label>',{
+              text:"Professors disponibles"
+            })
+          )
+        )
+        .append(
+          $("<div>",{
+            id: "inputTeachersAdded"
+          }).append(
+            $('<label>',{
+              text:"Professors a l'enquesta"
+            })
+          )
+        )
       )
       //QUESTIONS
       .append(
@@ -181,17 +203,24 @@ function formAddSurvey() {
       //STUDENTS
       .append(
         $("<div>",{
-          id: "divStudents",
-          text: "Alumnes"
+          id: "divStudents"
         }).append(
           $("<div>",{
             id: "inputStudentsForAdd",
-          })
+          }).append(
+            $('<label>',{
+              text:"Alumnes disponibles"
+            })
+          )
         )
         .append(
           $("<div>",{
             id: "inputStudentsAdded"
-          })
+          }).append(
+            $('<label>',{
+              text:"Alumnes a l'enquesta"
+            })
+          )
         )
       )
       
@@ -217,36 +246,37 @@ function formAddSurvey() {
   createDivStudents()
 
   //Move options (event is for not submit)
-  $(".divTeachers").click(function(event){
+  $(".inputTeachers").click(function(event){
     event.preventDefault();
     if($(this).hasClass("added")){
       $("#inputTeachersForAdd").append($(this))
-      $(this).removeClass("added")
+      $(this).removeClass("added").addClass("notAdded")
     }else{
       $("#inputTeachersAdded").append($(this))
-      $(this).addClass("added")
+      $(this).removeClass("notAdded").addClass("added")
     }
   });
 
-  $(".divQuiestion").click(function(event){
+  $(".inputQuestion").click(function(event){
     event.preventDefault();
+
     if($(this).hasClass("added")){
       $("#inputQuestionsForAdd").append($(this))
-      $(this).removeClass("added")
+      $(this).removeClass("added").addClass("notAdded")
     }else{
       $("#inputQuestionsAdded").append($(this))
-      $(this).addClass("added")
+      $(this).removeClass("notAdded").addClass("added")
     }
   });
 
-  $(".divStudents").click(function(event){
+  $(".inputStudents").click(function(event){
     event.preventDefault();
     if($(this).hasClass("added")){
       $("#inputStudentsForAdd").append($(this))
-      $(this).removeClass("added")
+      $(this).removeClass("added").addClass("notAdded")
     }else{
       $("#inputStudentsAdded").append($(this))
-      $(this).addClass("added")
+      $(this).removeClass("notAdded").addClass("added")
     }
   });
 }
@@ -406,7 +436,7 @@ function createDivTeachers(){
       $("<input>",{
         type: "submit",
         value:usersDic[key]["name"],
-        class: "divTeachers",
+        class: "inputTeachers notAdded",
         name: "teach"+key
       })
     )
@@ -415,16 +445,26 @@ function createDivTeachers(){
 
 function createDivQuestions(){
   for(var key in questionsDic){
-    if(questionsDic[key]["active"]){
-      $("#inputQuestionsForAdd").append(
-        $("<input>",{
-          type: "submit",
-          value:questionsDic[key]["title"],
-          id: "divQuiestion",
-          class: "divQuiestion",
-          name: "quest"+key
-        })
-        )
-    }
+    $("#inputQuestionsForAdd").append(
+      $("<input>",{
+        type: "submit",
+        value:questionsDic[key]["title"],
+        class: "inputQuestion notAdded",
+        name: "quest"+key
+      })
+    )
+  }
+}
+
+function createDivStudents(){
+  for(var key in studentsDic){
+    $("#inputStudentsForAdd").append(
+      $("<input>",{
+        type: "submit",
+        value:studentsDic[key]["name"],
+        class: "inputStudents notAdded",
+        name: "studn"+key
+      })
+    )
   }
 }
