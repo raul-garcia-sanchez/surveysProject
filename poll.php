@@ -14,12 +14,10 @@ if (isset($_POST['submitButtonSaveQuestion']) && isset($_POST['selectTypeQuestio
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Enquestes</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="resources/functions.js"></script>
 
     <!--Imports para hacer un calendario bonito-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-
 </head>
 
 <body class="page-poll">
@@ -57,11 +55,14 @@ if (isset($_POST['submitButtonSaveQuestion']) && isset($_POST['selectTypeQuestio
         createFooter();
         ?>
     </div>
-    <div id="DB" hidden>
-        <?php
-            printDataBase()
-        ?>
-    </div>
+    <script>
+        var usersDic = <?php createUsersDic()?>;
+        var questionsDic = <?php createQuestionsDic()?>;
+        var studentsDic = <?php createStudentsDic()?>;
+        
+
+        //export {usersDic,questionsDic,studentsDic} from "./resources/functions.js"
+    </script>
     <script src="./resources/functions.js"></script>
 </body>
 

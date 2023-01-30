@@ -530,14 +530,14 @@ i{
     font-size: 28px;
 }
 
-.page-poll #divQuestions{
+.page-poll form>div{
     display: flex;
     flex-direction: row;
 }
 .page-poll #divQuiestion{
     border: solid 1px black
 }
-.page-poll #inputQuestionsForAdd, .page-poll #inputQuestionsAdded{
+.page-poll form div div{
     border: solid black 1px;
     border-radius: 5%;
     width: 500px;

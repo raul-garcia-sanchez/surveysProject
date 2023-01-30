@@ -1,8 +1,3 @@
-var usersDic = {};
-var questionsDic = {};
-var studentsDic = {};
-
-
 function removeById(textId) {
   let elementToRemove = $("#" + textId);
   elementToRemove.remove();
@@ -151,12 +146,23 @@ function formAddSurvey() {
           id: "inputEndDate"
         })
       )
+      //TEACHERS
       .append(
-        $("<input>",{
-          type: "submit",
-          name: "prueba"
-        })
+        $("<div>",{
+          id: "divTeachers",
+          text: "Professors"
+        }).append(
+          $("<div>",{
+            id: "inputTeachersForAdd",
+          })
+        )
+        .append(
+          $("<div>",{
+            id: "inputTeachersAdded"
+          })
+        )
       )
+      //QUESTIONS
       .append(
         $("<div>",{
           id: "divQuestions",
@@ -172,12 +178,29 @@ function formAddSurvey() {
           })
         )
       )
+      //STUDENTS
+      .append(
+        $("<div>",{
+          id: "divStudents",
+          text: "Alumnes"
+        }).append(
+          $("<div>",{
+            id: "inputStudentsForAdd",
+          })
+        )
+        .append(
+          $("<div>",{
+            id: "inputStudentsAdded"
+          })
+        )
+      )
+      
   );
   
   $("#principalContent").append(initialDiv);
   
 
-  //Nos permite decorar el calendario
+  //Calendar decoration
   const datetimeInputs = $(".datetime");
   for (let i = 0; i < datetimeInputs.length; i++) {
       flatpickr(datetimeInputs[i], {
@@ -188,8 +211,23 @@ function formAddSurvey() {
       });
   }
 
-  
+  //Create options teachers,questions and students
+  createDivTeachers()
   createDivQuestions()
+  createDivStudents()
+
+  //Move options (event is for not submit)
+  $(".divTeachers").click(function(event){
+    event.preventDefault();
+    if($(this).hasClass("added")){
+      $("#inputTeachersForAdd").append($(this))
+      $(this).removeClass("added")
+    }else{
+      $("#inputTeachersAdded").append($(this))
+      $(this).addClass("added")
+    }
+  });
+
   $(".divQuiestion").click(function(event){
     event.preventDefault();
     if($(this).hasClass("added")){
@@ -199,7 +237,17 @@ function formAddSurvey() {
       $("#inputQuestionsAdded").append($(this))
       $(this).addClass("added")
     }
-    
+  });
+
+  $(".divStudents").click(function(event){
+    event.preventDefault();
+    if($(this).hasClass("added")){
+      $("#inputStudentsForAdd").append($(this))
+      $(this).removeClass("added")
+    }else{
+      $("#inputStudentsAdded").append($(this))
+      $(this).addClass("added")
+    }
   });
 }
 
@@ -352,62 +400,31 @@ function eliminarAlerta(event){
   $(event.target).parent().remove()
 }
 
-function addDbToDictionary(){
-  //Recorremos el div donde estan los divs con los datos de usuarios
-  $(".users").children().each(function(){
-    var id = $(this).find("p#id").text();
-    var name = $(this).find("p#name").text();
-    var role = $(this).find("p#role").text();
-
-    usersDic[id] = {"name":name,"role":role}
-  })
-
-  //Recorremos el div donde estan los divs con las preguntas
-  $(".questions").children().each(function(){
-    var id = $(this).find("p#id").text();
-    var title = $(this).find("p#title").text();
-    var active = $(this).find("p#active").text();
-    var type = $(this).find("p#type").text();
-
-    //Tranformando a booleano
-    if(active == 1){
-      active = true
-    }else{
-      active = false
-    }
-
-    questionsDic[id] = {"title":title,"active":active,"type":type}
-  })
-
-  //Recorremos el div donde estan los divs con los datos de alumnos
-  $(".students").children().each(function(){
-    var id = $(this).find("p#id").text();
-    var name = $(this).find("p#name").text();
-
-    studentsDic[id] = {"name":name}
-  })
-
-  //Eliminar el div con datos porque es innecesario que se quede ahi
-  $("#DB").remove()
+function createDivTeachers(){
+  for(var key in usersDic){
+    $("#inputTeachersForAdd").append(
+      $("<input>",{
+        type: "submit",
+        value:usersDic[key]["name"],
+        class: "divTeachers",
+        name: "teach"+key
+      })
+    )
+  }
 }
 
-addDbToDictionary()
-
 function createDivQuestions(){
-
   for(var key in questionsDic){
     if(questionsDic[key]["active"]){
-      
       $("#inputQuestionsForAdd").append(
         $("<input>",{
           type: "submit",
-          value:questionsDic[key]["title"] + "Tipus: " + questionsDic[key]["type"],
+          value:questionsDic[key]["title"],
           id: "divQuiestion",
           class: "divQuiestion",
           name: "quest"+key
         })
         )
     }
-    
   }
 }

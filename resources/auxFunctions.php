@@ -241,7 +241,9 @@ function printAlertJs($message,$type){
     echo '<script>alertCss("'.$message.'","'.$type.'")</script>';
 }
 
-function printDataBase(){
+
+
+function createUsersDic(){
     try {
         $hostname = "20.107.55.123";
         $dbname = "surveys_database";
@@ -254,49 +256,65 @@ function printDataBase(){
         exit;
     }
 
-    //Hay que printar los usuarios, todas las preguntas con su type, todos los alumnos
-
     //Print de la parte de usuarios
     try {
         $queryText = 'select id,username,name,role from users';
         $query = $pdo->prepare($queryText);
         $query->execute();
 
-        echo "<div class='users'> \n";
+        echo "{";
         while($row = $query->fetch()){
-            echo "<div>\n";
-            echo "<p id='id'>". $row['id'] ."</p>\n";
-            echo "<p id='name'>". $row['name'] ."</p>\n";
-            echo "<p id='role'>". $row['role'] ."</p>\n";
-            echo "</div>\n";
+            echo $row['id'] . ":{'name':'" . $row['name'] . "','role':'" . $row['role'] . "'},\n";
         }
-        echo "</div>\n\n";
+        echo "}";
     } catch (PDOException $e) {
-        appendLog("E", "Error trying to load database in document: " . $e->getMessage() . " - " . $queryText);
+        appendLog("E", "Error trying to load users in the dictionary: " . $e->getMessage() . " - " . $queryText);
         printAlertJs("Hi ha hagut un error en carregar la pàgina",'e');
         return;
+    }
+}
+
+function createQuestionsDic() {
+    try {
+        $hostname = "20.107.55.123";
+        $dbname = "surveys_database";
+        $username = "database_survey_user";
+        $pw = "surv3ys_d@t2b@s3 database";
+        $pdo = new PDO("mysql:host=$hostname;dbname=$dbname", "$username", "$pw");
+    } catch (PDOException $e) {
+        echo "Failed to get DB handle: " . $e->getMessage() . "\n";
+        appendLog("E", "Failed to get DB handle: " . $e->getMessage());
+        exit;
     }
 
     //Print de la parte de preguntas
     try {
-        $queryText = 'select id,title,active,type from questions';
+        $queryText = 'select id,title,active,type from questions where active = 1';
         $query = $pdo->prepare($queryText);
         $query->execute();
-
-        echo "<div class='questions'>\n";
+        echo "{";
         while($row = $query->fetch()){
-            echo "<div>\n";
-            echo "<p id='id'>". $row['id'] ."</p>\n";
-            echo "<p id='title'>". $row['title'] ."</p>\n";
-            echo "<p id='active'>". $row['active'] ."</p>\n";
-            echo "<p id='type'>". $row['type'] ."</p>\n";
-            echo "</div>\n";
+            echo $row['id'] . ":{'title':'" . $row['title'] . "','type':'" . $row['type'] . "'},\n";
         }
-        echo "</div>\n\n";
+        echo "}";
     } catch (PDOException $e) {
-        appendLog("E", "Error trying to load database in document: " . $e->getMessage() . " - " . $queryText);
+        appendLog("E", "Error trying to load questions in the dictionary: " . $e->getMessage() . " - " . $queryText);
         printAlertJs("Hi ha hagut un error en carregar la pàgina",'e');
         return;
+    }
+}
+
+function createStudentsDic() {
+    try {
+        $hostname = "20.107.55.123";
+        $dbname = "surveys_database";
+        $username = "database_survey_user";
+        $pw = "surv3ys_d@t2b@s3 database";
+        $pdo = new PDO("mysql:host=$hostname;dbname=$dbname", "$username", "$pw");
+    } catch (PDOException $e) {
+        echo "Failed to get DB handle: " . $e->getMessage() . "\n";
+        appendLog("E", "Failed to get DB handle: " . $e->getMessage());
+        exit;
     }
 
     //Print parte alumnos
@@ -305,16 +323,13 @@ function printDataBase(){
         $query = $pdo->prepare($queryText);
         $query->execute();
 
-        echo "<div class='students'>\n";
+        echo "{";
         while($row = $query->fetch()){
-            echo "<div>\n";
-            echo "<p id='id'>". $row['id'] ."</p>\n";
-            echo "<p id='name'>". $row['name'] ."</p>\n";
-            echo "</div>\n";
+            echo $row['id'] . ":{'name':'" . $row['name'] . "'},\n";
         }
-        echo "</div>\n\n";
+        echo "}";
     } catch (PDOException $e) {
-        appendLog("E", "Error trying to load database in document: " . $e->getMessage() . " - " . $queryText);
+        appendLog("E", "Error trying to load students in the dictionary: " . $e->getMessage() . " - " . $queryText);
         printAlertJs("Hi ha hagut un error en carregar la pàgina",'e');
         return;
     }
