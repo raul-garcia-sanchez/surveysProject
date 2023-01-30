@@ -530,6 +530,20 @@ i{
     font-size: 28px;
 }
 
+.page-poll #divQuestions{
+    display: flex;
+    flex-direction: row;
+}
+.page-poll #divQuiestion{
+    border: solid 1px black
+}
+.page-poll #inputQuestionsForAdd, .page-poll #inputQuestionsAdded{
+    border: solid black 1px;
+    border-radius: 5%;
+    width: 500px;
+    height: 400px;
+}
+
 
 
 #divAlertas{

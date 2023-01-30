@@ -96,7 +96,7 @@ function formAddSurvey() {
   removeById("divToRemove");
   $(".page-poll #divListSurveys").css("display", "none");
   $(".page-poll #divListQuestions").css("display", "none");
-
+  
   let initialDiv = $("<div>", {
     id: "divToRemove",
   }).append(
@@ -157,8 +157,25 @@ function formAddSurvey() {
           name: "prueba"
         })
       )
+      .append(
+        $("<div>",{
+          id: "divQuestions",
+          text: "Preguntes"
+        }).append(
+          $("<div>",{
+            id: "inputQuestionsForAdd",
+          })
+        )
+        .append(
+          $("<div>",{
+            id: "inputQuestionsAdded"
+          })
+        )
+      )
   );
+  
   $("#principalContent").append(initialDiv);
+  
 
   //Nos permite decorar el calendario
   const datetimeInputs = $(".datetime");
@@ -172,7 +189,18 @@ function formAddSurvey() {
   }
 
   
-
+  createDivQuestions()
+  $(".divQuiestion").click(function(event){
+    event.preventDefault();
+    if($(this).hasClass("added")){
+      $("#inputQuestionsForAdd").append($(this))
+      $(this).removeClass("added")
+    }else{
+      $("#inputQuestionsAdded").append($(this))
+      $(this).addClass("added")
+    }
+    
+  });
 }
 
 function printListQuestions() {
@@ -364,3 +392,22 @@ function addDbToDictionary(){
 }
 
 addDbToDictionary()
+
+function createDivQuestions(){
+
+  for(var key in questionsDic){
+    if(questionsDic[key]["active"]){
+      
+      $("#inputQuestionsForAdd").append(
+        $("<input>",{
+          type: "submit",
+          value:questionsDic[key]["title"] + "Tipus: " + questionsDic[key]["type"],
+          id: "divQuiestion",
+          class: "divQuiestion",
+          name: "quest"+key
+        })
+        )
+    }
+    
+  }
+}
