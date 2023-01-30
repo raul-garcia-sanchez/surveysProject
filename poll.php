@@ -29,8 +29,11 @@ if (isset($_POST['submitButtonSaveQuestion']) && isset($_POST['selectTypeQuestio
         echo '<div id="divEliminar">
         <form action="poll.php" method="POST">
         <input type="text" style="visibility:hidden" name="deleteId" id="inpDeleteId">
+        <div id="divOptionsBeforeDelete">
+        <h1 id="textoAvisoBorrado">Estàs segur que ho vols esborrar?</h1>
         <input type="submit" value="Esborrar" id="buttonSubmitDelete">
         <button onclick="displayNoneForm()" id="buttonCancel" type="button">Cancelar</button>
+        </div>
         </form>
         </div>';
         if ($_SESSION['user']["role"] == "admin") {

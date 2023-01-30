@@ -272,6 +272,7 @@ function deleteById(id, type){
   let str = id+","+type
   $('#inpDeleteId').val(str)
   $('#divEliminar').css('display','block')
+  
 }
 
 function displayNoneForm(){
