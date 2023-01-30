@@ -2,6 +2,9 @@
 include './resources/auxFunctions.php';
 if (isset($_POST['submitButtonSaveQuestion']) && isset($_POST['selectTypeQuestion']) && isset($_SESSION['user']['username'])) {
     addQuestion();
+}if (isset($_POST['deleteId'])) {
+    $array = explode(',',$_POST['deleteId']);
+    deleteById($array[0],$array[1]);
 }
 ?><!DOCTYPE html>
 <html lang="en">
@@ -23,6 +26,13 @@ if (isset($_POST['submitButtonSaveQuestion']) && isset($_POST['selectTypeQuestio
 
         createHeader("Enquestes IETI");
         echo '<div id="divAlertas"></div>';
+        echo '<div id="divEliminar">
+        <form action="poll.php" method="POST">
+        <input type="text" style="visibility:hidden" name="deleteId" id="inpDeleteId">
+        <input type="submit" value="Esborrar" id="buttonSubmitDelete">
+        <button onclick="displayNoneForm()" id="buttonCancel" type="button">Cancelar</button>
+        </form>
+        </div>';
         if ($_SESSION['user']["role"] == "admin") {
         echo '<div id="divAlertas"></div>';
         echo "

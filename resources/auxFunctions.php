@@ -68,7 +68,7 @@ function printSurveys()
     }
 
     try {
-        $queryText = 'select title from surveys;';
+        $queryText = 'select title, id from surveys;';
         $query = $pdo->prepare($queryText);
         $query->execute();
         appendLog("S", "Query executed successfully - '" . $queryText . "'");
@@ -82,7 +82,7 @@ function printSurveys()
     $texto = "<div id='divListSurveys' class='divLlistat'>";
     $texto .= "<table><tr><th class='thTittle'>Titol Enquesta</th><th class='thOperations'>Operacions</th></tr>";
     while ($row) {
-        $texto .= "<tr><td>" . $row["title"] . "<td class='tdOperations'><i class='fa fa-pencil-square-o' aria-hidden='true'></i><i class='fa fa-trash-o' aria-hidden='true'></i></td></tr></td>";
+        $texto .= "<tr><td>" . $row["title"] . '<td class="tdOperations"><i class="fa fa-pencil-square-o" aria-hidden="true"></i><i class="fa fa-trash-o" onclick="deleteById('.$row["id"].',`surveys`)" aria-hidden="true"></i></td></tr></td>';
         $row = $query->fetch();
     }
     $texto .= "</table></div>";
@@ -108,7 +108,7 @@ function printQuestions()
     }
 
     try {
-        $queryText = 'select title from questions;';
+        $queryText = 'select title, id from questions;';
         $query = $pdo->prepare($queryText);
         $query->execute();
         appendLog("S", "Query executed successfully - '" . $queryText . "'");
@@ -120,7 +120,7 @@ function printQuestions()
     $texto = "<div id='divListQuestions' class='divLlistat'>";
     $texto .= "<table><tr><th class='thTittle'>Títol Pregunta</th><th class='thOperations'>Operacions</th></tr>";
     while ($row) {
-        $texto .= "<tr><td>" . $row["title"] . "<td class='tdOperations'><i class='fa fa-pencil-square-o' aria-hidden='true'></i><i class='fa fa-trash-o' aria-hidden='true'></i></td></tr></td>";
+        $texto .= "<tr><td>" . $row["title"] . "<td class='tdOperations'><i class='fa fa-pencil-square-o' aria-hidden='true'></i><i class='fa fa-trash-o' onclick='deleteById(".$row['id'].",`surveys`)' aria-hidden='true'></i></td></tr></td>";
         $row = $query->fetch();
     }
     $texto .= "</table></div>";
@@ -207,7 +207,7 @@ function addQuestion()
                     appendLog("S", "Successful drop of the question: ".$questionText." - ".$queryText);
                     return;
                 } catch (PDOException $e) {
-                    appendLog("S", "Failed drop of the question ".$questionText."to de database:".$e->getMessage()." - ".$queryText);
+                    appendLog("E", "Failed drop of the question ".$questionText."to de database:".$e->getMessage()." - ".$queryText);
                 }
             }
             $i += 1;
@@ -240,4 +240,40 @@ function getClientIP(){
 
 function printAlertJs($message,$type){
     echo '<script>alertCss("'.$message.'","'.$type.'")</script>';
+}
+
+function deleteById($id,$type){
+    try {
+        $hostname = "20.107.55.123";
+        $dbname = "surveys_database";
+        $username = "database_survey_user";
+        $pw = "surv3ys_d@t2b@s3 database";
+        $pdo = new PDO("mysql:host=$hostname;dbname=$dbname", "$username", "$pw");
+    } catch (PDOException $e) {
+        printAlertJs("Hi ha hagut un problema en connectar-te amb la base de dades",'e');
+        echo "Failed to get DB handle: " . $e->getMessage() . "\n";
+        appendLog("E", "Failed to get DB handle: " . $e->getMessage());
+        exit;
+    }   
+    try{
+        $queryText = "DELETE FROM ".$type." where id = ".$id;
+        if($type == 'surveys'){
+            $tablaAsociada = 'questions_surveys';
+            $queryStart = $pdo->prepare("DELETE FROM $tablaAsociada where id_survey = $id");
+            $queryStart->execute();
+        }
+        if($type == 'surveys'){
+            $tablaAsociada = 'teachers_surveys';
+            $queryStart = $pdo->prepare("DELETE FROM $tablaAsociada where id_survey = $id");
+            $queryStart->execute();
+        }
+        $query = $pdo->prepare("DELETE FROM $type where id = $id");
+        /*$query->bindParam(1, $type); 
+        $query->bindParam(2, $id); */
+        $query->execute();
+        appendLog("S", "Successful drop of the survey with id: ".$id);
+        return;
+    } catch (PDOException $e) {
+        appendLog("E", "Failed drop of the ".$type."to de database:".$e->getMessage()." - ".$queryText);
+    }
 }
