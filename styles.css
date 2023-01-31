@@ -567,9 +567,10 @@ i{
     margin-top: 5px;
 }
 
-.page-poll form div>div input{
+.page-poll form div>div input, .page-poll form div>div button{
     width: 90% !important;
     margin: 20px 5% !important;
+    height: 30px;
 }
 
 .page-poll .notAdded:hover{

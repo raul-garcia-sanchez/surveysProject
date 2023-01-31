@@ -3,6 +3,14 @@ include './resources/auxFunctions.php';
 if (isset($_POST['submitButtonSaveQuestion']) && isset($_POST['selectTypeQuestion']) && isset($_SESSION['user']['username'])) {
     addQuestion();
 }
+if(isset($_POST["surveySubmit"])){
+    $nameOfSurvey = "";
+    foreach ($_POST as $key => $value){
+        echo $key . " - " . $value."<br>";
+    }
+    unset($_POST);
+}
+
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -62,7 +70,6 @@ if (isset($_POST['submitButtonSaveQuestion']) && isset($_POST['selectTypeQuestio
     </script>
     <script src="./resources/functions.js"></script>
 </body>
-
 </html>
 <?php
     appendLog("S", "The page " . $_SERVER['PHP_SELF'] . " has loaded successfully by user " . $_SESSION['user']["username"]);

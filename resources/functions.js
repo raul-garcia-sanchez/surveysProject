@@ -97,7 +97,8 @@ function formAddSurvey() {
   }).append(
     $("<form>", {
       method: "POST",
-      action: "poll.php"
+      action: "poll.php",
+      id:"formSurvey"
     })
       .append(
         $("<h1>", {
@@ -246,15 +247,27 @@ function formAddSurvey() {
   createDivStudents()
 
   //Move options (event is for not submit)
-  $(".inputTeachers").click(function(event){
+  $(".inputTeacher").click(function(event){
     event.preventDefault();
+
     if($(this).hasClass("added")){
       $("#inputTeachersForAdd").append($(this))
       $(this).removeClass("added").addClass("notAdded")
+      $(this).children().remove()
     }else{
+      let key = $(this).attr("id")
       $("#inputTeachersAdded").append($(this))
       $(this).removeClass("notAdded").addClass("added")
+      $(this).append(
+        $("<input>",{
+          type: "text",
+          name: "teach"+key,
+          value: questionsDic[key]["title"],
+          hidden: "true"
+        })
+      )
     }
+    buttonSubmit()
   });
 
   $(".inputQuestion").click(function(event){
@@ -263,24 +276,49 @@ function formAddSurvey() {
     if($(this).hasClass("added")){
       $("#inputQuestionsForAdd").append($(this))
       $(this).removeClass("added").addClass("notAdded")
+      $(this).children().remove()
     }else{
+      let key = $(this).attr("id")
       $("#inputQuestionsAdded").append($(this))
       $(this).removeClass("notAdded").addClass("added")
+      $(this).append(
+        $("<input>",{
+          type: "text",
+          name: "quest"+key,
+          value: questionsDic[key]["title"],
+          hidden: "true"
+        })
+      )
+      
     }
+    buttonSubmit()
   });
 
-  $(".inputStudents").click(function(event){
+  $(".inputStudent").click(function(event){
     event.preventDefault();
     if($(this).hasClass("added")){
       $("#inputStudentsForAdd").append($(this))
       $(this).removeClass("added").addClass("notAdded")
+      $(this).children().remove()
     }else{
+      let key = $(this).attr("id")
       $("#inputStudentsAdded").append($(this))
       $(this).removeClass("notAdded").addClass("added")
+      $(this).append(
+        $("<input>",{
+          type: "text",
+          name: "studn"+key,
+          value: questionsDic[key]["title"],
+          hidden: "true"
+        })
+      )
     }
   });
-  createOrRemoveSubmitButton()
-  checkCreateSubmitButton()
+  
+  //Check when the user is writting the survey title
+  $("#inputSurveyText").on("input", function() {
+    buttonSubmit()
+  });
 }
 
 function printListQuestions() {
@@ -435,11 +473,10 @@ function eliminarAlerta(event){
 function createDivTeachers(){
   for(var key in usersDic){
     $("#inputTeachersForAdd").append(
-      $("<input>",{
-        type: "submit",
-        value:usersDic[key]["name"],
-        class: "inputTeachers notAdded",
-        name: "teach"+key
+      $("<button>",{
+        text:usersDic[key]["name"],
+        class: "inputTeacher notAdded",
+        id: key
       })
     )
   }
@@ -448,11 +485,10 @@ function createDivTeachers(){
 function createDivQuestions(){
   for(var key in questionsDic){
     $("#inputQuestionsForAdd").append(
-      $("<input>",{
-        type: "submit",
-        value:questionsDic[key]["title"],
+      $("<button>",{
+        text:questionsDic[key]["title"],
         class: "inputQuestion notAdded",
-        name: "quest"+key
+        id: key
       })
     )
   }
@@ -461,11 +497,10 @@ function createDivQuestions(){
 function createDivStudents(){
   for(var key in studentsDic){
     $("#inputStudentsForAdd").append(
-      $("<input>",{
-        type: "submit",
-        value:studentsDic[key]["name"],
-        class: "inputStudents notAdded",
-        name: "studn"+key
+      $("<button>",{
+        text:studentsDic[key]["name"],
+        class: "inputStudent notAdded",
+        id: key
       })
     )
   }
@@ -474,19 +509,39 @@ function createOrRemoveSubmitButton(remove=false){
   if(remove){
     $("#inputSubmitSurvey").remove()
   }else{
-    $("#divToRemove").append(
-      $("<input>",{
-        type:"submit",
-        id:"inputSubmitSurvey",
-        value:"Guardar Enquesta"
-      })
-    )
+    if($("#inputSubmitSurvey").val() == undefined){
+      $("#formSurvey").append(
+        $("<input>",{
+          type:"submit",
+          id:"inputSubmitSurvey",
+          value:"Guardar Enquesta",
+          name:"surveySubmit"
+        })
+      )
+    }
   }
 }
 
-function checkCreateSubmitButton(){
-  alert($("#inputStartDate").value)
-  if($("#inputSurveyText").value == undefined){
+function checkToCreateSubmitButton(){
+  if($("#inputSurveyText").val() == ""){
     return false
+  }else if($("#inputStartDate").val() == undefined){
+    return false
+  }else if($("#inputEndDate").val() == undefined){
+    return false
+  }else if($("#inputTeachersAdded").children().length == 1){
+    return false
+  }else if($("#inputQuestionsAdded").children().length == 1){
+    return false
+  }else{
+    return true
+  }
+}
+
+function buttonSubmit(){
+  if(checkToCreateSubmitButton()){
+    createOrRemoveSubmitButton()
+  }else{
+    createOrRemoveSubmitButton(remove=true)
   }
 }
