@@ -1,0 +1,72 @@
+S - 11:06:59 - ::1 - Successful connection to the database
+S - 11:06:59 - ::1 - Query executed successfully - 'select title from surveys;'
+S - 11:06:59 - ::1 - Successful connection to the database
+S - 11:06:59 - ::1 - Query executed successfully - 'select title from questions;'
+S - 11:06:59 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 11:07:17 - ::1 - Successful connection to the database
+S - 11:07:17 - ::1 - Query executed successfully - 'select title from surveys;'
+S - 11:07:17 - ::1 - Query executed successfully - 'select title from questions;'
+S - 11:07:18 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 11:07:24 - ::1 - The page /surveysProject/index.php has loaded successfully
+S - 11:07:26 - ::1 - Successful connection to the database
+S - 11:07:26 - ::1 - The page /surveysProject/login.php has loaded successfully
+S - 11:07:28 - ::1 - Successful connection to the database
+S - 11:07:28 - ::1 - The user successfully connected with the username raul@gmail.com and the encrypted password bbb0b5b15842af2a3f42072a418c908e8a63caab2120d15cfea68e433cfe68dd - select id, username, password, role from users where username = 'raul@gmail.com' and password = 'bbb0b5b15842af2a3f42072a418c908e8a63caab2120d15cfea68e433cfe68dd'
+S - 11:07:28 - ::1 - The page /surveysProject/dashboard.php has loaded successfully by user raul@gmail.com
+S - 11:07:29 - ::1 - The page /surveysProject/dashboard.php has loaded successfully by user raul@gmail.com
+S - 11:07:30 - ::1 - Successful connection to the database
+S - 11:07:30 - ::1 - Query executed successfully - 'select title from surveys;'
+S - 11:07:30 - ::1 - Query executed successfully - 'select title from questions;'
+S - 11:07:30 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 11:42:26 - ::1 - Successful connection to the database
+S - 11:42:26 - ::1 - Query executed successfully - 'select title from surveys;'
+S - 11:42:26 - ::1 - Query executed successfully - 'select title from questions;'
+S - 11:42:26 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 12:32:07 - ::1 - Successful connection to the database
+S - 12:32:07 - ::1 - Query executed successfully - 'select title from surveys;'
+S - 12:32:07 - ::1 - Query executed successfully - 'select title from questions;'
+S - 12:32:07 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 12:32:12 - ::1 - Successful connection to the database
+S - 12:32:12 - ::1 - Query executed successfully - 'select title from surveys;'
+S - 12:32:12 - ::1 - Query executed successfully - 'select title from questions;'
+S - 12:32:13 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 12:49:14 - ::1 - Successful connection to the database
+S - 12:49:15 - ::1 - Query executed successfully - 'select title from surveys;'
+S - 12:49:15 - ::1 - Query executed successfully - 'select title from questions;'
+S - 12:49:15 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 13:09:07 - ::1 - Successful connection to the database
+S - 13:09:07 - ::1 - Query executed successfully - 'select title from surveys;'
+S - 13:09:08 - ::1 - Query executed successfully - 'select title from questions;'
+S - 13:09:08 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 13:09:40 - ::1 - Successful connection to the database
+S - 13:09:40 - ::1 - Query executed successfully - 'select title from surveys;'
+S - 13:09:40 - ::1 - Query executed successfully - 'select title from questions;'
+S - 13:09:41 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 13:58:22 - ::1 - Successful connection to the database
+S - 13:58:22 - ::1 - Query executed successfully - 'select title from surveys;'
+S - 13:58:22 - ::1 - Query executed successfully - 'select title from questions;'
+S - 13:58:23 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 14:41:39 - ::1 - Successful connection to the database
+S - 14:41:39 - ::1 - Query executed successfully - 'select title from surveys;'
+S - 14:41:40 - ::1 - Query executed successfully - 'select title from questions;'
+S - 14:41:40 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 14:41:55 - ::1 - Successful connection to the database
+S - 14:41:55 - ::1 - Query executed successfully - 'select title from surveys;'
+S - 14:41:55 - ::1 - Query executed successfully - 'select title from questions;'
+S - 14:41:56 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 14:42:09 - ::1 - Successful connection to the database
+S - 14:42:09 - ::1 - Query executed successfully - 'select title from surveys;'
+S - 14:42:09 - ::1 - Query executed successfully - 'select title from questions;'
+S - 14:42:09 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 14:42:22 - ::1 - Successful connection to the database
+S - 14:42:22 - ::1 - Query executed successfully - 'select title from surveys;'
+S - 14:42:22 - ::1 - Query executed successfully - 'select title from questions;'
+S - 14:42:23 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 14:45:26 - ::1 - Successful connection to the database
+S - 14:45:26 - ::1 - Query executed successfully - 'select title from surveys;'
+S - 14:45:26 - ::1 - Query executed successfully - 'select title from questions;'
+S - 14:45:26 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 14:45:39 - ::1 - Successful connection to the database
+S - 14:45:39 - ::1 - Query executed successfully - 'select title from surveys;'
+S - 14:45:39 - ::1 - Query executed successfully - 'select title from questions;'
+S - 14:45:40 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com

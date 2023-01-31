@@ -279,6 +279,8 @@ function formAddSurvey() {
       $(this).removeClass("notAdded").addClass("added")
     }
   });
+  createOrRemoveSubmitButton()
+  checkCreateSubmitButton()
 }
 
 function printListQuestions() {
@@ -466,5 +468,25 @@ function createDivStudents(){
         name: "studn"+key
       })
     )
+  }
+}
+function createOrRemoveSubmitButton(remove=false){
+  if(remove){
+    $("#inputSubmitSurvey").remove()
+  }else{
+    $("#divToRemove").append(
+      $("<input>",{
+        type:"submit",
+        id:"inputSubmitSurvey",
+        value:"Guardar Enquesta"
+      })
+    )
+  }
+}
+
+function checkCreateSubmitButton(){
+  alert($("#inputStartDate").value)
+  if($("#inputSurveyText").value == undefined){
+    return false
   }
 }
