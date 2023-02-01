@@ -11,7 +11,7 @@ CREATE TABLE `invitations` (
 
 CREATE TABLE `options` (
   `id` int(11) NOT NULL,
-  `option` varchar(256) NOT NULL,
+  `option_text` varchar(256) NOT NULL,
   `id_question` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 

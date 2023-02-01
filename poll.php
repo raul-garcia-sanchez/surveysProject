@@ -1,16 +1,5 @@
 <?php session_start();
 include './resources/auxFunctions.php';
-if (isset($_POST['submitButtonSaveQuestion']) && isset($_POST['selectTypeQuestion']) && isset($_SESSION['user']['username'])) {
-    addQuestion();
-}
-if(isset($_POST["surveySubmit"])){
-    $nameOfSurvey = "";
-    foreach ($_POST as $key => $value){
-        echo $key . " - " . $value."<br>";
-    }
-    unset($_POST);
-}
-
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -22,6 +11,7 @@ if(isset($_POST["surveySubmit"])){
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Enquestes</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="./resources/functions.js"></script>
 
     <!--Imports para hacer un calendario bonito-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
@@ -31,6 +21,18 @@ if(isset($_POST["surveySubmit"])){
 <body class="page-poll">
     <div class="global-container">
         <?php
+        if (isset($_POST['submitButtonSaveQuestion']) && isset($_POST['selectTypeQuestion']) && isset($_SESSION['user']['username'])) {
+            addQuestion();
+        }
+        if(isset($_POST["surveySubmit"])){
+            $listOfSurvey = [];
+            foreach ($_POST as $key => $value){
+                $listOfSurvey[$key] = $value;
+            }
+            addSurvey($listOfSurvey);
+            printAlertJs("Enquesta carregada correctament",'s');
+            unset($_POST);
+        }
 
         createHeader("Enquestes IETI");
         echo '<div id="divAlertas"></div>';
@@ -55,9 +57,6 @@ if(isset($_POST["surveySubmit"])){
                 </button>
         </div>
         <div id='principalContent'>" . printSurveys() . printQuestions() . "</div>";
-            if (isset($_POST['submitButtonSaveQuestion'])) {
-                printAlertJs("Pregunta afegida correctament",'s');
-            }
             echo "</div>";
         }
         createFooter();

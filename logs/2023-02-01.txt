@@ -1,0 +1,81 @@
+S - 11:58:13 - ::1 - The page /surveysProject/index.php has loaded successfully
+S - 11:58:15 - ::1 - Successful connection to the database
+S - 11:58:15 - ::1 - The page /surveysProject/login.php has loaded successfully
+S - 11:58:16 - ::1 - Successful connection to the database
+W - 11:58:16 - ::1 - The user tried to connect with the username Pautronix996 and the encrypted password 4bb1ec40618d3326e10b4afea111625cc9ff1c7c484bb33ec120b9b1362ba7d9 - select id, username, password, role from users where username = 'Pautronix996' and password = '4bb1ec40618d3326e10b4afea111625cc9ff1c7c484bb33ec120b9b1362ba7d9'
+S - 11:58:16 - ::1 - The page /surveysProject/login.php has loaded successfully
+S - 11:58:22 - ::1 - Successful connection to the database
+S - 11:58:22 - ::1 - The user successfully connected with the username raul@gmail.com and the encrypted password bbb0b5b15842af2a3f42072a418c908e8a63caab2120d15cfea68e433cfe68dd - select id, username, password, role from users where username = 'raul@gmail.com' and password = 'bbb0b5b15842af2a3f42072a418c908e8a63caab2120d15cfea68e433cfe68dd'
+S - 11:58:22 - ::1 - The page /surveysProject/dashboard.php has loaded successfully by user raul@gmail.com
+S - 11:58:24 - ::1 - Successful connection to the database
+S - 11:58:24 - ::1 - Query executed successfully - 'select title from surveys;'
+S - 11:58:25 - ::1 - Query executed successfully - 'select title from questions;'
+S - 11:58:25 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 11:58:46 - ::1 - Successful connection to the database
+S - 11:58:46 - ::1 - Query executed successfully - 'select title from surveys;'
+S - 11:58:46 - ::1 - Query executed successfully - 'select title from questions;'
+S - 11:58:47 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 12:02:00 - ::1 - Successful connection to the database
+S - 12:02:00 - ::1 - Query executed successfully - 'select title from surveys;'
+S - 12:02:00 - ::1 - Query executed successfully - 'select title from questions;'
+S - 12:02:01 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 12:03:07 - ::1 - Successful connection to the database
+S - 12:03:07 - ::1 - Query executed successfully - 'select title from surveys;'
+S - 12:03:08 - ::1 - Query executed successfully - 'select title from questions;'
+S - 12:03:08 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 12:03:34 - ::1 - Successful connection to the database
+S - 12:03:34 - ::1 - Query executed successfully - 'select title from surveys;'
+S - 12:03:35 - ::1 - Query executed successfully - 'select title from questions;'
+S - 12:03:35 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 12:09:07 - ::1 - Successful connection to the database
+S - 12:09:07 - ::1 - Query executed successfully - 'select title from surveys;'
+S - 12:09:07 - ::1 - Query executed successfully - 'select title from questions;'
+S - 12:09:08 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 14:15:58 - ::1 - Query executed successfully - 'select title from surveys;'
+S - 14:15:59 - ::1 - Query executed successfully - 'select title from questions;'
+S - 14:15:59 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com
+E - 14:17:01 - ::1 - Error in idStudent and idStudn insertion in to DB: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'surveys_database.invitation' doesn't exist - INSERT INTO invitation(id_student,id_survey) VALUES (3,8);
+S - 14:17:01 - ::1 - Query executed successfully - 'select title from surveys;'
+S - 14:17:01 - ::1 - Query executed successfully - 'select title from questions;'
+S - 14:17:02 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 14:18:55 - ::1 - Query executed successfully - 'select title from surveys;'
+S - 14:18:56 - ::1 - Query executed successfully - 'select title from questions;'
+S - 14:18:56 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 14:19:10 - ::1 - Successful survey insertion in to DB
+S - 14:19:10 - ::1 - Query executed successfully - 'select title from surveys;'
+S - 14:19:11 - ::1 - Query executed successfully - 'select title from questions;'
+S - 14:19:11 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com
+E - 14:22:08 - ::1 - Error in idUser and idSurvey insertion in to DB: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-9' for key 'teachers_surveys.PRIMARY' - INSERT INTO teachers_surveys(id_user,id_survey) VALUES (1,9);
+S - 14:22:09 - ::1 - Query executed successfully - 'select title from surveys;'
+S - 14:22:09 - ::1 - Query executed successfully - 'select title from questions;'
+S - 14:22:09 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com
+E - 14:23:05 - ::1 - Error in idUser and idSurvey insertion in to DB: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-9' for key 'teachers_surveys.PRIMARY' - INSERT INTO teachers_surveys(id_user,id_survey) VALUES (1,9);
+S - 14:23:05 - ::1 - Query executed successfully - 'select title from surveys;'
+S - 14:23:06 - ::1 - Query executed successfully - 'select title from questions;'
+S - 14:23:06 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com
+E - 14:23:17 - ::1 - Error in idUser and idSurvey insertion in to DB: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-9' for key 'teachers_surveys.PRIMARY' - INSERT INTO teachers_surveys(id_user,id_survey) VALUES (1,9);
+S - 14:23:17 - ::1 - Query executed successfully - 'select title from surveys;'
+S - 14:23:17 - ::1 - Query executed successfully - 'select title from questions;'
+S - 14:23:18 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 14:28:27 - ::1 - Successful survey insertion in to DB
+S - 14:28:28 - ::1 - Query executed successfully - 'select title from surveys;'
+S - 14:28:28 - ::1 - Query executed successfully - 'select title from questions;'
+S - 14:28:28 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 14:30:04 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 14:30:26 - ::1 - Successful survey insertion in to DB
+S - 14:30:26 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 14:31:07 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 14:31:25 - ::1 - Successful survey insertion in to DB
+S - 14:31:26 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 14:36:51 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 14:37:10 - ::1 - Successful survey insertion in to DB
+S - 14:37:11 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com
+E - 14:38:30 - ::1 - Failed to add question Pregunta 1 in the database: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id_survey' in 'field list' - INSERT INTO questions (id_survey, title, active, type) VALUES(1,Pregunta 1,1,text)
+S - 14:38:31 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 14:44:22 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com
+E - 14:44:28 - ::1 - Failed to add question Pregunta 1 in the database: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id_survey' in 'field list' - INSERT INTO questions (id_survey, title, active, type) VALUES(1,Pregunta 1,1,text)
+S - 14:44:29 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 14:53:31 - ::1 - Successful insertion of the question: Pregunta 1 - INSERT INTO questions (id_survey, title, active, type) VALUES(1,Pregunta 1,1,text)
+S - 14:53:32 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 14:53:47 - ::1 - Successful insertion of the question: Pregunta 2 - INSERT INTO questions (id_survey, title, active, type) VALUES(1,Pregunta 2,1,number)
+S - 14:53:48 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com

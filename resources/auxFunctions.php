@@ -59,7 +59,6 @@ function printSurveys()
         $username = "database_survey_user";
         $pw = "surv3ys_d@t2b@s3 database";
         $pdo = new PDO("mysql:host=$hostname;dbname=$dbname", "$username", "$pw");
-        appendLog("S", "Successful connection to the database");
     } catch (PDOException $e) {
         printAlertJs("Hi ha hagut un problema en connectar-te amb la base de dades",'e');
         echo "Failed to get DB handle: " . $e->getMessage() . "\n";
@@ -71,7 +70,6 @@ function printSurveys()
         $queryText = 'select title from surveys;';
         $query = $pdo->prepare($queryText);
         $query->execute();
-        appendLog("S", "Query executed successfully - '" . $queryText . "'");
     } catch (PDOException $e) {
         appendLog("E", $e->getMessage() . " - Failed to execute the query - ".$queryText);
         printAlertJs("Hi ha hagut un problema en connectar-te amb la base de dades",'e');
@@ -110,7 +108,6 @@ function printQuestions()
         $queryText = 'select title from questions;';
         $query = $pdo->prepare($queryText);
         $query->execute();
-        appendLog("S", "Query executed successfully - '" . $queryText . "'");
     } catch (PDOException $e) {
         appendLog("E", $e->getMessage() . " - Failed to execute the query - '".$queryText);
     }
@@ -136,7 +133,6 @@ function addQuestion()
         $username = "database_survey_user";
         $pw = "surv3ys_d@t2b@s3 database";
         $pdo = new PDO("mysql:host=$hostname;dbname=$dbname", "$username", "$pw");
-        appendLog("S", "Successful connection to the database");
     } catch (PDOException $e) {
         printAlertJs("Hi ha hagut un problema en connectar-te amb la base de dades",'e');
         echo "Failed to get DB handle: " . $e->getMessage() . "\n";
@@ -148,7 +144,7 @@ function addQuestion()
     if($questionType == "text" || $questionType == "number" || $questionType == "opcioSimple"){
         try {
             $questionText = $_POST['questionInput'];
-            $query = $pdo->prepare('INSERT INTO questions (id_survey, title, active, type) VALUES(1,?,1,?)');
+            $query = $pdo->prepare('INSERT INTO questions (title, active, type) VALUES(?,1,?)');
             $query->bindParam(1, $questionText); 
             $query->bindParam(2, $questionType);
             $query->execute();
@@ -217,7 +213,7 @@ function addQuestion()
 
     unset($query);
     unset($pdo);
-    printAlertJs("S'ha creat correctament la questio",'s');
+    printAlertJs("Pregunta afegida correctament",'s');
 }
 
 function appendLog($messageTypeInitial,$message){
@@ -335,7 +331,7 @@ function createStudentsDic() {
     }
 }
 
-function addSurvey($title){
+function addSurvey($dic){
     try {
         $hostname = "20.107.55.123";
         $dbname = "surveys_database";
@@ -347,5 +343,73 @@ function addSurvey($title){
         appendLog("E", "Failed to get DB handle: " . $e->getMessage());
         exit;
     }
+    //Insert survey
+    try{
+        $queryText = "INSERT INTO surveys (creator,title,startDate,finishDate) SELECT id as creator, '".$dic["inputSurveyText"]."' AS title, '".$dic["inputStartDate"]."' AS startDate, '".$dic["inputEndDate"]."' AS finishDate FROM users WHERE username = '".$_SESSION["user"]["username"]."';";
+        $query = $pdo->prepare("INSERT INTO surveys (creator,title,startDate,finishDate) SELECT id as creator, ? as title, ? as startDate, ? as finishDate from users where username = '".$_SESSION["user"]["username"]."'");
+        $query->bindParam(1, $dic["inputSurveyText"]);
+        $query->bindParam(2, $dic["inputStartDate"]);
+        $query->bindParam(3, $dic["inputEndDate"]);
+        $query->execute();
+    } catch(PDOException $e){
+        appendLog("E", "Error in to survey insertion: ". $e->getMessage() ." - " . $queryText);
+        printAlertJs("Hi ha hagut un error en carregar l'enquesta",'e');
+        return;
+    }
+
+    //Get id of the survey
+    try{
+        $queryText = "SELECT id FROM surveys WHERE title = '".$dic["inputSurveyText"]."' AND startDate = '".$dic["inputStartDate"]."' AND finishDate = '".$dic["inputEndDate"]."'";
+        $query = $pdo->prepare("SELECT id FROM surveys WHERE title = ? AND startDate = ? AND finishDate = ?");
+        $query->bindParam(1, $dic["inputSurveyText"]);
+        $query->bindParam(2, $dic["inputStartDate"]);
+        $query->bindParam(3, $dic["inputEndDate"]);
+        $query->execute();
+        $idSurvey = $query->fetch()[0];
+    }catch (PDOException $e){
+        appendLog("E", "Error trying get the survey id: ". $e->getMessage() ." - " . $queryText);
+        printAlertJs("Hi ha hagut un error en carregar l'enquesta",'e');
+        return;
+    }
+
+    //Insert data into relational table
+    foreach($dic as $key => $value){
+        //Insert user id and survey id into teachers_surveys
+        if(substr($key,0,5) == "teach"){
+            try{
+                $idUser = intval(substr($key, 5));
+                $queryText = "INSERT INTO teachers_surveys(id_user,id_survey) VALUES ($idUser,$idSurvey);";
+                $query = $pdo->prepare("INSERT INTO teachers_surveys(id_user,id_survey) VALUES ($idUser,$idSurvey)");
+                $query->execute();
+            } catch(PDOException $e){
+                appendLog("E", "Error in idUser and idSurvey insertion in to DB: ". $e->getMessage() ." - " . $queryText);
+                printAlertJs("Hi ha hagut un error en carregar l'enquesta",'e');
+                return;
+            }
+        }else if(substr($key,0,5) == "quest"){
+            try{
+                $idQuest = intval(substr($key, 5));
+                $queryText = "INSERT INTO questions_surveys(id_question,id_survey) VALUES ($idQuest,$idSurvey);";
+                $query = $pdo->prepare("INSERT INTO questions_surveys(id_question,id_survey) VALUES ($idQuest,$idSurvey)");
+                $query->execute();
+            } catch(PDOException $e){
+                appendLog("E", "Error in idQuest and idSurvey insertion in to DB: ". $e->getMessage() ." - " . $queryText);
+                printAlertJs("Hi ha hagut un error en carregar l'enquesta",'e');
+                return;
+            }
+        }else if(substr($key,0,5) == "studn"){
+            try{
+                $idStudn = intval(substr($key, 5));
+                $queryText = "INSERT INTO invitations(id_student,id_survey) VALUES ($idStudn,$idSurvey);";
+                $query = $pdo->prepare("INSERT INTO invitations(id_student,id_survey) VALUES ($idStudn,$idSurvey)");
+                $query->execute();
+            } catch(PDOException $e){
+                appendLog("E", "Error in idStudent and idStudn insertion in to DB: ". $e->getMessage() ." - " . $queryText);
+                printAlertJs("Hi ha hagut un error en carregar l'enquesta",'e');
+                return;
+            }
+        }
+    }
+    appendLog("S", "Successful survey insertion in to DB");
 
 }
