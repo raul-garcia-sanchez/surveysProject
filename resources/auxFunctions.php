@@ -208,12 +208,8 @@ function addQuestion()
         }
         
     }
-    
     unset($query);
     unset($pdo);
-    unset($_POST);
-    printAlertJs("Pregunta afegida correctament",'s');
-
 }
 
 function appendLog($messageTypeInitial,$message){
@@ -453,7 +449,5 @@ function addSurvey($dic){
             }
         }
     }
-    unset($_POST);
     appendLog("S", "Successful survey insertion in to DB");
-
 }

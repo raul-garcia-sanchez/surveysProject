@@ -1,3 +1,36 @@
+function alertCss(message,type){
+  if(type == 'w'){
+    backgroundColor = 'rgb(250, 250, 139)';
+    borderColor = '3px solid yellow';
+  }else if(type == 'e'){
+    backgroundColor = 'rgb(255, 127, 127)';
+    borderColor = '3px solid red';
+  }else if(type == 'i'){
+    backgroundColor = 'rgb(166, 166, 255)';
+    borderColor = '3px solid blue';
+  }else if(type == 's'){
+    backgroundColor = 'rgb(96, 252, 96)';
+    borderColor = '3px solid green';
+  }else{
+    backgroundColor = 'rgb(212, 212, 212)';
+    borderColor = '3px solid grey';
+  }
+
+  $('#divAlertas').append(
+    $("<div>", {
+      class: 'divAlerta',
+    }).css('background-color',backgroundColor).css('border',borderColor).append(
+      $('<h4>',{
+        text: message
+      })
+    ).append(
+      $('<button>',{
+        text: 'X',
+        onclick: 'eliminarAlerta(event)'
+      })
+    ))
+}
+
 function removeById(textId) {
   let elementToRemove = $("#" + textId);
   elementToRemove.remove();
@@ -434,39 +467,6 @@ function addNameInputs(){
   $(".inpOption").each(function(index){
     $(this).attr("name",index)
   })
-}
-
-function alertCss(message,type){
-  if(type == 'w'){
-    backgroundColor = 'rgb(250, 250, 139)';
-    borderColor = '3px solid yellow';
-  }else if(type == 'e'){
-    backgroundColor = 'rgb(255, 127, 127)';
-    borderColor = '3px solid red';
-  }else if(type == 'i'){
-    backgroundColor = 'rgb(166, 166, 255)';
-    borderColor = '3px solid blue';
-  }else if(type == 's'){
-    backgroundColor = 'rgb(96, 252, 96)';
-    borderColor = '3px solid green';
-  }else{
-    backgroundColor = 'rgb(212, 212, 212)';
-    borderColor = '3px solid grey';
-  }
-
-  $('#divAlertas').append(
-    $("<div>", {
-      class: 'divAlerta',
-    }).css('background-color',backgroundColor).css('border',borderColor).append(
-      $('<h4>',{
-        text: message
-      })
-    ).append(
-      $('<button>',{
-        text: 'X',
-        onclick: 'eliminarAlerta(event)'
-      })
-    ))
 }
 
 function eliminarAlerta(event){

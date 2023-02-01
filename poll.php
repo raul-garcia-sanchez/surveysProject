@@ -30,17 +30,6 @@ if (isset($_POST['submitButtonSaveQuestion']) && isset($_POST['selectTypeQuestio
 
         createHeader("Enquestes IETI");
         echo '<div id="divAlertas"></div>';
-        if (isset($_POST['submitButtonSaveQuestion']) && isset($_POST['selectTypeQuestion']) && isset($_SESSION['user']['username'])) {
-            addQuestion();
-        }
-        if(isset($_POST["surveySubmit"])){
-            $listOfSurvey = [];
-            foreach ($_POST as $key => $value){
-                $listOfSurvey[$key] = $value;
-            }
-            addSurvey($listOfSurvey);
-            printAlertJs("Enquesta carregada correctament",'s');
-        }
         echo '<div id="divEliminar">
         <form action="poll.php" method="POST">
         <input type="text" style="visibility:hidden" name="deleteId" id="inpDeleteId">
@@ -53,6 +42,18 @@ if (isset($_POST['submitButtonSaveQuestion']) && isset($_POST['selectTypeQuestio
         </div>';
         if ($_SESSION['user']["role"] == "admin") {
         echo '<div id="divAlertas"></div>';
+        if (isset($_POST['submitButtonSaveQuestion']) && isset($_POST['selectTypeQuestion']) && isset($_SESSION['user']['username'])) {
+            addQuestion();
+            printAlertJs("Pregunta afegida correctament",'s');
+        }
+        if(isset($_POST["surveySubmit"])){
+            $listOfSurvey = [];
+            foreach ($_POST as $key => $value){
+                $listOfSurvey[$key] = $value;
+            }
+            addSurvey($listOfSurvey);
+            printAlertJs("Enquesta carregada correctament",'s');
+        }
         echo "
         <div class='card' id='dashboard-professor'>
         <div class='card-content'>
@@ -82,7 +83,6 @@ if (isset($_POST['submitButtonSaveQuestion']) && isset($_POST['selectTypeQuestio
         var questionsDic = <?php createQuestionsDic()?>;
         var studentsDic = <?php createStudentsDic()?>;
     </script>
-    <script src="./resources/functions.js"></script>
 </body>
 </html>
 <?php

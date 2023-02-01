@@ -172,3 +172,111 @@ S - 17:33:04 - 127.0.0.1 - Successful insertion of the question: 123 - INSERT IN
 S - 17:33:05 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
 S - 17:34:09 - 127.0.0.1 - Successful survey insertion in to DB
 S - 17:34:10 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+E - 17:45:16 - 127.0.0.1 - Error in idUser and idSurvey insertion in to DB: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-17' for key 'teachers_surveys.PRIMARY' - INSERT INTO teachers_surveys(id_user,id_survey) VALUES (1,17);
+S - 17:45:17 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 17:45:38 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user 
+S - 17:45:47 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+E - 17:46:42 - 127.0.0.1 - Error in idUser and idSurvey insertion in to DB: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-17' for key 'teachers_surveys.PRIMARY' - INSERT INTO teachers_surveys(id_user,id_survey) VALUES (1,17);
+S - 17:46:43 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 17:46:51 - 127.0.0.1 - The page /app/surveysProject/index.php has loaded successfully
+S - 17:46:52 - 127.0.0.1 - Successful connection to the database
+S - 17:46:52 - 127.0.0.1 - The page /app/surveysProject/login.php has loaded successfully
+S - 17:46:54 - 127.0.0.1 - Successful connection to the database
+S - 17:46:54 - 127.0.0.1 - The user successfully connected with the username raul@gmail.com and the encrypted password bbb0b5b15842af2a3f42072a418c908e8a63caab2120d15cfea68e433cfe68dd - select id, username, password, role from users where username = 'raul@gmail.com' and password = 'bbb0b5b15842af2a3f42072a418c908e8a63caab2120d15cfea68e433cfe68dd'
+S - 17:46:54 - 127.0.0.1 - The page /app/surveysProject/dashboard.php has loaded successfully by user raul@gmail.com
+S - 17:46:55 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 17:47:52 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 17:48:02 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 17:48:14 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 17:48:21 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 17:48:27 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 17:48:33 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 17:48:35 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 17:48:46 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 17:57:20 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 17:59:27 - 127.0.0.1 - Successful survey insertion in to DB
+S - 17:59:28 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:01:25 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user 
+E - 18:04:02 - 127.0.0.1 - Error in idUser and idSurvey insertion in to DB: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-20' for key 'teachers_surveys.PRIMARY' - INSERT INTO teachers_surveys(id_user,id_survey) VALUES (1,20);
+S - 18:04:03 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+E - 18:07:23 - 127.0.0.1 - Error in idUser and idSurvey insertion in to DB: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-20' for key 'teachers_surveys.PRIMARY' - INSERT INTO teachers_surveys(id_user,id_survey) VALUES (1,20);
+S - 18:07:24 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:07:32 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:07:40 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user 
+S - 18:08:23 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:08:30 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:08:43 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:08:48 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:09:22 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:09:56 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:10:07 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:13:25 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:14:52 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:15:28 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:16:43 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:20:02 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:23:56 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:24:23 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:25:53 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:26:50 - 127.0.0.1 - User raul@gmail.com has successfully logout
+S - 18:26:50 - 127.0.0.1 - Successful connection to the database
+S - 18:26:50 - 127.0.0.1 - The page /app/surveysProject/login.php has loaded successfully
+S - 18:26:54 - 127.0.0.1 - Successful connection to the database
+S - 18:26:54 - 127.0.0.1 - The user successfully connected with the username raul@gmail.com and the encrypted password bbb0b5b15842af2a3f42072a418c908e8a63caab2120d15cfea68e433cfe68dd - select id, username, password, role from users where username = 'raul@gmail.com' and password = 'bbb0b5b15842af2a3f42072a418c908e8a63caab2120d15cfea68e433cfe68dd'
+S - 18:26:54 - 127.0.0.1 - The page /app/surveysProject/dashboard.php has loaded successfully by user raul@gmail.com
+S - 18:28:01 - 127.0.0.1 - The page /app/surveysProject/dashboard.php has loaded successfully by user raul@gmail.com
+S - 18:29:53 - 127.0.0.1 - The page /app/surveysProject/dashboard.php has loaded successfully by user raul@gmail.com
+S - 18:30:05 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:30:43 - 127.0.0.1 - Successful insertion of the question: Pregunta final - INSERT INTO questions (id_survey, title, active, type) VALUES(1,Pregunta final,1,opcioSimple)
+S - 18:30:43 - 127.0.0.1 - Successful insertion of the option: 123 - INSERT INTO options (option_text, id_question) VALUES(123,(select id from questions where title = "Pregunta final" and type = "opcioSimple" limit 1))
+S - 18:30:43 - 127.0.0.1 - Successful insertion of the option: 123 - INSERT INTO options (option_text, id_question) VALUES(123,(select id from questions where title = "Pregunta final" and type = "opcioSimple" limit 1))
+S - 18:30:43 - 127.0.0.1 - Successful insertion of the option: 1 - INSERT INTO options (option_text, id_question) VALUES(1,(select id from questions where title = "Pregunta final" and type = "opcioSimple" limit 1))
+S - 18:30:43 - 127.0.0.1 - Successful insertion of the option: 222 - INSERT INTO options (option_text, id_question) VALUES(222,(select id from questions where title = "Pregunta final" and type = "opcioSimple" limit 1))
+S - 18:30:44 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:33:30 - 127.0.0.1 - Successful survey insertion in to DB
+S - 18:33:31 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:35:34 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:35:44 - 127.0.0.1 - Successful insertion of the question: Crear pregunta - INSERT INTO questions (id_survey, title, active, type) VALUES(1,Crear pregunta,1,text)
+S - 18:35:45 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:36:00 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user 
+S - 18:36:36 - 127.0.0.1 - Successful insertion of the question: Crear pregunta - INSERT INTO questions (id_survey, title, active, type) VALUES(1,Crear pregunta,1,text)
+S - 18:36:37 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:37:32 - 127.0.0.1 - Successful insertion of the question: Crear pregunta - INSERT INTO questions (id_survey, title, active, type) VALUES(1,Crear pregunta,1,text)
+S - 18:37:33 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:38:10 - 127.0.0.1 - Successful insertion of the question: Crear pregunta - INSERT INTO questions (id_survey, title, active, type) VALUES(1,Crear pregunta,1,text)
+S - 18:38:10 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:38:18 - 127.0.0.1 - Successful insertion of the question: Crear pregunta - INSERT INTO questions (id_survey, title, active, type) VALUES(1,Crear pregunta,1,text)
+S - 18:38:19 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:38:30 - 127.0.0.1 - Successful insertion of the question: Crear pregunta - INSERT INTO questions (id_survey, title, active, type) VALUES(1,Crear pregunta,1,text)
+S - 18:38:31 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:39:11 - 127.0.0.1 - Successful insertion of the question: Crear pregunta - INSERT INTO questions (id_survey, title, active, type) VALUES(1,Crear pregunta,1,text)
+S - 18:39:12 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:41:20 - 127.0.0.1 - Successful insertion of the question: Crear pregunta - INSERT INTO questions (id_survey, title, active, type) VALUES(1,Crear pregunta,1,text)
+S - 18:41:21 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:41:58 - 127.0.0.1 - Successful insertion of the question: Crear pregunta - INSERT INTO questions (id_survey, title, active, type) VALUES(1,Crear pregunta,1,text)
+S - 18:41:59 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:42:12 - 127.0.0.1 - Successful insertion of the question: Pregunta nueva - INSERT INTO questions (id_survey, title, active, type) VALUES(1,Pregunta nueva,1,text)
+S - 18:42:13 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:43:27 - 127.0.0.1 - Successful insertion of the question: Pregunta nueva - INSERT INTO questions (id_survey, title, active, type) VALUES(1,Pregunta nueva,1,text)
+S - 18:43:28 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:44:41 - 127.0.0.1 - Successful insertion of the question: PreguntaFinal - INSERT INTO questions (id_survey, title, active, type) VALUES(1,PreguntaFinal,1,text)
+S - 18:44:42 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:45:18 - 127.0.0.1 - Successful insertion of the question: PreguntaFinal - INSERT INTO questions (id_survey, title, active, type) VALUES(1,PreguntaFinal,1,text)
+S - 18:45:18 - 127.0.0.1 - Successful insertion of the question: PreguntaFinal - INSERT INTO questions (id_survey, title, active, type) VALUES(1,PreguntaFinal,1,text)
+S - 18:45:19 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:45:38 - 127.0.0.1 - Successful survey insertion in to DB
+S - 18:45:38 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:47:11 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user 
+E - 18:52:24 - 127.0.0.1 - Error in idUser and idSurvey insertion in to DB: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-24' for key 'teachers_surveys.PRIMARY' - INSERT INTO teachers_surveys(id_user,id_survey) VALUES (1,24);
+S - 18:52:25 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+E - 18:53:26 - 127.0.0.1 - Error in idUser and idSurvey insertion in to DB: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-24' for key 'teachers_surveys.PRIMARY' - INSERT INTO teachers_surveys(id_user,id_survey) VALUES (1,24);
+S - 18:53:27 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+E - 18:53:38 - 127.0.0.1 - Error in idUser and idSurvey insertion in to DB: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-24' for key 'teachers_surveys.PRIMARY' - INSERT INTO teachers_surveys(id_user,id_survey) VALUES (1,24);
+S - 18:53:39 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 18:53:49 - 127.0.0.1 - The page /app/surveysProject/index.php has loaded successfully
+S - 20:32:20 - 127.0.0.1 - Successful connection to the database
+S - 20:32:20 - 127.0.0.1 - The page /app/surveysProject/login.php has loaded successfully
+S - 20:32:22 - 127.0.0.1 - Successful connection to the database
+S - 20:32:22 - 127.0.0.1 - The user successfully connected with the username raul@gmail.com and the encrypted password bbb0b5b15842af2a3f42072a418c908e8a63caab2120d15cfea68e433cfe68dd - select id, username, password, role from users where username = 'raul@gmail.com' and password = 'bbb0b5b15842af2a3f42072a418c908e8a63caab2120d15cfea68e433cfe68dd'
+S - 20:32:22 - 127.0.0.1 - The page /app/surveysProject/dashboard.php has loaded successfully by user raul@gmail.com
+S - 20:32:23 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com

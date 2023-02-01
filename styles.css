@@ -770,6 +770,16 @@ i{
     margin: 20px;
 }
 
+.page-poll #divToRemove #formSurvey #divDates div{
+    min-height: auto;
+}
+
+.page-poll #divToRemove #formSurvey #divDates div input{
+    width: 99% !important;
+    margin: 0px 0.5% !important;
+    border: none;
+}
+
 #divAlertas{
     width: 100%;
     text-align: center;
