@@ -29,11 +29,10 @@ include './resources/auxFunctions.php';
 </head>
 
 <body class="page-login">
-<div id="divAlertas"></div>
 
     <?php
     printHeaderBeforeLogin("Enquestes IETI");
-
+    echo '<div id="divAlertas"></div>';
     try {
         $hostname = "20.107.55.123";
         $dbname = "surveys_database";
@@ -56,15 +55,15 @@ include './resources/auxFunctions.php';
         $query->execute();
 
         $userExist = $query->fetch(PDO::FETCH_ASSOC);
-
+        $queryText = "select id, username, password, role from users where username = '".$_POST["username"]."' and password = '".$password."'";
         if ($userExist) {
             $_SESSION['user'] = $userExist;
-            appendLog("S", "The user successfully connected with the username " . $_POST["username"] . " and the encrypted password ".$password);
+            appendLog("S", "The user successfully connected with the username " . $_POST["username"] . " and the encrypted password ".$password." - ".$queryText);
             header("Location:  dashboard.php");
             die();
         } else {
             printAlertJs('Usuari o contrasenya invàlids','e');
-            appendLog("W", "The user tried to connect with the username " . $_POST["username"] . " and the encrypted password ".$password);
+            appendLog("W", "The user tried to connect with the username " . $_POST["username"] . " and the encrypted password ".$password. " - " .$queryText);
         }
     }
 
@@ -84,7 +83,7 @@ include './resources/auxFunctions.php';
                 <label>Contrasenya</label>
             </div>
             <div class="recoverPassword">Has oblidat la teva contrasenya?</div>
-            <input class="buttonSubmit" type="submit" value="Inciar sessió" name="submit">
+            <input class="buttonSubmit  buttonHover" type="submit" value="Inciar sessió" name="submit">
         </form>
         <p class="messageError">
         </p>

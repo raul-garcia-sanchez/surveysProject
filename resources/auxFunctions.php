@@ -26,7 +26,7 @@ function createFooter()
     echo "<p>ENQUESTES IETI</p>";
     echo "</div>";
     echo "<div>";
-    echo "<p class='polices'><a href=''>Politica de Privacitat</a> - <a href=''>Politica de Cookies</a></p>";
+    echo "<p class='polices'><a href=''>Política de Privacitat</a> - <a href=''>Política de Cookies</a></p>";
     echo "<p>Institut Esteve Terrades I Illa - Carrer Bonavista, 70, 08940 Cornellà de Llobregat, Barcelona</p>";
     echo "</div>";
     echo "<div>";
@@ -42,7 +42,7 @@ function printFooterBeforeLogin()
     echo "<p>ENQUESTES IETI</p>";
     echo "</div>";
     echo "<div>";
-    echo "<p class='polices'><a href=''>Politica de Privacitat</a> - <a href=''>Politica de Cookies</a></p>";
+    echo "<p class='polices'><a href=''>Política de Privacitat</a> - <a href=''>Política de Cookies</a></p>";
     echo "<p>Institut Esteve Terrades I Illa - Carrer Bonavista, 70, 08940 Cornellà de Llobregat, Barcelona</p>";
     echo "</div>";
     echo "<div>";
@@ -68,12 +68,12 @@ function printSurveys()
     }
 
     try {
-        $queryText = 'select title from surveys;';
+        $queryText = 'select title, id from surveys;';
         $query = $pdo->prepare($queryText);
         $query->execute();
         appendLog("S", "Query executed successfully - '" . $queryText . "'");
     } catch (PDOException $e) {
-        appendLog("E", "Failed to execute the query - '".$queryText."': " . $e->getMessage());
+        appendLog("E", $e->getMessage() . " - Failed to execute the query - ".$queryText);
         printAlertJs("Hi ha hagut un problema en connectar-te amb la base de dades",'e');
     }
     
@@ -82,13 +82,12 @@ function printSurveys()
     $texto = "<div id='divListSurveys' class='divLlistat'>";
     $texto .= "<table><tr><th class='thTittle'>Titol Enquesta</th><th class='thOperations'>Operacions</th></tr>";
     while ($row) {
-        $texto .= "<tr><td>" . $row["title"] . "<td class='tdOperations'><i class='fa fa-pencil-square-o' aria-hidden='true'></i><i class='fa fa-trash-o' aria-hidden='true'></i></td></tr></td>";
+        $texto .= "<tr><td>" . $row["title"] . '<td class="tdOperations"><i class="fa fa-pencil-square-o" aria-hidden="true"></i><i class="fa fa-trash-o" onclick="deleteById('.$row["id"].',`surveys`)" aria-hidden="true"></i></td></tr></td>';
         $row = $query->fetch();
     }
     $texto .= "</table></div>";
     unset($query);
     unset($pdo);
-    printAlertJs("S'ha carregat correctament el llistat d'enquestes",'i');
     return $texto;
 }
 
@@ -108,19 +107,19 @@ function printQuestions()
     }
 
     try {
-        $queryText = 'select title from questions;';
+        $queryText = 'select title, id from questions where active = 1;';
         $query = $pdo->prepare($queryText);
         $query->execute();
         appendLog("S", "Query executed successfully - '" . $queryText . "'");
     } catch (PDOException $e) {
-        appendLog("E", "Failed to execute the query - '".$queryText."': " . $e->getMessage());
+        appendLog("E", $e->getMessage() . " - Failed to execute the query - '".$queryText);
     }
     
     $row = $query->fetch();
     $texto = "<div id='divListQuestions' class='divLlistat'>";
-    $texto .= "<table><tr><th class='thTittle'>Titol Pregunta</th><th class='thOperations'>Operacions</th></tr>";
+    $texto .= "<table><tr><th class='thTittle'>Títol Pregunta</th><th class='thOperations'>Operacions</th></tr>";
     while ($row) {
-        $texto .= "<tr><td>" . $row["title"] . "<td class='tdOperations'><i class='fa fa-pencil-square-o' aria-hidden='true'></i><i class='fa fa-trash-o' aria-hidden='true'></i></td></tr></td>";
+        $texto .= "<tr><td>" . $row["title"] . "<td class='tdOperations'><i class='fa fa-pencil-square-o' aria-hidden='true'></i><i class='fa fa-trash-o' onclick='deleteById(".$row['id'].",`questions`)' aria-hidden='true'></i></td></tr></td>";
         $row = $query->fetch();
     }
     $texto .= "</table></div>";
@@ -139,30 +138,82 @@ function addQuestion()
         $pdo = new PDO("mysql:host=$hostname;dbname=$dbname", "$username", "$pw");
         appendLog("S", "Successful connection to the database");
     } catch (PDOException $e) {
+        printAlertJs("Hi ha hagut un problema en connectar-te amb la base de dades",'e');
         echo "Failed to get DB handle: " . $e->getMessage() . "\n";
         appendLog("E", "Failed to get DB handle: " . $e->getMessage());
         exit;
-    }
+    }   
 
-    try {
-        $query = $pdo->prepare('INSERT INTO questions (id_survey, title, active, type) VALUES(?,?,?,?)');
-        $idSurvey = 1;
-        $titleQuestion = "Aprovaràn aquests nois el projecte?";
-        $questionActive = 1;
-        $typeQuestion = 'text';
+    $questionType = $_POST['selectTypeQuestion'];
+    if($questionType == "text" || $questionType == "number" || $questionType == "opcioSimple"){
+        try {
+            $questionText = $_POST['questionInput'];
+            $query = $pdo->prepare('INSERT INTO questions (id_survey, title, active, type) VALUES(1,?,1,?)');
+            $query->bindParam(1, $questionText); 
+            $query->bindParam(2, $questionType);
+            $query->execute();
 
-        $query->bindParam(1, $idSurvey);
-        $query->bindParam(2, $titleQuestion);
-        $query->bindParam(3, $questionActive);
-        $query->bindParam(4, $typeQuestion);
-        $query->execute();
-        $queryText = "INSERT INTO questions (id_survey, title, active, type) VALUES($idSurvey,'$titleQuestion',$questionActive,'$typeQuestion')";
-        appendLog("S", "Successfully added question with title '" . $titleQuestion . "' and type '" . $typeQuestion . "' - '" . $queryText . "'");
-    } catch (PDOException $e) {
-        echo $e;
-        //Añadir a futuro
-        //appendLog("E", "Successfully added question with title '" . $titleQuestion . "' and type '" . $typeQuestion . "' - '" . $queryText . "'");
+            $queryText = 'INSERT INTO questions (id_survey, title, active, type) VALUES(1,'.$questionText.',1,'.$questionType.')';
+            appendLog("S", "Successful insertion of the question: ".$questionText." - ".$queryText);
+        } catch (PDOException $e) {
+            $queryText = 'INSERT INTO questions (id_survey, title, active, type) VALUES(1,'.$questionText.',1,'.$questionType.')';
+            printAlertJs("No s'ha pogut afegir la questio a la base de dades",'e');
+            appendLog("E", "Failed to add question ".$questionText." in the database: " . $e->getMessage() . " - ". $queryText);
+            return;
+        }
     }
+    if($questionType == "opcioSimple"){
+        $i = 0;
+        while(isset($_POST[strval($i)])){
+            try {
+                $questionText = $_POST['questionInput'];
+                $subQuery = 'select id from questions where title = "'.$questionText.'" and type = "'.$questionType.'" limit 1';
+                $queryText = 'INSERT INTO options (option, id_question) VALUES('.$questionText.',('.$subQuery.'))';
+
+                $query = $pdo->prepare("INSERT INTO options (option_text,id_question) VALUES(?,(select id from questions where title = ? and type = ? limit 1))");
+                $query->bindParam(1, $_POST[strval($i)]);
+                $query->bindParam(2, $questionText);
+                $query->bindParam(3, $questionType);
+                $query->execute();
+
+                appendLog("S", "Successful insertion of the option: ".$_POST[strval($i)]." - ".$queryText);
+            } catch (PDOException $e) {
+                printAlertJs("No s'ha pogut afegir la opcio Nº $i a la base de dades, eliminant tota la pregunta",'e');
+                $subQuery = 'select id from questions where title = "'.$questionText.'" and type = "'.$questionType.'" limit 1';
+                $queryText = 'INSERT INTO options (option, id_question) VALUES('.$questionText.',('.$subQuery.'))';
+                appendLog("E", "Failed to add option ".$_POST[strval($i)]." in the database: " . $e->getMessage() . " - ". $queryText);
+
+                for ($i; $i >= 0;$i--){
+                    try{
+                        $queryText = "delete from questions where option_text = ".$_POST[strval($i)]." and id_question = (".$subQuery.")";
+                        $query = $pdo->prepare("delete from questions where option_text = ? and id_question = (select id from questions where title = ? and type = ? limit 1)");
+                        $query->bindParam(1, $_POST[strval($i)]);
+                        $query->bindParam(2, $questionText);
+                        $query->bindParam(3, $questionType);
+                        $query->execute();
+
+                        appendLog("S", "Successful drop of the option: ".$_POST[strval($i)]." - ".$queryText);
+                    } catch (PDOException $e) {
+                        appendLog("E", "Failed to drop option ".$_POST[strval($i)]." to the database: " . $e->getMessage() . " - ". $queryText);
+                    }
+                }
+                
+                try{
+                    $queryText = "delete from question where title = '".$questionText."' and type = '" . $questionType . "'";
+                    $query = $pdo->prepare("delete from question where title = ? and type = '".$questionType."'");
+                    $query->bindParam(1, $questionText); 
+                    $query->execute();
+                    appendLog("S", "Successful drop of the question: ".$questionText." - ".$queryText);
+                    return;
+                } catch (PDOException $e) {
+                    appendLog("E", "Failed drop of the question ".$questionText."to de database:".$e->getMessage()." - ".$queryText);
+                }
+            }
+            $i += 1;
+        }
+        
+    }
+    
 
     unset($query);
     unset($pdo);
@@ -188,4 +239,43 @@ function getClientIP(){
 
 function printAlertJs($message,$type){
     echo '<script>alertCss("'.$message.'","'.$type.'")</script>';
+}
+
+function deleteById($id,$type){
+    try {
+        $hostname = "20.107.55.123";
+        $dbname = "surveys_database";
+        $username = "database_survey_user";
+        $pw = "surv3ys_d@t2b@s3 database";
+        $pdo = new PDO("mysql:host=$hostname;dbname=$dbname", "$username", "$pw");
+    } catch (PDOException $e) {
+        printAlertJs("Hi ha hagut un problema en connectar-te amb la base de dades",'e');
+        echo "Failed to get DB handle: " . $e->getMessage() . "\n";
+        appendLog("E", "Failed to get DB handle: " . $e->getMessage());
+        exit;
+    }   
+    try{
+        $queryText = "DELETE FROM ".$type." where id = ".$id;
+        if($type == 'surveys'){
+            $tablaAsociada = 'questions_surveys';
+            $queryStart = $pdo->prepare("DELETE FROM $tablaAsociada where id_survey = $id");
+            $queryStart->execute();
+            $tablaAsociada = 'teachers_surveys';
+            $queryStart2 = $pdo->prepare("DELETE FROM $tablaAsociada where id_survey = $id");
+            $queryStart2->execute();
+            $query = $pdo->prepare("DELETE FROM $type where id = $id");
+            $query->execute();
+            appendLog("S", "Successful drop of the survey with id: ".$id);
+        }
+        else if($type == 'questions'){
+            $query = $pdo->prepare("UPDATE questions set active = 0 where id = $id");
+            $query->execute();
+            appendLog("S", "Successful update active-inactive of the option with id: ".$id);
+        }
+        /*$query->bindParam(1, $type); 
+        $query->bindParam(2, $id); */
+        return;
+    } catch (PDOException $e) {
+        appendLog("E", "Failed drop of the ".$type."to de database:".$e->getMessage()." - ".$queryText);
+    }
 }

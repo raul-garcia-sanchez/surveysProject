@@ -26,9 +26,9 @@ session_start();
             echo '
                 <div class="card" id="dashboard-admin">
                     <div class="card-content">
-                        <a href="teacher.php"><button><h1>Professors</h1></button></a>
-                        <a href="poll.php"><button><h1>Enquestes</h1></button></a>
-                        <a href="stats.php"><button><h1>Estadistiques</h1></button></a>
+                        <a href="teacher.php"><button class="buttonHover"><h1>Professors</h1></button></a>
+                        <a href="poll.php"><button class="buttonHover"><h1>Enquestes</h1></button></a>
+                        <a href="stats.php"><button class="buttonHover"><h1>Estadistiques</h1></button></a>
                     </div>
                 </div>
                 ';
@@ -39,8 +39,8 @@ session_start();
             echo '
                     <div class="card" id="dashboard-professor">
                         <div class="card-content">
-                            <a href="profile.php"><button><h1>Perfil</h1></button></a>
-                            <a href="stats.php"><button><h1>Estadistiques</h1></button></a>
+                            <a href="profile.php"><button class"buttonHover"><h1>Perfil</h1></button></a>
+                            <a href="stats.php"><button class"buttonHover"><h1>Estadistiques</h1></button></a>
                         </div>
                     </div>
                 ';

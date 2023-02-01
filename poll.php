@@ -1,5 +1,12 @@
-<?php session_start(); ?>
-<!DOCTYPE html>
+<?php session_start();
+include './resources/auxFunctions.php';
+if (isset($_POST['submitButtonSaveQuestion']) && isset($_POST['selectTypeQuestion']) && isset($_SESSION['user']['username'])) {
+    addQuestion();
+}if (isset($_POST['deleteId'])) {
+    $array = explode(',',$_POST['deleteId']);
+    deleteById($array[0],$array[1]);
+}
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -14,35 +21,44 @@
 </head>
 
 <body class="page-poll">
-<div id="divAlertas"></div>
     <div class="global-container">
         <?php
-        include './resources/auxFunctions.php';
+
         createHeader("Enquestes IETI");
+        echo '<div id="divAlertas"></div>';
+        echo '<div id="divEliminar">
+        <form action="poll.php" method="POST">
+        <input type="text" style="visibility:hidden" name="deleteId" id="inpDeleteId">
+        <div id="divOptionsBeforeDelete">
+        <h1 id="textoAvisoBorrado">Estàs segur que ho vols esborrar?</h1>
+        <input type="submit" value="Esborrar" id="buttonSubmitDelete">
+        <button onclick="displayNoneForm()" id="buttonCancel" type="button">Cancelar</button>
+        </div>
+        </form>
+        </div>';
         if ($_SESSION['user']["role"] == "admin") {
-            echo "
+        echo '<div id="divAlertas"></div>';
+        echo "
         <div class='card' id='dashboard-professor'>
         <div class='card-content'>
-                <button onclick='formAddQuestion()'>
+                <button class='buttonHover' onclick='formAddQuestion()'>
                     <h3>Crear pregunta</h3>
                 </button>
                 
-                <button onclick='printListQuestions()'>
+                <button class='buttonHover' onclick='printListQuestions()'>
                     <h3>Llistat de preguntes</h3>
                 </button>
-                <button onclick='printListSurveys()'>
+                <button class='buttonHover' onclick='printListSurveys()'>
                     <h3>Llistat d'enquestes</h3>
                 </button>
                 
-                <button onclick='formAddSurvey()'>
+                <button class='buttonHover' onclick='formAddSurvey()'>
                     <h3>Crear enquesta</h3>
                 </button>
         </div>
         <div id='principalContent'>" . printSurveys() . printQuestions() . "</div>";
             if (isset($_POST['submitButtonSaveQuestion'])) {
-                addQuestion();
-                $message = "Pregunta afegida correctament";
-                echo "<p id='errorMessage' align='center'> $message</p>";
+                printAlertJs("Pregunta afegida correctament",'s');
             }
             echo "</div>";
         }

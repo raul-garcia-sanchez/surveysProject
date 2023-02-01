@@ -14,8 +14,8 @@
 </head>
 
 <body class="page-perfil">
-<div id="divAlertas"></div>
     <div class="global-container">
+        <div id="divAlertas"></div>
         <h1>Perfil</h1>
         <a href="dashboard.php"><button>Tornar enrere</button></a>
     </div>
