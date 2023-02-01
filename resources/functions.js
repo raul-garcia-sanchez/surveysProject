@@ -433,6 +433,7 @@ function addNameInputs(){
     $(this).attr("name",index)
   })
 }
+
 function alertCss(message,type){
   if(type == 'w'){
     backgroundColor = 'rgb(250, 250, 139)';

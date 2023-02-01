@@ -79,3 +79,96 @@ S - 14:53:31 - ::1 - Successful insertion of the question: Pregunta 1 - INSERT I
 S - 14:53:32 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com
 S - 14:53:47 - ::1 - Successful insertion of the question: Pregunta 2 - INSERT INTO questions (id_survey, title, active, type) VALUES(1,Pregunta 2,1,number)
 S - 14:53:48 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 16:04:45 - ::1 - The page /app/surveysProject/index.php has loaded successfully
+S - 16:04:47 - ::1 - Successful connection to the database
+S - 16:04:47 - ::1 - The page /app/surveysProject/login.php has loaded successfully
+S - 16:04:49 - ::1 - Successful connection to the database
+S - 16:04:49 - ::1 - The user successfully connected with the username raul@gmail.com and the encrypted password bbb0b5b15842af2a3f42072a418c908e8a63caab2120d15cfea68e433cfe68dd - select id, username, password, role from users where username = 'raul@gmail.com' and password = 'bbb0b5b15842af2a3f42072a418c908e8a63caab2120d15cfea68e433cfe68dd'
+S - 16:04:49 - ::1 - The page /app/surveysProject/dashboard.php has loaded successfully by user raul@gmail.com
+S - 16:05:04 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 16:07:37 - ::1 - The page /app/surveysProject/index.php has loaded successfully
+S - 16:07:38 - ::1 - Successful connection to the database
+S - 16:07:38 - ::1 - The page /app/surveysProject/login.php has loaded successfully
+S - 16:07:40 - ::1 - Successful connection to the database
+S - 16:07:40 - ::1 - The user successfully connected with the username raul@gmail.com and the encrypted password bbb0b5b15842af2a3f42072a418c908e8a63caab2120d15cfea68e433cfe68dd - select id, username, password, role from users where username = 'raul@gmail.com' and password = 'bbb0b5b15842af2a3f42072a418c908e8a63caab2120d15cfea68e433cfe68dd'
+S - 16:07:40 - ::1 - The page /app/surveysProject/dashboard.php has loaded successfully by user raul@gmail.com
+S - 16:07:42 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 16:07:52 - ::1 - Successful insertion of the question: Pregunta 123123 - INSERT INTO questions (id_survey, title, active, type) VALUES(1,Pregunta 123123,1,text)
+S - 16:07:53 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 16:12:48 - ::1 - Successful insertion of the question: Pregunta 123123 - INSERT INTO questions (id_survey, title, active, type) VALUES(1,Pregunta 123123,1,text)
+S - 16:12:49 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 16:13:05 - ::1 - Successful insertion of the question: Pregunta alerta? - INSERT INTO questions (id_survey, title, active, type) VALUES(1,Pregunta alerta?,1,text)
+S - 16:13:05 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 16:14:36 - ::1 - Successful insertion of the question: Pregunta alerta2 - INSERT INTO questions (id_survey, title, active, type) VALUES(1,Pregunta alerta2,1,number)
+S - 16:14:37 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 16:15:19 - ::1 - Successful insertion of the question: Pregunta alerta2 - INSERT INTO questions (id_survey, title, active, type) VALUES(1,Pregunta alerta2,1,number)
+S - 16:15:20 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 16:15:31 - ::1 - Successful insertion of the question: Pregunta 3 carregat - INSERT INTO questions (id_survey, title, active, type) VALUES(1,Pregunta 3 carregat,1,text)
+S - 16:15:32 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 16:17:46 - ::1 - Successful insertion of the question: Pregunta 3 carregat - INSERT INTO questions (id_survey, title, active, type) VALUES(1,Pregunta 3 carregat,1,text)
+S - 16:17:47 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 16:22:11 - 127.0.0.1 - The page /app/surveysProject/index.php has loaded successfully
+S - 16:22:13 - 127.0.0.1 - Successful connection to the database
+S - 16:22:13 - 127.0.0.1 - The page /app/surveysProject/login.php has loaded successfully
+S - 16:22:14 - 127.0.0.1 - Successful connection to the database
+S - 16:22:14 - 127.0.0.1 - The user successfully connected with the username raul@gmail.com and the encrypted password bbb0b5b15842af2a3f42072a418c908e8a63caab2120d15cfea68e433cfe68dd - select id, username, password, role from users where username = 'raul@gmail.com' and password = 'bbb0b5b15842af2a3f42072a418c908e8a63caab2120d15cfea68e433cfe68dd'
+S - 16:22:14 - 127.0.0.1 - The page /app/surveysProject/dashboard.php has loaded successfully by user raul@gmail.com
+S - 16:22:17 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 17:09:19 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 17:10:09 - 127.0.0.1 - Successful insertion of the question: Pregunta alerta 123 - INSERT INTO questions (id_survey, title, active, type) VALUES(1,Pregunta alerta 123,1,text)
+S - 17:10:10 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 17:10:24 - 127.0.0.1 - Successful insertion of the question: Preg - INSERT INTO questions (id_survey, title, active, type) VALUES(1,Preg,1,text)
+S - 17:10:24 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 17:10:58 - 127.0.0.1 - Successful insertion of the question: Preg - INSERT INTO questions (id_survey, title, active, type) VALUES(1,Preg,1,text)
+S - 17:10:59 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 17:11:05 - 127.0.0.1 - Successful insertion of the question: 123 - INSERT INTO questions (id_survey, title, active, type) VALUES(1,123,1,number)
+S - 17:11:05 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 17:11:42 - 127.0.0.1 - Successful insertion of the question: 123 - INSERT INTO questions (id_survey, title, active, type) VALUES(1,123,1,number)
+S - 17:11:43 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 17:13:26 - 127.0.0.1 - Successful insertion of the question: 123 - INSERT INTO questions (id_survey, title, active, type) VALUES(1,123,1,number)
+S - 17:13:27 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 17:13:30 - 127.0.0.1 - Successful insertion of the question: 213 - INSERT INTO questions (id_survey, title, active, type) VALUES(1,213,1,text)
+S - 17:13:31 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 17:14:04 - 127.0.0.1 - Successful insertion of the question: 213 - INSERT INTO questions (id_survey, title, active, type) VALUES(1,213,1,text)
+S - 17:14:05 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 17:15:09 - 127.0.0.1 - Successful insertion of the question: 213 - INSERT INTO questions (id_survey, title, active, type) VALUES(1,213,1,text)
+S - 17:15:10 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 17:16:12 - ::1 - The page /app/surveysProject/index.php has loaded successfully
+S - 17:16:14 - ::1 - Successful connection to the database
+S - 17:16:14 - ::1 - The page /app/surveysProject/login.php has loaded successfully
+S - 17:16:15 - ::1 - Successful connection to the database
+S - 17:16:15 - ::1 - The user successfully connected with the username raul@gmail.com and the encrypted password bbb0b5b15842af2a3f42072a418c908e8a63caab2120d15cfea68e433cfe68dd - select id, username, password, role from users where username = 'raul@gmail.com' and password = 'bbb0b5b15842af2a3f42072a418c908e8a63caab2120d15cfea68e433cfe68dd'
+S - 17:16:15 - ::1 - The page /app/surveysProject/dashboard.php has loaded successfully by user raul@gmail.com
+S - 17:16:18 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 17:16:28 - ::1 - Successful insertion of the question: q - INSERT INTO questions (id_survey, title, active, type) VALUES(1,q,1,text)
+S - 17:16:29 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 17:20:49 - ::1 - Successful insertion of the question: q - INSERT INTO questions (id_survey, title, active, type) VALUES(1,q,1,text)
+S - 17:20:50 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 17:21:17 - ::1 - Successful insertion of the question: q - INSERT INTO questions (id_survey, title, active, type) VALUES(1,q,1,text)
+S - 17:21:18 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 17:21:32 - 127.0.0.1 - Successful insertion of the question: 213 - INSERT INTO questions (id_survey, title, active, type) VALUES(1,213,1,text)
+S - 17:21:33 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 17:21:41 - 127.0.0.1 - Successful insertion of the question: 213 - INSERT INTO questions (id_survey, title, active, type) VALUES(1,213,1,text)
+S - 17:21:42 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 17:21:47 - 127.0.0.1 - Successful insertion of the question: 123 - INSERT INTO questions (id_survey, title, active, type) VALUES(1,123,1,text)
+S - 17:21:48 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 17:28:21 - 127.0.0.1 - Successful insertion of the question: 123 - INSERT INTO questions (id_survey, title, active, type) VALUES(1,123,1,text)
+S - 17:28:22 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 17:28:27 - 127.0.0.1 - Successful insertion of the question: 123 - INSERT INTO questions (id_survey, title, active, type) VALUES(1,123,1,text)
+S - 17:28:28 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 17:28:30 - 127.0.0.1 - Successful insertion of the question: 123 - INSERT INTO questions (id_survey, title, active, type) VALUES(1,123,1,text)
+S - 17:28:31 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 17:29:56 - 127.0.0.1 - Successful insertion of the question: 123 - INSERT INTO questions (id_survey, title, active, type) VALUES(1,123,1,text)
+S - 17:29:56 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 17:30:53 - 127.0.0.1 - Successful insertion of the question: 123 - INSERT INTO questions (id_survey, title, active, type) VALUES(1,123,1,text)
+S - 17:30:54 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 17:30:58 - 127.0.0.1 - Successful insertion of the question: 123 - INSERT INTO questions (id_survey, title, active, type) VALUES(1,123,1,text)
+S - 17:30:59 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 17:31:08 - 127.0.0.1 - Successful insertion of the question: 123 - INSERT INTO questions (id_survey, title, active, type) VALUES(1,123,1,text)
+S - 17:31:09 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 17:32:56 - 127.0.0.1 - Successful insertion of the question: 123 - INSERT INTO questions (id_survey, title, active, type) VALUES(1,123,1,text)
+S - 17:32:57 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 17:33:04 - 127.0.0.1 - Successful insertion of the question: 123 - INSERT INTO questions (id_survey, title, active, type) VALUES(1,123,1,text)
+S - 17:33:05 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 17:34:09 - 127.0.0.1 - Successful survey insertion in to DB
+S - 17:34:10 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com

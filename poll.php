@@ -21,6 +21,9 @@ include './resources/auxFunctions.php';
 <body class="page-poll">
     <div class="global-container">
         <?php
+
+        createHeader("Enquestes IETI");
+        echo '<div id="divAlertas"></div>';
         if (isset($_POST['submitButtonSaveQuestion']) && isset($_POST['selectTypeQuestion']) && isset($_SESSION['user']['username'])) {
             addQuestion();
         }
@@ -31,11 +34,7 @@ include './resources/auxFunctions.php';
             }
             addSurvey($listOfSurvey);
             printAlertJs("Enquesta carregada correctament",'s');
-            unset($_POST);
         }
-
-        createHeader("Enquestes IETI");
-        echo '<div id="divAlertas"></div>';
         if ($_SESSION['user']["role"] == "admin") {
         echo '<div id="divAlertas"></div>';
         echo "
