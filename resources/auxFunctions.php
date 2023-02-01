@@ -80,7 +80,7 @@ function printSurveys()
     $texto = "<div id='divListSurveys' class='divLlistat'>";
     $texto .= "<table><tr><th class='thTittle'>Titol Enquesta</th><th class='thOperations'>Operacions</th></tr>";
     while ($row) {
-        $texto .= "<tr><td>" . $row["title"] . '<td class="tdOperations"><i class="fa fa-pencil-square-o" aria-hidden="true"></i><i class="fa fa-trash-o" onclick="deleteById('.$row["id"].',`surveys`)" aria-hidden="true"></i></td></tr></td>';
+        $texto .= "<tr><td>" . $row["title"] . '<td class="tdOperations"><i class="fa fa-pencil-square-o" onclick="editSurvey('.$row['id'].')" aria-hidden="true"></i><i class="fa fa-trash-o" onclick="deleteById('.$row["id"].',`surveys`)" aria-hidden="true"></i></td></tr></td>';
         $row = $query->fetch();
     }
     $texto .= "</table></div>";
@@ -104,7 +104,7 @@ function printQuestions()
     }
 
     try {
-        $queryText = 'select title, id from questions where active = 1;';
+        $queryText = 'select title, id, type from questions where active = 1;';
         $query = $pdo->prepare($queryText);
         $query->execute();
     } catch (PDOException $e) {
@@ -115,7 +115,8 @@ function printQuestions()
     $texto = "<div id='divListQuestions' class='divLlistat'>";
     $texto .= "<table><tr><th class='thTittle'>Títol Pregunta</th><th class='thOperations'>Operacions</th></tr>";
     while ($row) {
-        $texto .= "<tr><td>" . $row["title"] . "<td class='tdOperations'><i class='fa fa-pencil-square-o' aria-hidden='true'></i><i class='fa fa-trash-o' onclick='deleteById(".$row['id'].",`questions`)' aria-hidden='true'></i></td></tr></td>";
+        $textoIdTipo = $row['id'].",".$row['type'].",".$row['title'];
+        $texto .= "<tr><td>" . $row["title"] . "<td class='tdOperations'><i class='fa fa-pencil-square-o' onclick='editQuestion(`".$textoIdTipo."`)' aria-hidden='true'></i><i class='fa fa-trash-o' onclick='deleteById(".$row['id'].",`questions`)' aria-hidden='true'></i></td></tr></td>";
         $row = $query->fetch();
     }
     $texto .= "</table></div>";
@@ -148,7 +149,7 @@ function addQuestion()
             $query->bindParam(2, $questionType);
             $query->execute();
 
-            $queryText = 'INSERT INTO questions (id_survey, title, active, type) VALUES(1,'.$questionText.',1,'.$questionType.')';
+            $queryText = 'INSERT INTO questions (title, active, type) VALUES('.$questionText.',1,'.$questionType.')';
             appendLog("S", "Successful insertion of the question: ".$questionText." - ".$queryText);
         } catch (PDOException $e) {
             $queryText = 'INSERT INTO questions (id_survey, title, active, type) VALUES(1,'.$questionText.',1,'.$questionType.')';
@@ -180,8 +181,8 @@ function addQuestion()
 
                 for ($i; $i >= 0;$i--){
                     try{
-                        $queryText = "delete from questions where option_text = ".$_POST[strval($i)]." and id_question = (".$subQuery.")";
-                        $query = $pdo->prepare("delete from questions where option_text = ? and id_question = (select id from questions where title = ? and type = ? limit 1)");
+                        $queryText = "delete from options where option_text = ".$_POST[strval($i)]." and id_question = (".$subQuery.")";
+                        $query = $pdo->prepare("delete from options where option_text = ? and id_question = (select id from questions where title = ? and type = ? limit 1)");
                         $query->bindParam(1, $_POST[strval($i)]);
                         $query->bindParam(2, $questionText);
                         $query->bindParam(3, $questionType);
@@ -194,8 +195,8 @@ function addQuestion()
                 }
                 
                 try{
-                    $queryText = "delete from question where title = '".$questionText."' and type = '" . $questionType . "'";
-                    $query = $pdo->prepare("delete from question where title = ? and type = '".$questionType."'");
+                    $queryText = "delete from questions where title = '".$questionText."' and type = '" . $questionType . "'";
+                    $query = $pdo->prepare("delete from questions where title = ? and type = '".$questionType."'");
                     $query->bindParam(1, $questionText); 
                     $query->execute();
                     appendLog("S", "Successful drop of the question: ".$questionText." - ".$queryText);
@@ -210,6 +211,40 @@ function addQuestion()
     }
     unset($query);
     unset($pdo);
+}
+
+function updateQuestion($id,$title,$type){
+    try {
+        $hostname = "20.107.55.123";
+        $dbname = "surveys_database";
+        $username = "database_survey_user";
+        $pw = "surv3ys_d@t2b@s3 database";
+        $pdo = new PDO("mysql:host=$hostname;dbname=$dbname", "$username", "$pw");
+        appendLog("S", "Successful connection to the database");
+    } catch (PDOException $e) {
+        printAlertJs("Hi ha hagut un problema en connectar-te amb la base de dades",'e');
+        echo "Failed to get DB handle: " . $e->getMessage() . "\n";
+        appendLog("E", "Failed to get DB handle: " . $e->getMessage());
+        exit;
+    }   
+    if($type == "text" || $type == "number" || $type == "opcioSimple"){
+        try {
+            $query = $pdo->prepare('UPDATE questions set title = ? where id = ?');
+            $query->bindParam(1, $title); 
+            $query->bindParam(2, $id);
+            $query->execute();
+
+            $queryText = 'UPDATE questions set title = '.$title.' where id = '.$id.'';
+            appendLog("S", "Successful update of the question: ".$title." - ".$queryText);
+        } catch (PDOException $e) {
+            $queryText = 'UPDATE questions set title = '.$title.' where id = '.$id.'';
+            printAlertJs("No s'ha pogut actualitzar la questio a la base de dades",'e');
+            appendLog("E", "Failed to add question ".$title." in the database: " . $e->getMessage() . " - ". $queryText);
+            return;
+        }
+    }
+
+
 }
 
 function appendLog($messageTypeInitial,$message){

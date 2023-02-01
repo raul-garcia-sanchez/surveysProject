@@ -280,3 +280,13 @@ S - 20:32:22 - 127.0.0.1 - Successful connection to the database
 S - 20:32:22 - 127.0.0.1 - The user successfully connected with the username raul@gmail.com and the encrypted password bbb0b5b15842af2a3f42072a418c908e8a63caab2120d15cfea68e433cfe68dd - select id, username, password, role from users where username = 'raul@gmail.com' and password = 'bbb0b5b15842af2a3f42072a418c908e8a63caab2120d15cfea68e433cfe68dd'
 S - 20:32:22 - 127.0.0.1 - The page /app/surveysProject/dashboard.php has loaded successfully by user raul@gmail.com
 S - 20:32:23 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 20:47:27 - 127.0.0.1 - The page /app/surveysProject/index.php has loaded successfully
+S - 20:47:30 - 127.0.0.1 - Successful connection to the database
+S - 20:47:30 - 127.0.0.1 - The page /app/surveysProject/login.php has loaded successfully
+S - 20:47:32 - 127.0.0.1 - Successful connection to the database
+S - 20:47:32 - 127.0.0.1 - The user successfully connected with the username raul@gmail.com and the encrypted password bbb0b5b15842af2a3f42072a418c908e8a63caab2120d15cfea68e433cfe68dd - select id, username, password, role from users where username = 'raul@gmail.com' and password = 'bbb0b5b15842af2a3f42072a418c908e8a63caab2120d15cfea68e433cfe68dd'
+S - 20:47:32 - 127.0.0.1 - The page /app/surveysProject/dashboard.php has loaded successfully by user raul@gmail.com
+S - 20:47:35 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 20:48:23 - 127.0.0.1 - User raul@gmail.com has successfully logout
+S - 20:48:23 - 127.0.0.1 - Successful connection to the database
+S - 20:48:23 - 127.0.0.1 - The page /app/surveysProject/login.php has loaded successfully

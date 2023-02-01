@@ -5,6 +5,12 @@ if (isset($_POST['submitButtonSaveQuestion']) && isset($_POST['selectTypeQuestio
 }if (isset($_POST['deleteId'])) {
     $array = explode(',',$_POST['deleteId']);
     deleteById($array[0],$array[1]);
+}if (isset($_POST['updateId']) && isset($_POST['updateTitle'])){
+    if(strlen($_POST['updateTitle'])>0){
+        updateQuestion($_POST['updateId'],$_POST['updateTitle'],$_POST['updateType']);
+    }else{
+        printAlertJs("L'enquesta no s'hi ha actualitzat perquè el títol estava buit",'e');
+    }
 }
 ?><!DOCTYPE html>
 <html lang="en">
@@ -35,8 +41,8 @@ if (isset($_POST['submitButtonSaveQuestion']) && isset($_POST['selectTypeQuestio
         <input type="text" style="visibility:hidden" name="deleteId" id="inpDeleteId">
         <div id="divOptionsBeforeDelete">
         <h1 id="textoAvisoBorrado">Estàs segur que ho vols esborrar?</h1>
-        <input type="submit" value="Esborrar" id="buttonSubmitDelete">
-        <button onclick="displayNoneForm()" id="buttonCancel" type="button">Cancelar</button>
+        <input type="submit" value="Esborrar" class="buttonHover" id="buttonSubmitDelete">
+        <button onclick="displayNoneForm()" id="buttonCancel" class="buttonHover" type="button">Cancelar</button>
         </div>
         </form>
         </div>';

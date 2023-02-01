@@ -559,3 +559,62 @@ function buttonSubmit(){
     createOrRemoveSubmitButton(remove=true)
   }
 }
+
+function editQuestion(info){
+  $(".page-poll #divListSurveys").css("display", "none");
+  $(".page-poll #divListQuestions").css("display", "none");
+  alert(info)
+  let arrayInfo = info.split(',')
+  let id = arrayInfo[0]
+  let type = arrayInfo[1]
+  let text = arrayInfo[2]
+  let divInicio = $('<div>',{
+    id: 'divRemovible',
+  })
+  if(type=='text' || type=='num'){
+    divInicio.append(
+      $('<form>',{
+        method:'post',
+        action:'poll.php',
+        id: 'formUpdateQuestion'
+      }).append(
+        $('<h3>',{
+          text:'Pregunta a editar:'
+        })
+      ).append(
+        $('<label>',{
+          text: 'Títol: '
+        }).append(
+        $('<input>',{
+          type:'text',
+          value: text,
+          name:'updateTitle',
+          id: 'updateTitle'
+        })
+        )
+      ).append(
+        $('<input>',{
+          type:'text',
+          value: id,
+          name:'updateId',
+          style: 'display:none'
+        })
+        ).append(
+          $('<input>',{
+            type:'text',
+            value: type,
+            name:'updateType',
+            style: 'display:none'
+          })
+          ).append(
+        $('<input>',{
+          type: 'submit',
+          value: 'Guardar'
+        })
+      )
+    )
+  }else if(type == 'opcioSimple'){
+
+  }
+  $('#principalContent').append(divInicio)
+}
