@@ -1,688 +1,167 @@
-S - 15:39:54 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user 
-S - 15:40:04 - ::1 - The page /app/surveysProject/index.php has loaded successfully
-S - 15:40:07 - ::1 - Successful connection to the database
-S - 15:40:07 - ::1 - The page /app/surveysProject/login.php has loaded successfully
-S - 15:40:12 - ::1 - Successful connection to the database
-S - 15:40:12 - ::1 - The user successfully connected with the username raul@gmail.com and the encrypted password bbb0b5b15842af2a3f42072a418c908e8a63caab2120d15cfea68e433cfe68dd - select id, username, password, role from users where username = 'raul@gmail.com' and password = 'bbb0b5b15842af2a3f42072a418c908e8a63caab2120d15cfea68e433cfe68dd'
-S - 15:40:12 - ::1 - The page /app/surveysProject/dashboard.php has loaded successfully by user raul@gmail.com
-S - 15:40:14 - ::1 - Successful connection to the database
-S - 15:40:14 - ::1 - Query executed successfully - 'select title from surveys;'
-S - 15:40:14 - ::1 - Successful connection to the database
-S - 15:40:14 - ::1 - Query executed successfully - 'select title from questions;'
-S - 15:40:14 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 15:49:23 - ::1 - Successful connection to the database
-S - 15:49:23 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 15:49:23 - ::1 - Successful connection to the database
-S - 15:49:23 - ::1 - Query executed successfully - 'select title from questions;'
-S - 15:49:23 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 15:50:08 - ::1 - Successful connection to the database
-S - 15:50:08 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 15:50:09 - ::1 - Successful connection to the database
-S - 15:50:09 - ::1 - Query executed successfully - 'select title from questions;'
-S - 15:50:09 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 15:50:27 - ::1 - Successful connection to the database
-S - 15:50:27 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 15:50:31 - ::1 - Successful connection to the database
-S - 15:50:31 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 15:50:31 - ::1 - Successful connection to the database
-S - 15:50:31 - ::1 - Query executed successfully - 'select title from questions;'
-S - 15:50:31 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 15:50:41 - ::1 - Successful connection to the database
-S - 15:50:41 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 15:50:41 - ::1 - Successful connection to the database
-S - 15:50:41 - ::1 - Query executed successfully - 'select title from questions;'
-S - 15:50:41 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 15:56:28 - ::1 - Successful connection to the database
-S - 15:56:28 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 15:56:28 - ::1 - Successful connection to the database
-S - 15:56:28 - ::1 - Query executed successfully - 'select title from questions;'
-S - 15:56:28 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 15:56:38 - ::1 - Successful connection to the database
-S - 15:56:38 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 15:56:38 - ::1 - Successful connection to the database
-S - 15:56:38 - ::1 - Query executed successfully - 'select title from questions;'
-S - 15:56:38 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 15:56:42 - ::1 - Successful connection to the database
-S - 15:56:42 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 15:56:42 - ::1 - Successful connection to the database
-S - 15:56:42 - ::1 - Query executed successfully - 'select title from questions;'
-S - 15:56:42 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 15:57:55 - ::1 - Successful connection to the database
-S - 15:57:55 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 15:57:55 - ::1 - Successful connection to the database
-S - 15:57:55 - ::1 - Query executed successfully - 'select title from questions;'
-S - 15:57:55 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 15:57:56 - ::1 - Successful connection to the database
-S - 15:57:56 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 15:57:56 - ::1 - Successful connection to the database
-S - 15:57:56 - ::1 - Query executed successfully - 'select title from questions;'
-S - 15:57:56 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 15:58:16 - ::1 - Successful connection to the database
-S - 15:58:16 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 15:58:16 - ::1 - Successful connection to the database
-S - 15:58:17 - ::1 - Query executed successfully - 'select title from questions;'
-S - 15:58:17 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 15:58:24 - ::1 - Successful connection to the database
-S - 15:58:24 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 15:58:24 - ::1 - Successful connection to the database
-S - 15:58:25 - ::1 - Query executed successfully - 'select title from questions;'
-S - 15:58:25 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 15:58:33 - ::1 - Successful connection to the database
-S - 15:58:33 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 15:58:33 - ::1 - Successful connection to the database
-S - 15:58:33 - ::1 - Query executed successfully - 'select title from questions;'
-S - 15:58:33 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 15:59:58 - ::1 - Successful connection to the database
-S - 15:59:58 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 15:59:58 - ::1 - Successful connection to the database
-S - 15:59:58 - ::1 - Query executed successfully - 'select title from questions;'
-S - 15:59:58 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:00:02 - ::1 - Successful connection to the database
-S - 16:00:02 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:00:02 - ::1 - Successful connection to the database
-S - 16:00:03 - ::1 - Query executed successfully - 'select title from questions;'
-S - 16:00:03 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:00:09 - ::1 - Successful connection to the database
-S - 16:00:09 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:00:09 - ::1 - Successful connection to the database
-S - 16:00:09 - ::1 - Query executed successfully - 'select title from questions;'
-S - 16:00:09 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:00:22 - ::1 - Successful connection to the database
-E - 16:00:22 - ::1 - SQLSTATE[42S02]: Base table or view not found: 1146 Table 'surveys_database.surveys' doesn't exist - Failed to execute the query - select title, id from surveys;
-S - 16:00:22 - ::1 - Successful connection to the database
-S - 16:00:22 - ::1 - Query executed successfully - 'select title from questions;'
-S - 16:00:22 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:00:27 - ::1 - Successful connection to the database
-S - 16:00:27 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:00:27 - ::1 - Successful connection to the database
-S - 16:00:27 - ::1 - Query executed successfully - 'select title from questions;'
-S - 16:00:27 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:00:46 - ::1 - Successful connection to the database
-S - 16:00:46 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:00:46 - ::1 - Successful connection to the database
-S - 16:00:46 - ::1 - Query executed successfully - 'select title from questions;'
-S - 16:00:46 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:01:06 - ::1 - Successful connection to the database
-S - 16:01:06 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:01:06 - ::1 - Successful connection to the database
-S - 16:01:06 - ::1 - Query executed successfully - 'select title from questions;'
-S - 16:01:06 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:02:42 - ::1 - Successful connection to the database
-S - 16:02:42 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:02:42 - ::1 - Successful connection to the database
-S - 16:02:42 - ::1 - Query executed successfully - 'select title from questions;'
-S - 16:02:42 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:02:59 - ::1 - Successful connection to the database
-S - 16:02:59 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:02:59 - ::1 - Successful connection to the database
-S - 16:02:59 - ::1 - Query executed successfully - 'select title from questions;'
-S - 16:02:59 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:03:03 - ::1 - Successful connection to the database
-S - 16:03:03 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:03:04 - ::1 - Successful connection to the database
-S - 16:03:04 - ::1 - Query executed successfully - 'select title from questions;'
-S - 16:03:04 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:03:07 - ::1 - Successful connection to the database
-S - 16:03:07 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:03:07 - ::1 - Successful connection to the database
-S - 16:03:07 - ::1 - Query executed successfully - 'select title from questions;'
-S - 16:03:07 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:03:27 - ::1 - Successful connection to the database
-S - 16:03:27 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:03:27 - ::1 - Successful connection to the database
-S - 16:03:27 - ::1 - Query executed successfully - 'select title from questions;'
-S - 16:03:27 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:03:28 - ::1 - Successful connection to the database
-S - 16:03:28 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:03:28 - ::1 - Successful connection to the database
-S - 16:03:28 - ::1 - Query executed successfully - 'select title from questions;'
-S - 16:03:28 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:03:28 - ::1 - Successful connection to the database
-S - 16:03:28 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:03:28 - ::1 - Successful connection to the database
-S - 16:03:28 - ::1 - Query executed successfully - 'select title from questions;'
-S - 16:03:28 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:03:40 - ::1 - Successful connection to the database
-S - 16:03:40 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:03:40 - ::1 - Successful connection to the database
-S - 16:03:40 - ::1 - Query executed successfully - 'select title from questions;'
-S - 16:03:40 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:03:53 - ::1 - Successful connection to the database
-S - 16:03:53 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:03:53 - ::1 - Successful connection to the database
-S - 16:03:53 - ::1 - Query executed successfully - 'select title from questions;'
-S - 16:03:53 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:07:21 - ::1 - Successful connection to the database
-S - 16:07:21 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:07:21 - ::1 - Successful connection to the database
-S - 16:07:21 - ::1 - Query executed successfully - 'select title from questions;'
-S - 16:07:21 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:08:55 - ::1 - Successful connection to the database
-S - 16:08:55 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:08:55 - ::1 - Successful connection to the database
-S - 16:08:55 - ::1 - Query executed successfully - 'select title from questions;'
-S - 16:08:55 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:09:21 - ::1 - Successful connection to the database
-S - 16:09:21 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:09:21 - ::1 - Successful connection to the database
-S - 16:09:22 - ::1 - Query executed successfully - 'select title from questions;'
-S - 16:09:22 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:09:28 - ::1 - Successful connection to the database
-S - 16:09:28 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:09:28 - ::1 - Successful connection to the database
-S - 16:09:28 - ::1 - Query executed successfully - 'select title from questions;'
-S - 16:09:28 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:09:32 - ::1 - Successful connection to the database
-S - 16:09:32 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:09:32 - ::1 - Successful connection to the database
-S - 16:09:32 - ::1 - Query executed successfully - 'select title from questions;'
-S - 16:09:32 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:09:33 - ::1 - Successful connection to the database
-S - 16:09:33 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:09:33 - ::1 - Successful connection to the database
-S - 16:09:33 - ::1 - Query executed successfully - 'select title from questions;'
-S - 16:09:33 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:19:44 - ::1 - Successful connection to the database
-E - 16:19:44 - ::1 - SQLSTATE[42S02]: Base table or view not found: 1146 Table 'surveys_database.surveys' doesn't exist - Failed to execute the query - select title, id from surveys;
-S - 16:19:44 - ::1 - Successful connection to the database
-S - 16:19:44 - ::1 - Query executed successfully - 'select title from questions;'
-S - 16:19:44 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:19:47 - ::1 - Successful connection to the database
-E - 16:19:47 - ::1 - SQLSTATE[42S02]: Base table or view not found: 1146 Table 'surveys_database.surveys' doesn't exist - Failed to execute the query - select title, id from surveys;
-S - 16:19:47 - ::1 - Successful connection to the database
-S - 16:19:47 - ::1 - Query executed successfully - 'select title from questions;'
-S - 16:19:47 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:21:17 - ::1 - Successful connection to the database
-S - 16:21:17 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:21:17 - ::1 - Successful connection to the database
-S - 16:21:18 - ::1 - Query executed successfully - 'select title from questions;'
-S - 16:21:18 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:22:07 - ::1 - Successful connection to the database
-S - 16:22:07 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:22:07 - ::1 - Successful connection to the database
-S - 16:22:07 - ::1 - Query executed successfully - 'select title from questions;'
-S - 16:22:07 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:22:27 - ::1 - Successful connection to the database
-S - 16:22:27 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:22:27 - ::1 - Successful connection to the database
-S - 16:22:27 - ::1 - Query executed successfully - 'select title from questions;'
-S - 16:22:27 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:22:56 - ::1 - Successful connection to the database
-S - 16:22:56 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:22:57 - ::1 - Successful connection to the database
-S - 16:22:57 - ::1 - Query executed successfully - 'select title from questions;'
-S - 16:22:57 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:23:43 - ::1 - Successful connection to the database
-S - 16:23:43 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:23:43 - ::1 - Successful connection to the database
-S - 16:23:43 - ::1 - Query executed successfully - 'select title from questions;'
-S - 16:23:43 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:24:03 - ::1 - Successful connection to the database
-S - 16:24:03 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:24:03 - ::1 - Successful connection to the database
-S - 16:24:03 - ::1 - Query executed successfully - 'select title from questions;'
-S - 16:24:03 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:24:25 - ::1 - Successful connection to the database
-S - 16:24:25 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:24:26 - ::1 - Successful connection to the database
-S - 16:24:26 - ::1 - Query executed successfully - 'select title from questions;'
-S - 16:24:26 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:24:35 - ::1 - Successful connection to the database
-S - 16:24:35 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:24:35 - ::1 - Successful connection to the database
-S - 16:24:35 - ::1 - Query executed successfully - 'select title from questions;'
-S - 16:24:35 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:24:54 - ::1 - Successful connection to the database
-S - 16:24:54 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:24:54 - ::1 - Successful connection to the database
-S - 16:24:54 - ::1 - Query executed successfully - 'select title from questions;'
-S - 16:24:54 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:29:10 - ::1 - Successful connection to the database
-S - 16:29:10 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:29:10 - ::1 - Successful connection to the database
-S - 16:29:10 - ::1 - Query executed successfully - 'select title from questions;'
-S - 16:29:10 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:29:19 - ::1 - Successful connection to the database
-S - 16:29:19 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:29:19 - ::1 - Successful connection to the database
-S - 16:29:19 - ::1 - Query executed successfully - 'select title from questions;'
-S - 16:29:19 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:30:29 - ::1 - Successful connection to the database
-S - 16:30:29 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:30:29 - ::1 - Successful connection to the database
-S - 16:30:29 - ::1 - Query executed successfully - 'select title from questions;'
-S - 16:30:29 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:33:20 - ::1 - Successful connection to the database
-S - 16:33:20 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:33:20 - ::1 - Successful connection to the database
-S - 16:33:20 - ::1 - Query executed successfully - 'select title from questions;'
-S - 16:33:20 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:33:21 - ::1 - Successful connection to the database
-S - 16:33:21 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:33:21 - ::1 - Successful connection to the database
-S - 16:33:21 - ::1 - Query executed successfully - 'select title from questions;'
-S - 16:33:21 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:39:23 - ::1 - Successful connection to the database
-S - 16:39:23 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:39:23 - ::1 - Successful connection to the database
-S - 16:39:23 - ::1 - Query executed successfully - 'select title from questions;'
-S - 16:39:23 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:39:41 - ::1 - Successful connection to the database
-S - 16:39:41 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:39:41 - ::1 - Successful connection to the database
-S - 16:39:41 - ::1 - Query executed successfully - 'select title from questions;'
-S - 16:39:41 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:39:44 - ::1 - Successful connection to the database
-S - 16:39:44 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:39:44 - ::1 - Successful connection to the database
-S - 16:39:44 - ::1 - Query executed successfully - 'select title from questions;'
-S - 16:39:44 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:39:45 - ::1 - Successful connection to the database
-S - 16:39:45 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:39:45 - ::1 - Successful connection to the database
-S - 16:39:45 - ::1 - Query executed successfully - 'select title from questions;'
-S - 16:39:45 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:39:45 - ::1 - Successful connection to the database
-S - 16:39:45 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:39:46 - ::1 - Successful connection to the database
-S - 16:39:46 - ::1 - Query executed successfully - 'select title from questions;'
-S - 16:39:46 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:39:46 - ::1 - Successful connection to the database
-S - 16:39:46 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:39:46 - ::1 - Successful connection to the database
-S - 16:39:46 - ::1 - Query executed successfully - 'select title from questions;'
-S - 16:39:46 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:39:46 - ::1 - Successful connection to the database
-S - 16:39:46 - ::1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:39:46 - ::1 - Successful connection to the database
-S - 16:39:46 - ::1 - Query executed successfully - 'select title from questions;'
-S - 16:39:46 - ::1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:41:32 - 127.0.0.1 - The page /app/surveysProject/index.php has loaded successfully
-S - 16:41:34 - 127.0.0.1 - Successful connection to the database
-S - 16:41:34 - 127.0.0.1 - The page /app/surveysProject/login.php has loaded successfully
-S - 16:41:43 - 127.0.0.1 - Successful connection to the database
-S - 16:41:43 - 127.0.0.1 - The user successfully connected with the username raul@gmail.com and the encrypted password bbb0b5b15842af2a3f42072a418c908e8a63caab2120d15cfea68e433cfe68dd - select id, username, password, role from users where username = 'raul@gmail.com' and password = 'bbb0b5b15842af2a3f42072a418c908e8a63caab2120d15cfea68e433cfe68dd'
-S - 16:41:43 - 127.0.0.1 - The page /app/surveysProject/dashboard.php has loaded successfully by user raul@gmail.com
-S - 16:41:45 - 127.0.0.1 - Successful connection to the database
-S - 16:41:45 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:41:45 - 127.0.0.1 - Successful connection to the database
-S - 16:41:45 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
-S - 16:41:45 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:45:56 - 127.0.0.1 - Successful connection to the database
-S - 16:45:56 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:45:56 - 127.0.0.1 - Successful connection to the database
-S - 16:45:56 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
-S - 16:45:56 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:46:29 - 127.0.0.1 - Successful connection to the database
-S - 16:46:29 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:46:30 - 127.0.0.1 - Successful connection to the database
-S - 16:46:30 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
-S - 16:46:30 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:47:21 - 127.0.0.1 - Successful connection to the database
-S - 16:47:21 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:47:21 - 127.0.0.1 - Successful connection to the database
-S - 16:47:21 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
-S - 16:47:21 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:48:23 - 127.0.0.1 - Successful connection to the database
-S - 16:48:23 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:48:23 - 127.0.0.1 - Successful connection to the database
-S - 16:48:23 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
-S - 16:48:23 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:48:45 - 127.0.0.1 - Successful connection to the database
-S - 16:48:45 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:48:45 - 127.0.0.1 - Successful connection to the database
-S - 16:48:45 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
-S - 16:48:45 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:49:18 - 127.0.0.1 - Successful connection to the database
-S - 16:49:18 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:49:18 - 127.0.0.1 - Successful connection to the database
-S - 16:49:18 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
-S - 16:49:18 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 16:49:35 - 127.0.0.1 - Successful connection to the database
-S - 16:49:36 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 16:49:36 - 127.0.0.1 - Successful connection to the database
-S - 16:49:36 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
-S - 16:49:36 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 17:03:08 - 127.0.0.1 - Successful connection to the database
-S - 17:03:08 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 17:03:08 - 127.0.0.1 - Successful connection to the database
-S - 17:03:08 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
-S - 17:03:08 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 17:03:16 - 127.0.0.1 - Successful connection to the database
-S - 17:03:16 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 17:03:16 - 127.0.0.1 - Successful connection to the database
-S - 17:03:16 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
-S - 17:03:16 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 17:03:21 - 127.0.0.1 - Successful connection to the database
-S - 17:03:21 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 17:03:21 - 127.0.0.1 - Successful connection to the database
-S - 17:03:21 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
-S - 17:03:21 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 17:03:27 - 127.0.0.1 - Successful connection to the database
-S - 17:03:27 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 17:03:27 - 127.0.0.1 - Successful connection to the database
-S - 17:03:27 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
-S - 17:03:27 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 17:03:29 - 127.0.0.1 - Successful connection to the database
-S - 17:03:29 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 17:03:30 - 127.0.0.1 - Successful connection to the database
-S - 17:03:30 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
-S - 17:03:30 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 17:05:37 - 127.0.0.1 - Successful connection to the database
-S - 17:05:37 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 17:05:37 - 127.0.0.1 - Successful connection to the database
-S - 17:05:37 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
-S - 17:05:37 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-E - 17:07:59 - 127.0.0.1 - Failed drop of the question to de database:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''survey' where id = '1'' at line 1 - delete from survey where id = '1
-S - 17:07:59 - 127.0.0.1 - Successful connection to the database
-S - 17:07:59 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 17:07:59 - 127.0.0.1 - Successful connection to the database
-S - 17:07:59 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
-S - 17:07:59 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-E - 17:45:54 - 127.0.0.1 - Failed drop of the question to de database:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''survey' where id = '1'' at line 1 - delete from survey where id = '1
-S - 17:45:54 - 127.0.0.1 - Successful connection to the database
-S - 17:45:54 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 17:45:54 - 127.0.0.1 - Successful connection to the database
-S - 17:45:54 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
-S - 17:45:54 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-E - 17:46:15 - 127.0.0.1 - Failed drop of the surveyto de database:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''survey' where id = '1'' at line 1 - delete from survey where id = '1
-S - 17:46:15 - 127.0.0.1 - Successful connection to the database
-S - 17:46:15 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 17:46:15 - 127.0.0.1 - Successful connection to the database
-S - 17:46:15 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
-S - 17:46:15 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-E - 17:46:17 - 127.0.0.1 - Failed drop of the surveyto de database:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''survey' where id = '1'' at line 1 - delete from survey where id = '1
-S - 17:46:17 - 127.0.0.1 - Successful connection to the database
-S - 17:46:17 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 17:46:17 - 127.0.0.1 - Successful connection to the database
-S - 17:46:17 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
-S - 17:46:17 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-E - 17:46:22 - 127.0.0.1 - Failed drop of the surveyto de database:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''survey' where id = '1'' at line 1 - delete from survey where id = '1
-S - 17:46:22 - 127.0.0.1 - Successful connection to the database
-S - 17:46:22 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 17:46:22 - 127.0.0.1 - Successful connection to the database
-S - 17:46:22 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
-S - 17:46:22 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-E - 17:46:26 - 127.0.0.1 - Failed drop of the surveyto de database:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''survey' where id = '1'' at line 1 - delete from survey where id = '1
-S - 17:46:26 - 127.0.0.1 - Successful connection to the database
-S - 17:46:26 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 17:46:26 - 127.0.0.1 - Successful connection to the database
-S - 17:46:26 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
-S - 17:46:26 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-E - 17:47:16 - 127.0.0.1 - Failed drop of the surveyto de database:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''survey' where id = '1'' at line 1 - DELETE FROM survey where id = '1
-S - 17:47:16 - 127.0.0.1 - Successful connection to the database
-S - 17:47:16 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 17:47:16 - 127.0.0.1 - Successful connection to the database
-S - 17:47:16 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
-S - 17:47:16 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-E - 17:47:20 - 127.0.0.1 - Failed drop of the surveyto de database:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''survey' where id = '1'' at line 1 - DELETE FROM survey where id = '1
-S - 17:47:20 - 127.0.0.1 - Successful connection to the database
-S - 17:47:20 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 17:47:20 - 127.0.0.1 - Successful connection to the database
-S - 17:47:20 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
-S - 17:47:20 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-E - 17:49:30 - 127.0.0.1 - Failed drop of the surveyto de database:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''survey' where id = '1'' at line 1 - DELETE FROM survey where id = 1
-S - 17:49:30 - 127.0.0.1 - Successful connection to the database
-S - 17:49:30 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 17:49:30 - 127.0.0.1 - Successful connection to the database
-S - 17:49:30 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
-S - 17:49:30 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-E - 17:49:35 - 127.0.0.1 - Failed drop of the surveyto de database:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''survey' where id = '1'' at line 1 - DELETE FROM survey where id = 1
-S - 17:49:35 - 127.0.0.1 - Successful connection to the database
-S - 17:49:35 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 17:49:35 - 127.0.0.1 - Successful connection to the database
-S - 17:49:35 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
-S - 17:49:35 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-E - 17:49:45 - 127.0.0.1 - Failed drop of the surveyto de database:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''survey' where id = '1'' at line 1 - DELETE FROM survey where id = 1
-S - 17:49:45 - 127.0.0.1 - Successful connection to the database
-S - 17:49:45 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 17:49:45 - 127.0.0.1 - Successful connection to the database
-S - 17:49:45 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
-S - 17:49:45 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-E - 17:53:01 - 127.0.0.1 - Failed drop of the surveyto de database:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''survey' where id = '1'' at line 1 - DELETE FROM survey where id = 1
-S - 17:53:01 - 127.0.0.1 - Successful connection to the database
-S - 17:53:01 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 17:53:01 - 127.0.0.1 - Successful connection to the database
-S - 17:53:01 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
-S - 17:53:01 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-E - 17:53:04 - 127.0.0.1 - Failed drop of the surveysto de database:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''surveys' where id = '1'' at line 1 - DELETE FROM surveys where id = 1
-S - 17:53:04 - 127.0.0.1 - Successful connection to the database
-S - 17:53:04 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 17:53:04 - 127.0.0.1 - Successful connection to the database
-S - 17:53:04 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
-S - 17:53:04 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-E - 17:53:08 - 127.0.0.1 - Failed drop of the surveysto de database:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''surveys' where id = '1'' at line 1 - DELETE FROM surveys where id = 1
-S - 17:53:08 - 127.0.0.1 - Successful connection to the database
-S - 17:53:08 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 17:53:08 - 127.0.0.1 - Successful connection to the database
-S - 17:53:08 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
-S - 17:53:08 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-E - 17:54:21 - 127.0.0.1 - Failed drop of the surveysto de database:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''surveys' where id = '1'' at line 1 - DELETE FROM surveys where id = 1
-S - 17:54:21 - 127.0.0.1 - Successful connection to the database
-S - 17:54:21 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 17:54:21 - 127.0.0.1 - Successful connection to the database
-S - 17:54:21 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
-S - 17:54:21 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 17:54:31 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user 
-E - 17:55:15 - 127.0.0.1 - Failed drop of the surveysto de database:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''surveys' where id = '1'' at line 1 - DELETE FROM surveys where id = 1
-S - 17:55:15 - 127.0.0.1 - Successful connection to the database
-S - 17:55:15 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 17:55:15 - 127.0.0.1 - Successful connection to the database
-S - 17:55:15 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
-S - 17:55:15 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-E - 17:55:28 - 127.0.0.1 - Failed drop of the surveysto de database:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''surveys' where id = '1'' at line 1 - DELETE FROM surveys where id = 1
-S - 17:55:28 - 127.0.0.1 - Successful connection to the database
-S - 17:55:28 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 17:55:29 - 127.0.0.1 - Successful connection to the database
-S - 17:55:29 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
-S - 17:55:29 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-E - 17:56:57 - 127.0.0.1 - Failed drop of the surveysto de database:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''surveys' where id = '1'' at line 1 - DELETE FROM surveys where id = 1
-S - 17:56:57 - 127.0.0.1 - Successful connection to the database
-S - 17:56:57 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 17:56:57 - 127.0.0.1 - Successful connection to the database
-S - 17:56:57 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
-S - 17:56:57 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-E - 17:57:48 - 127.0.0.1 - Failed drop of the surveysto de database:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''surveys' where id = '1'' at line 1 - DELETE FROM surveys where id = 1
-S - 17:57:48 - 127.0.0.1 - Successful connection to the database
-S - 17:57:48 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 17:57:48 - 127.0.0.1 - Successful connection to the database
-S - 17:57:48 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
-S - 17:57:48 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-E - 17:58:42 - 127.0.0.1 - Failed drop of the surveysto de database:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''surveys' where id = '1'' at line 1 - DELETE FROM surveys where id = 1
-S - 17:58:43 - 127.0.0.1 - Successful connection to the database
-S - 17:58:43 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 17:58:43 - 127.0.0.1 - Successful connection to the database
-S - 17:58:43 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
-S - 17:58:43 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-E - 18:00:21 - 127.0.0.1 - Failed drop of the surveysto de database:SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`surveys_database`.`questions`, CONSTRAINT `questions_ibfk_1` FOREIGN KEY (`id_survey`) REFERENCES `surveys` (`id`)) - DELETE FROM surveys where id = 1
-S - 18:00:21 - 127.0.0.1 - Successful connection to the database
-S - 18:00:21 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 18:00:21 - 127.0.0.1 - Successful connection to the database
-S - 18:00:21 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
-S - 18:00:21 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-E - 18:00:23 - 127.0.0.1 - Failed drop of the surveysto de database:SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`surveys_database`.`questions`, CONSTRAINT `questions_ibfk_1` FOREIGN KEY (`id_survey`) REFERENCES `surveys` (`id`)) - DELETE FROM surveys where id = 1
-S - 18:00:24 - 127.0.0.1 - Successful connection to the database
-S - 18:00:24 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 18:00:24 - 127.0.0.1 - Successful connection to the database
-S - 18:00:24 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
-S - 18:00:24 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-E - 18:00:27 - 127.0.0.1 - Failed drop of the surveysto de database:SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`surveys_database`.`questions`, CONSTRAINT `questions_ibfk_1` FOREIGN KEY (`id_survey`) REFERENCES `surveys` (`id`)) - DELETE FROM surveys where id = 1
-S - 18:00:27 - 127.0.0.1 - Successful connection to the database
-S - 18:00:27 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 18:00:28 - 127.0.0.1 - Successful connection to the database
-S - 18:00:28 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
-S - 18:00:28 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-E - 18:05:26 - 127.0.0.1 - Failed drop of the surveysto de database:SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`surveys_database`.`questions`, CONSTRAINT `questions_ibfk_1` FOREIGN KEY (`id_survey`) REFERENCES `surveys` (`id`)) - DELETE FROM surveys where id = 1
-S - 18:05:26 - 127.0.0.1 - Successful connection to the database
-S - 18:05:26 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 18:05:27 - 127.0.0.1 - Successful connection to the database
-S - 18:05:27 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
-S - 18:05:27 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-E - 18:05:29 - 127.0.0.1 - Failed drop of the surveysto de database:SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`surveys_database`.`questions`, CONSTRAINT `questions_ibfk_1` FOREIGN KEY (`id_survey`) REFERENCES `surveys` (`id`)) - DELETE FROM surveys where id = 1
-S - 18:05:29 - 127.0.0.1 - Successful connection to the database
-S - 18:05:29 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 18:05:29 - 127.0.0.1 - Successful connection to the database
-S - 18:05:29 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
-S - 18:05:29 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-E - 18:05:32 - 127.0.0.1 - Failed drop of the surveysto de database:SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`surveys_database`.`questions`, CONSTRAINT `questions_ibfk_1` FOREIGN KEY (`id_survey`) REFERENCES `surveys` (`id`)) - DELETE FROM surveys where id = 1
-S - 18:05:33 - 127.0.0.1 - Successful connection to the database
-S - 18:05:33 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 18:05:33 - 127.0.0.1 - Successful connection to the database
-S - 18:05:33 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
-S - 18:05:33 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-E - 18:09:15 - 127.0.0.1 - Failed drop of the surveysto de database:SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`surveys_database`.`questions`, CONSTRAINT `questions_ibfk_1` FOREIGN KEY (`id_survey`) REFERENCES `surveys` (`id`)) - DELETE FROM surveys where id = 1
-S - 18:09:15 - 127.0.0.1 - Successful connection to the database
-S - 18:09:15 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 18:09:15 - 127.0.0.1 - Successful connection to the database
-S - 18:09:16 - 127.0.0.1 - Query executed successfully - 'select title, id from questions;'
-S - 18:09:16 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 18:09:26 - 127.0.0.1 - Successful drop of the survey with id: 4
-S - 18:09:26 - 127.0.0.1 - Successful connection to the database
-S - 18:09:26 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 18:09:26 - 127.0.0.1 - Successful connection to the database
-S - 18:09:26 - 127.0.0.1 - Query executed successfully - 'select title, id from questions;'
-S - 18:09:26 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 18:09:40 - 127.0.0.1 - Successful drop of the survey with id: 4
-S - 18:09:40 - 127.0.0.1 - Successful connection to the database
-S - 18:09:40 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 18:09:40 - 127.0.0.1 - Successful connection to the database
-S - 18:09:40 - 127.0.0.1 - Query executed successfully - 'select title, id from questions;'
-S - 18:09:40 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 18:10:07 - 127.0.0.1 - Successful drop of the survey with id: 3
-S - 18:10:07 - 127.0.0.1 - Successful connection to the database
-S - 18:10:07 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 18:10:07 - 127.0.0.1 - Successful connection to the database
-S - 18:10:07 - 127.0.0.1 - Query executed successfully - 'select title, id from questions;'
-S - 18:10:07 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 18:16:46 - 127.0.0.1 - Successful drop of the survey with id: 3
-S - 18:16:46 - 127.0.0.1 - Successful connection to the database
-S - 18:16:46 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 18:16:46 - 127.0.0.1 - Successful connection to the database
-S - 18:16:46 - 127.0.0.1 - Query executed successfully - 'select title, id from questions;'
-S - 18:16:46 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 18:16:52 - 127.0.0.1 - Successful drop of the survey with id: 4
-S - 18:16:52 - 127.0.0.1 - Successful connection to the database
-S - 18:16:52 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 18:16:52 - 127.0.0.1 - Successful connection to the database
-S - 18:16:52 - 127.0.0.1 - Query executed successfully - 'select title, id from questions;'
-S - 18:16:52 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 18:16:58 - 127.0.0.1 - Successful drop of the survey with id: 2
-S - 18:16:58 - 127.0.0.1 - Successful connection to the database
-S - 18:16:58 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 18:16:59 - 127.0.0.1 - Successful connection to the database
-S - 18:16:59 - 127.0.0.1 - Query executed successfully - 'select title, id from questions;'
-S - 18:16:59 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 18:22:34 - 127.0.0.1 - Successful drop of the survey with id: 2
-S - 18:22:34 - 127.0.0.1 - Successful connection to the database
-S - 18:22:34 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 18:22:34 - 127.0.0.1 - Successful connection to the database
-S - 18:22:34 - 127.0.0.1 - Query executed successfully - 'select title, id from questions;'
-S - 18:22:34 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 18:28:00 - 127.0.0.1 - Successful drop of the survey with id: 2
-S - 18:28:00 - 127.0.0.1 - Successful connection to the database
-S - 18:28:00 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 18:28:00 - 127.0.0.1 - Successful connection to the database
-S - 18:28:00 - 127.0.0.1 - Query executed successfully - 'select title, id from questions;'
-S - 18:28:00 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 18:28:08 - 127.0.0.1 - Successful drop of the survey with id: 4
-S - 18:28:09 - 127.0.0.1 - Successful connection to the database
-S - 18:28:09 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 18:28:09 - 127.0.0.1 - Successful connection to the database
-S - 18:28:09 - 127.0.0.1 - Query executed successfully - 'select title, id from questions;'
-S - 18:28:09 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 18:28:27 - 127.0.0.1 - Successful drop of the survey with id: 4
-S - 18:28:27 - 127.0.0.1 - Successful connection to the database
-S - 18:28:27 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 18:28:28 - 127.0.0.1 - Successful connection to the database
-S - 18:28:28 - 127.0.0.1 - Query executed successfully - 'select title, id from questions;'
-S - 18:28:28 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-E - 18:31:33 - 127.0.0.1 - Failed drop of the surveysto de database:SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`surveys_database`.`questions_surveys`, CONSTRAINT `questions_surveys_ibfk_1` FOREIGN KEY (`ìd_survey`) REFERENCES `surveys` (`id`)) - DELETE FROM surveys where id = 4
-S - 18:31:33 - 127.0.0.1 - Successful connection to the database
-S - 18:31:33 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 18:31:34 - 127.0.0.1 - Successful connection to the database
-S - 18:31:34 - 127.0.0.1 - Query executed successfully - 'select title, id from questions;'
-S - 18:31:34 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-E - 18:31:43 - 127.0.0.1 - Failed drop of the surveysto de database:SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`surveys_database`.`questions_surveys`, CONSTRAINT `questions_surveys_ibfk_1` FOREIGN KEY (`ìd_survey`) REFERENCES `surveys` (`id`)) - DELETE FROM surveys where id = 4
-S - 18:31:43 - 127.0.0.1 - Successful connection to the database
-S - 18:31:43 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 18:31:43 - 127.0.0.1 - Successful connection to the database
-S - 18:31:43 - 127.0.0.1 - Query executed successfully - 'select title, id from questions;'
-S - 18:31:43 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-E - 18:31:49 - 127.0.0.1 - Failed drop of the surveysto de database:SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`surveys_database`.`questions_surveys`, CONSTRAINT `questions_surveys_ibfk_1` FOREIGN KEY (`ìd_survey`) REFERENCES `surveys` (`id`)) - DELETE FROM surveys where id = 4
-S - 18:31:49 - 127.0.0.1 - Successful connection to the database
-S - 18:31:49 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 18:31:50 - 127.0.0.1 - Successful connection to the database
-S - 18:31:50 - 127.0.0.1 - Query executed successfully - 'select title, id from questions;'
-S - 18:31:50 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-E - 18:52:58 - 127.0.0.1 - Failed drop of the surveysto de database:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 4' at line 1 - DELETE FROM surveys where id = 4
-S - 18:52:58 - 127.0.0.1 - Successful connection to the database
-S - 18:52:58 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 18:52:58 - 127.0.0.1 - Successful connection to the database
-S - 18:52:58 - 127.0.0.1 - Query executed successfully - 'select title, id from questions;'
-S - 18:52:58 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-E - 18:53:43 - 127.0.0.1 - Failed drop of the surveysto de database:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id_survey' in 'where clause' - DELETE FROM surveys where id = 4
-S - 18:53:43 - 127.0.0.1 - Successful connection to the database
-S - 18:53:43 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 18:53:43 - 127.0.0.1 - Successful connection to the database
-S - 18:53:43 - 127.0.0.1 - Query executed successfully - 'select title, id from questions;'
-S - 18:53:43 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-E - 18:53:46 - 127.0.0.1 - Failed drop of the surveysto de database:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id_survey' in 'where clause' - DELETE FROM surveys where id = 1
-S - 18:53:46 - 127.0.0.1 - Successful connection to the database
-S - 18:53:47 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 18:53:47 - 127.0.0.1 - Successful connection to the database
-S - 18:53:47 - 127.0.0.1 - Query executed successfully - 'select title, id from questions;'
-S - 18:53:47 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-E - 18:53:50 - 127.0.0.1 - Failed drop of the surveysto de database:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id_survey' in 'where clause' - DELETE FROM surveys where id = 1
-S - 18:53:50 - 127.0.0.1 - Successful connection to the database
-S - 18:53:50 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 18:53:50 - 127.0.0.1 - Successful connection to the database
-S - 18:53:50 - 127.0.0.1 - Query executed successfully - 'select title, id from questions;'
-S - 18:53:50 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-E - 18:56:58 - 127.0.0.1 - Failed drop of the surveysto de database:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id_survey' in 'where clause' - DELETE FROM surveys where id = 1
-S - 18:56:58 - 127.0.0.1 - Successful connection to the database
-S - 18:56:58 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 18:56:58 - 127.0.0.1 - Successful connection to the database
-S - 18:56:58 - 127.0.0.1 - Query executed successfully - 'select title, id from questions;'
-S - 18:56:58 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-E - 18:57:02 - 127.0.0.1 - Failed drop of the surveysto de database:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id_survey' in 'where clause' - DELETE FROM surveys where id = 4
-S - 18:57:02 - 127.0.0.1 - Successful connection to the database
-S - 18:57:02 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 18:57:02 - 127.0.0.1 - Successful connection to the database
-S - 18:57:02 - 127.0.0.1 - Query executed successfully - 'select title, id from questions;'
-S - 18:57:02 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-E - 19:00:07 - 127.0.0.1 - Failed drop of the surveysto de database:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''surveys' where id = '4'' at line 1 - DELETE FROM surveys where id = 4
-S - 19:00:08 - 127.0.0.1 - Successful connection to the database
-S - 19:00:08 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 19:00:08 - 127.0.0.1 - Successful connection to the database
-S - 19:00:08 - 127.0.0.1 - Query executed successfully - 'select title, id from questions;'
-S - 19:00:08 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-E - 19:00:11 - 127.0.0.1 - Failed drop of the surveysto de database:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''surveys' where id = '1'' at line 1 - DELETE FROM surveys where id = 1
-S - 19:00:11 - 127.0.0.1 - Successful connection to the database
-S - 19:00:11 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 19:00:12 - 127.0.0.1 - Successful connection to the database
-S - 19:00:12 - 127.0.0.1 - Query executed successfully - 'select title, id from questions;'
-S - 19:00:12 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-E - 19:01:09 - 127.0.0.1 - Failed drop of the surveysto de database:SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`surveys_database`.`teachers_surveys`, CONSTRAINT `teachers_surveys_ibfk_1` FOREIGN KEY (`id_survey`) REFERENCES `surveys` (`id`)) - DELETE FROM surveys where id = 1
-S - 19:01:10 - 127.0.0.1 - Successful connection to the database
-S - 19:01:10 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 19:01:10 - 127.0.0.1 - Successful connection to the database
-S - 19:01:10 - 127.0.0.1 - Query executed successfully - 'select title, id from questions;'
-S - 19:01:10 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-E - 19:01:13 - 127.0.0.1 - Failed drop of the surveysto de database:SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`surveys_database`.`teachers_surveys`, CONSTRAINT `teachers_surveys_ibfk_1` FOREIGN KEY (`id_survey`) REFERENCES `surveys` (`id`)) - DELETE FROM surveys where id = 1
-S - 19:01:13 - 127.0.0.1 - Successful connection to the database
-S - 19:01:13 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 19:01:13 - 127.0.0.1 - Successful connection to the database
-S - 19:01:13 - 127.0.0.1 - Query executed successfully - 'select title, id from questions;'
-S - 19:01:13 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 19:03:10 - 127.0.0.1 - Successful drop of the survey with id: 1
-S - 19:03:10 - 127.0.0.1 - Successful connection to the database
-S - 19:03:10 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 19:03:11 - 127.0.0.1 - Successful connection to the database
-S - 19:03:11 - 127.0.0.1 - Query executed successfully - 'select title, id from questions;'
-S - 19:03:11 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
-S - 19:03:36 - 127.0.0.1 - Successful drop of the survey with id: 3
-S - 19:03:36 - 127.0.0.1 - Successful connection to the database
-S - 19:03:36 - 127.0.0.1 - Query executed successfully - 'select title, id from surveys;'
-S - 19:03:36 - 127.0.0.1 - Successful connection to the database
-S - 19:03:36 - 127.0.0.1 - Query executed successfully - 'select title, id from questions;'
-S - 19:03:36 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 16:26:43 - 127.0.0.1 - The page /index.php has loaded successfully
+S - 16:26:45 - 127.0.0.1 - Successful connection to the database
+S - 16:26:45 - 127.0.0.1 - The page /login.php has loaded successfully
+S - 16:26:46 - 127.0.0.1 - Successful connection to the database
+S - 16:26:46 - 127.0.0.1 - The user successfully connected with the username raul@gmail.com and the encrypted password bbb0b5b15842af2a3f42072a418c908e8a63caab2120d15cfea68e433cfe68dd - select id, username, password, role from users where username = 'raul@gmail.com' and password = 'bbb0b5b15842af2a3f42072a418c908e8a63caab2120d15cfea68e433cfe68dd'
+S - 16:26:46 - 127.0.0.1 - The page /dashboard.php has loaded successfully by user raul@gmail.com
+S - 16:26:47 - 127.0.0.1 - Successful connection to the database
+S - 16:26:47 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 16:26:48 - 127.0.0.1 - Successful connection to the database
+S - 16:26:48 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 16:26:48 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 16:29:49 - 127.0.0.1 - The page /poll.php has loaded successfully by user 
+S - 16:30:18 - 127.0.0.1 - Successful connection to the database
+S - 16:30:18 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 16:30:18 - 127.0.0.1 - Successful connection to the database
+S - 16:30:18 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 16:30:18 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 16:32:34 - 127.0.0.1 - Successful connection to the database
+S - 16:32:34 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 16:32:34 - 127.0.0.1 - Successful connection to the database
+S - 16:32:34 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 16:32:34 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 16:32:35 - 127.0.0.1 - Successful connection to the database
+S - 16:32:35 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 16:32:35 - 127.0.0.1 - Successful connection to the database
+S - 16:32:35 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 16:32:35 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 16:33:07 - 127.0.0.1 - Successful connection to the database
+S - 16:33:07 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 16:33:07 - 127.0.0.1 - Successful connection to the database
+S - 16:33:07 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 16:33:07 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 16:33:35 - 127.0.0.1 - Successful connection to the database
+S - 16:33:35 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 16:33:35 - 127.0.0.1 - Successful connection to the database
+S - 16:33:35 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 16:33:35 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 16:33:58 - 127.0.0.1 - Successful connection to the database
+S - 16:33:58 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 16:33:58 - 127.0.0.1 - Successful connection to the database
+S - 16:33:58 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 16:33:58 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 16:34:57 - 127.0.0.1 - Successful connection to the database
+S - 16:34:57 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 16:34:57 - 127.0.0.1 - Successful connection to the database
+S - 16:34:58 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 16:34:58 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 16:36:11 - 127.0.0.1 - Successful connection to the database
+S - 16:36:11 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 16:36:11 - 127.0.0.1 - Successful connection to the database
+S - 16:36:11 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 16:36:11 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 16:37:12 - 127.0.0.1 - Successful connection to the database
+S - 16:37:12 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 16:37:12 - 127.0.0.1 - Successful connection to the database
+S - 16:37:12 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 16:37:12 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 16:39:06 - 127.0.0.1 - Successful connection to the database
+S - 16:39:06 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 16:39:06 - 127.0.0.1 - Successful connection to the database
+S - 16:39:06 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 16:39:06 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 16:39:11 - 127.0.0.1 - Successful connection to the database
+S - 16:39:11 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 16:39:11 - 127.0.0.1 - Successful connection to the database
+S - 16:39:11 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 16:39:11 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 16:39:24 - 127.0.0.1 - Successful connection to the database
+S - 16:39:24 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 16:39:24 - 127.0.0.1 - Successful connection to the database
+S - 16:39:24 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 16:39:24 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 16:44:54 - 127.0.0.1 - Successful connection to the database
+S - 16:44:54 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 16:44:54 - 127.0.0.1 - Successful connection to the database
+S - 16:44:54 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 16:44:54 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 16:50:03 - 127.0.0.1 - Successful connection to the database
+S - 16:50:03 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 16:50:03 - 127.0.0.1 - Successful connection to the database
+S - 16:50:03 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 16:50:03 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 16:53:07 - 127.0.0.1 - Successful connection to the database
+S - 16:53:07 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 16:53:07 - 127.0.0.1 - Successful connection to the database
+S - 16:53:07 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 16:53:07 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 16:56:02 - 127.0.0.1 - Successful connection to the database
+S - 16:56:02 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 16:56:02 - 127.0.0.1 - Successful connection to the database
+S - 16:56:02 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 16:56:02 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 16:56:06 - 127.0.0.1 - Successful connection to the database
+S - 16:56:06 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 16:56:06 - 127.0.0.1 - Successful connection to the database
+S - 16:56:06 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 16:56:06 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 17:36:08 - 127.0.0.1 - The page /poll.php has loaded successfully by user 
+S - 17:36:12 - 127.0.0.1 - The page /index.php has loaded successfully
+S - 17:36:13 - 127.0.0.1 - Successful connection to the database
+S - 17:36:17 - 127.0.0.1 - The page /login.php has loaded successfully
+S - 17:36:17 - 127.0.0.1 - Successful connection to the database
+S - 17:36:17 - 127.0.0.1 - The page /login.php has loaded successfully
+S - 17:36:19 - 127.0.0.1 - Successful connection to the database
+S - 17:36:19 - 127.0.0.1 - The user successfully connected with the username raul@gmail.com and the encrypted password bbb0b5b15842af2a3f42072a418c908e8a63caab2120d15cfea68e433cfe68dd - select id, username, password, role from users where username = 'raul@gmail.com' and password = 'bbb0b5b15842af2a3f42072a418c908e8a63caab2120d15cfea68e433cfe68dd'
+S - 17:36:19 - 127.0.0.1 - The page /dashboard.php has loaded successfully by user raul@gmail.com
+S - 17:36:22 - 127.0.0.1 - Successful connection to the database
+S - 17:36:22 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 17:36:23 - 127.0.0.1 - Successful connection to the database
+S - 17:36:23 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 17:36:23 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 17:46:12 - 127.0.0.1 - Successful connection to the database
+S - 17:46:12 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 17:46:12 - 127.0.0.1 - Successful connection to the database
+S - 17:46:12 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 17:46:12 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 17:49:42 - 127.0.0.1 - Successful connection to the database
+S - 17:49:42 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 17:49:43 - 127.0.0.1 - Successful connection to the database
+S - 17:49:43 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 17:49:43 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 17:55:39 - 127.0.0.1 - Successful connection to the database
+S - 17:55:39 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 17:55:39 - 127.0.0.1 - Successful connection to the database
+S - 17:55:39 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 17:55:39 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 17:56:35 - 127.0.0.1 - Successful connection to the database
+S - 17:56:35 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 17:56:35 - 127.0.0.1 - Successful connection to the database
+S - 17:56:35 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 17:56:35 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 18:00:20 - 127.0.0.1 - Successful connection to the database
+S - 18:00:20 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 18:00:20 - 127.0.0.1 - Successful connection to the database
+S - 18:00:20 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 18:00:20 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 18:00:34 - 127.0.0.1 - Successful connection to the database
+S - 18:00:34 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 18:00:35 - 127.0.0.1 - Successful connection to the database
+S - 18:00:35 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 18:00:35 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 18:33:55 - 127.0.0.1 - Successful connection to the database
+S - 18:33:55 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 18:33:55 - 127.0.0.1 - Successful connection to the database
+S - 18:33:55 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 18:33:55 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 18:35:21 - 127.0.0.1 - Successful connection to the database
+S - 18:35:21 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 18:35:21 - 127.0.0.1 - Successful connection to the database
+S - 18:35:21 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 18:35:21 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 18:35:29 - 127.0.0.1 - Successful connection to the database
+S - 18:35:29 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 18:35:29 - 127.0.0.1 - Successful connection to the database
+S - 18:35:29 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 18:35:29 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 18:36:33 - 127.0.0.1 - Successful connection to the database
+S - 18:36:33 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 18:36:33 - 127.0.0.1 - Successful connection to the database
+S - 18:36:33 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 18:36:33 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 18:38:21 - 127.0.0.1 - The page /poll.php has loaded successfully by user 
+S - 18:46:54 - 127.0.0.1 - Successful connection to the database
+S - 18:46:54 - 127.0.0.1 - Query executed successfully - 'select title from surveys;'
+S - 18:46:54 - 127.0.0.1 - Successful connection to the database
+S - 18:46:54 - 127.0.0.1 - Query executed successfully - 'select title from questions;'
+S - 18:46:54 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com

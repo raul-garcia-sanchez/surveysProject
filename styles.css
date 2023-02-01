@@ -64,11 +64,6 @@ header p {
     font-size: medium;
 }
 
-.userDiv .logoutSubmit:hover {
-    width: 110px;
-    height: 45px;
-}
-
 .buttonHover:hover{
     transition: .5s;
     transform: scale(1.1);
@@ -576,7 +571,7 @@ i{
     border: 0.5px solid black;
 }
 
-.page-poll .saveQuestion {
+.page-poll #formQuestion .saveQuestion {
     width: 200px;
     height: 200px;
     border-radius: 10px;
@@ -591,7 +586,7 @@ i{
     font-weight: bold;
 }
 
-.page-poll .saveQuestion:hover {
+.page-poll #formQuestion .saveQuestion:hover {
     width: 220px;
     height: 220px;
     display: block;
@@ -603,8 +598,8 @@ i{
     padding-top: 20px;
     padding-bottom: 60px;
     border: 1px solid black;
-    width: 70%;
-    margin: 40px 15% 0;
+    width: 80%;
+    margin: 40px 10% 0;
     border-radius: 10px;
     background-color: #adadad;
 }
@@ -613,6 +608,7 @@ i{
     display: flex;
     min-height: 450px;
     flex-direction: column;
+    padding-top: 26px;
 }
 
 .page-poll .divLlistat{
@@ -624,14 +620,38 @@ i{
     font-weight: bold;
 }
 
+.page-poll #divToRemove .titlePoll{
+    font-size: 28px;
+    padding: 20px 0px 30px;
+}
+
 .page-poll #divToRemove form{
+    width: 80%;
+    margin: 0 10%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     text-align: center;
     width: 70%;
     margin: 0 15%;
+}
 
+.page-poll #divToRemove form label{
+    font-size: 21px;
+    font-weight: bolder;
+    padding: 0px 0px 10px;
+    display: block;
+}
+
+.page-poll #divToRemove form input{
+    font-size: 21px;
+    height: 31px;
+    margin: 10px 0px 10px;
+    width: 97%;
+}
+
+.page-poll #divToRemove #formQuestion .divOption{
+    display: flex;
 }
 
 .page-poll #divToRemove form #questionInput{
@@ -654,7 +674,7 @@ i{
 }
 
 .page-poll .buttonRemoveOption{
-    margin-top: 5px;
+    margin-top: 10px;
     width: 3%;
     height: 30px;
 }
@@ -701,7 +721,53 @@ i{
     border-radius: 10px;
     border: 4px solid rgb(0, 88, 37);
     margin-left: 40px;
+}
 
+.page-poll #divQuestions, #divTeachers ,#divStudents{
+    display: flex;
+    flex-direction: row;
+}
+
+.page-poll #formSurvey div>div{
+    border: solid black 1px;
+    border-radius: 5px;
+    margin: 10px;
+    width: 50%;
+    min-height: 150px;
+    background-color: #ffffff;
+}
+
+.page-poll #formSurvey div>div label{
+    border-bottom: solid black 1px;
+    margin-top: 5px;
+}
+
+.page-poll #formSurvey div>div input, .page-poll #formSurvey div>div button{
+    width: 90% !important;
+    margin: 20px 5% !important;
+    height: 30px;
+}
+
+.page-poll .notAdded:hover{
+    background-color: greenyellow;
+}
+
+.page-poll .added:hover{
+    background-color: rgb(255, 102, 0);
+}
+
+.page-poll #divToRemove form #divStartDate{
+    width: 45%;
+    display: inline-block;
+    text-align: center;
+    margin: 20px;
+}
+
+.page-poll #divToRemove form #divFinishDate{
+    width: 45%;
+    display: inline-block;
+    text-align: center;
+    margin: 20px;
 }
 
 #divAlertas{

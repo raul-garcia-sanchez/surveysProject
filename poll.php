@@ -17,7 +17,11 @@ if (isset($_POST['submitButtonSaveQuestion']) && isset($_POST['selectTypeQuestio
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Enquestes</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="resources/functions.js"></script>
+    <script src="./resources/functions.js"></script>
+
+    <!--Imports para hacer un calendario bonito-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </head>
 
 <body class="page-poll">
@@ -26,6 +30,17 @@ if (isset($_POST['submitButtonSaveQuestion']) && isset($_POST['selectTypeQuestio
 
         createHeader("Enquestes IETI");
         echo '<div id="divAlertas"></div>';
+        if (isset($_POST['submitButtonSaveQuestion']) && isset($_POST['selectTypeQuestion']) && isset($_SESSION['user']['username'])) {
+            addQuestion();
+        }
+        if(isset($_POST["surveySubmit"])){
+            $listOfSurvey = [];
+            foreach ($_POST as $key => $value){
+                $listOfSurvey[$key] = $value;
+            }
+            addSurvey($listOfSurvey);
+            printAlertJs("Enquesta carregada correctament",'s');
+        }
         echo '<div id="divEliminar">
         <form action="poll.php" method="POST">
         <input type="text" style="visibility:hidden" name="deleteId" id="inpDeleteId">
@@ -57,17 +72,18 @@ if (isset($_POST['submitButtonSaveQuestion']) && isset($_POST['selectTypeQuestio
                 </button>
         </div>
         <div id='principalContent'>" . printSurveys() . printQuestions() . "</div>";
-            if (isset($_POST['submitButtonSaveQuestion'])) {
-                printAlertJs("Pregunta afegida correctament",'s');
-            }
             echo "</div>";
         }
         createFooter();
         ?>
     </div>
+    <script>
+        var usersDic = <?php createUsersDic()?>;
+        var questionsDic = <?php createQuestionsDic()?>;
+        var studentsDic = <?php createStudentsDic()?>;
+    </script>
     <script src="./resources/functions.js"></script>
 </body>
-
 </html>
 <?php
     appendLog("S", "The page " . $_SERVER['PHP_SELF'] . " has loaded successfully by user " . $_SESSION['user']["username"]);
