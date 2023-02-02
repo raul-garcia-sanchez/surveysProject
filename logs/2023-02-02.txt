@@ -1,0 +1,10 @@
+S - 16:15:51 - 127.0.0.1 - The page /index.php has loaded successfully
+S - 16:15:53 - 127.0.0.1 - Successful connection to the database
+S - 16:15:53 - 127.0.0.1 - The page /login.php has loaded successfully
+S - 16:15:54 - 127.0.0.1 - Successful connection to the database
+S - 16:15:54 - 127.0.0.1 - The user successfully connected with the username raul@gmail.com and the encrypted password bbb0b5b15842af2a3f42072a418c908e8a63caab2120d15cfea68e433cfe68dd - select id, username, password, role from users where username = 'raul@gmail.com' and password = 'bbb0b5b15842af2a3f42072a418c908e8a63caab2120d15cfea68e433cfe68dd'
+S - 16:15:54 - 127.0.0.1 - The page /dashboard.php has loaded successfully by user raul@gmail.com
+S - 16:15:56 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 16:16:18 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 16:16:39 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com
+S - 16:19:54 - 127.0.0.1 - The page /poll.php has loaded successfully by user raul@gmail.com

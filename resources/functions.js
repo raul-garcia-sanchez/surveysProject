@@ -262,7 +262,6 @@ function formAddSurvey() {
         $("<input>",{
           type: "text",
           name: "teach"+key,
-          value: questionsDic[key]["title"],
           hidden: "true"
         })
       )
@@ -285,7 +284,6 @@ function formAddSurvey() {
         $("<input>",{
           type: "text",
           name: "quest"+key,
-          value: questionsDic[key]["title"],
           hidden: "true"
         })
       )
@@ -308,7 +306,6 @@ function formAddSurvey() {
         $("<input>",{
           type: "text",
           name: "studn"+key,
-          value: questionsDic[key]["title"],
           hidden: "true"
         })
       )
