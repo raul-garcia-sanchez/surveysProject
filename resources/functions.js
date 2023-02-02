@@ -1,9 +1,43 @@
+function alertCss(message,type){
+  if(type == 'w'){
+    backgroundColor = 'rgb(250, 250, 139)';
+    borderColor = '3px solid yellow';
+  }else if(type == 'e'){
+    backgroundColor = 'rgb(255, 127, 127)';
+    borderColor = '3px solid red';
+  }else if(type == 'i'){
+    backgroundColor = 'rgb(166, 166, 255)';
+    borderColor = '3px solid blue';
+  }else if(type == 's'){
+    backgroundColor = 'rgb(96, 252, 96)';
+    borderColor = '3px solid green';
+  }else{
+    backgroundColor = 'rgb(212, 212, 212)';
+    borderColor = '3px solid grey';
+  }
+
+  $('#divAlertas').append(
+    $("<div>", {
+      class: 'divAlerta',
+    }).css('background-color',backgroundColor).css('border',borderColor).append(
+      $('<h4>',{
+        text: message
+      })
+    ).append(
+      $('<button>',{
+        text: 'X',
+        onclick: 'eliminarAlerta(event)'
+      })
+    ))
+}
+
 function removeById(textId) {
   let elementToRemove = $("#" + textId);
   elementToRemove.remove();
 }
 var arrayOpciones = [];
 function formAddQuestion() {
+  displayNoneForm();
   removeById("divToRemove");
   $(".page-poll #divListSurveys").css("display", "none");
   $(".page-poll #divListQuestions").css("display", "none");
@@ -87,15 +121,19 @@ function formAddQuestion() {
 }
 
 function formAddSurvey() {
+  displayNoneForm();
   removeById("errorMessage");
   removeById("divToRemove");
   $(".page-poll #divListSurveys").css("display", "none");
   $(".page-poll #divListQuestions").css("display", "none");
+  
   let initialDiv = $("<div>", {
     id: "divToRemove",
   }).append(
     $("<form>", {
       method: "POST",
+      action: "poll.php",
+      id:"formSurvey"
     })
       .append(
         $("<h1>", {
@@ -104,35 +142,234 @@ function formAddSurvey() {
         })
       )
       .append(
-        $("<input>", {
-          class: "saveQuestion",
-          value: "Guardar",
-          type: "submit",
-          name: "submitButtonSaveSurvey",
+        $("<label>",{
+          for: "inputSurveyText",
+          text: "Títol de l'enquesta"
+        })
+      )
+      .append(
+        $("<input>",{
+          id: "inputSurveyText",
+          type: "text",
+          name: "inputSurveyText"
+        })
+      ).append(
+        $('<div>',{
+          id:'divDates'
         }).append(
-          $("<h1>", {
-            text: "Guardar",
+          $("<div>",{
+            id:'divStartDate'
+          }).append(
+            $("<label>",{
+              for: "inputStartDate",
+              text: "Data Inici Enquesta"
+            })
+          )
+          .append(
+            $("<input>",{
+              class: "datetime",
+              type: "datetime-local",
+              name: "inputStartDate",
+              id: "inputStartDate"
+            }))
+        ).append(
+          $("<div>",{
+            id:'divFinishDate'
+          })
+        .append(
+          $("<label>",{
+            for: "inputEndDate",
+            text: "Data Final Enquesta"
           })
         )
+        .append(
+          $("<input>",{
+            class: "datetime",
+            type: "datetime-local",
+            name: "inputEndDate",
+            id: "inputEndDate"
+          })
+        ))
+      )//Teachers
+      .append(
+        $("<div>",{
+          id: "divTeachers",
+        }).append(
+          $("<div>",{
+            id: "inputTeachersForAdd",
+          }).append(
+            $('<label>',{
+              text:"Professors disponibles"
+            })
+          )
+        )
+        .append(
+          $("<div>",{
+            id: "inputTeachersAdded"
+          }).append(
+            $('<label>',{
+              text:"Professors a l'enquesta"
+            })
+          )
+        )
       )
+      //QUESTIONS
+      .append(
+        $("<div>",{
+          id: "divQuestions",
+        }).append(
+          $("<div>",{
+            id: "inputQuestionsForAdd",
+          }).append(
+            $('<label>',{
+              text:"Preguntes per l'enquesta"
+            })
+          )
+        )
+        .append(
+          $("<div>",{
+            id: "inputQuestionsAdded"
+          }).append(
+            $('<label>',{
+              text:"Preguntes de l'enquesta"
+            })
+          )
+        )
+      )
+      //STUDENTS
+      .append(
+        $("<div>",{
+          id: "divStudents"
+        }).append(
+          $("<div>",{
+            id: "inputStudentsForAdd",
+          }).append(
+            $('<label>',{
+              text:"Alumnes disponibles"
+            })
+          )
+        )
+        .append(
+          $("<div>",{
+            id: "inputStudentsAdded"
+          }).append(
+            $('<label>',{
+              text:"Alumnes a l'enquesta"
+            })
+          )
+        )
+      )
+      
   );
+  
   $("#principalContent").append(initialDiv);
+  
+
+  //Calendar decoration
+  const datetimeInputs = $(".datetime");
+  for (let i = 0; i < datetimeInputs.length; i++) {
+      flatpickr(datetimeInputs[i], {
+      enableTime: true,
+      time_24hr: true,
+      dateFormat: "Y-m-d H:i",
+      defaultDate: new Date()
+      });
+  }
+
+  //Create options teachers,questions and students
+  createDivTeachers()
+  createDivQuestions()
+  createDivStudents()
+
+  //Move options (event is for not submit)
+  $(".inputTeacher").click(function(event){
+    event.preventDefault();
+
+    if($(this).hasClass("added")){
+      $("#inputTeachersForAdd").append($(this))
+      $(this).removeClass("added").addClass("notAdded")
+      $(this).children().remove()
+    }else{
+      let key = $(this).attr("id")
+      $("#inputTeachersAdded").append($(this))
+      $(this).removeClass("notAdded").addClass("added")
+      $(this).append(
+        $("<input>",{
+          type: "text",
+          name: "teach"+key,
+          value: questionsDic[key]["title"],
+          hidden: "true"
+        })
+      )
+    }
+    buttonSubmit()
+  });
+
+  $(".inputQuestion").click(function(event){
+    event.preventDefault();
+
+    if($(this).hasClass("added")){
+      $("#inputQuestionsForAdd").append($(this))
+      $(this).removeClass("added").addClass("notAdded")
+      $(this).children().remove()
+    }else{
+      let key = $(this).attr("id")
+      $("#inputQuestionsAdded").append($(this))
+      $(this).removeClass("notAdded").addClass("added")
+      $(this).append(
+        $("<input>",{
+          type: "text",
+          name: "quest"+key,
+          value: questionsDic[key]["title"],
+          hidden: "true"
+        })
+      )
+      
+    }
+    buttonSubmit()
+  });
+
+  $(".inputStudent").click(function(event){
+    event.preventDefault();
+    if($(this).hasClass("added")){
+      $("#inputStudentsForAdd").append($(this))
+      $(this).removeClass("added").addClass("notAdded")
+      $(this).children().remove()
+    }else{
+      let key = $(this).attr("id")
+      $("#inputStudentsAdded").append($(this))
+      $(this).removeClass("notAdded").addClass("added")
+      $(this).append(
+        $("<input>",{
+          type: "text",
+          name: "studn"+key,
+          value: questionsDic[key]["title"],
+          hidden: "true"
+        })
+      )
+    }
+  });
+  
+  //Check when the user is writting the survey title
+  $("#inputSurveyText").on("input", function() {
+    buttonSubmit()
+  });
 }
 
 function printListQuestions() {
+  displayNoneForm();
   removeById("errorMessage");
   removeById("divToRemove");
   $(".page-poll #divListQuestions").css("display", "block");
   $(".page-poll #divListSurveys").css("display", "none");
-  alertCss("S'ha carregat correctament el llistat de preguntes",'i');
 }
 
 function printListSurveys() {
+  displayNoneForm();
   removeById("errorMessage");
   removeById("divToRemove");
   $(".page-poll #divListQuestions").css("display", " none");
   $(".page-poll #divListSurveys").css("display", "block");
-  alertCss("S'ha carregat correctament el llistat de enquestes",'i');
 }
 
 function createButtonSubmit(){
@@ -186,7 +423,6 @@ function crearInputPregunta(){
     (
       $('<input>',{
         class:'inpOption',
-        style:'width:96%;'
       })))
   if($('.inpOption').length>0){
     $('.divOption:nth-last-child(2)').append(
@@ -194,7 +430,8 @@ function crearInputPregunta(){
         text:'X',
         onclick:'eliminarDiv(event)',
         display:'inline',
-        type:'button'
+        type:'button',
+        class:'buttonRemoveOption'
       })
     )
   }
@@ -209,7 +446,7 @@ function crearInputPregunta(){
     }else{
       $('#submitButtonSaveQuestion').remove()
       $('.inpOption:last').on('keyup',function(){
-        if($('.inpOption:last').val()!=""&&$('.inpOption').length>1){
+        if($('.inpOption:last').val()!=""&&$('.inpOption').length>=1){
           createButtonSubmit()
           addNameInputs()
         }
@@ -226,45 +463,253 @@ function eliminarDiv(event){
   }
 }
 
+function eliminarDivUpdate(event){
+  if($('#deletedOptions').val()!=''){
+    var hijos = $(event.target).parent().children()
+    var textoInsertar = $('#deletedOptions').val()+","+hijos.eq(0).attr('name')
+  }else{
+    var hijos = $(event.target).parent().children()
+    var textoInsertar = hijos.eq(0).attr('name')
+  }
+  $('#deletedOptions').val(textoInsertar)
+  $(event.target).parent().remove()
+  
+  if($('.inpOption').length<=1){
+    $('#submitButtonSaveQuestion').remove()
+  }
+}
+
 function addNameInputs(){
   $(".inpOption").each(function(index){
     $(this).attr("name",index)
   })
-}
-function alertCss(message,type){
-  if(type == 'w'){
-    backgroundColor = 'rgb(250, 250, 139)';
-    borderColor = '3px solid yellow';
-  }else if(type == 'e'){
-    backgroundColor = 'rgb(255, 127, 127)';
-    borderColor = '3px solid red';
-  }else if(type == 'i'){
-    backgroundColor = 'rgb(166, 166, 255)';
-    borderColor = '3px solid blue';
-  }else if(type == 's'){
-    backgroundColor = 'rgb(96, 252, 96)';
-    borderColor = '3px solid green';
-  }else{
-    backgroundColor = 'rgb(212, 212, 212)';
-    borderColor = '3px solid grey';
-  }
-
-  $('#divAlertas').append(
-    $("<div>", {
-      class: 'divAlerta',
-    }).css('background-color',backgroundColor).css('border',borderColor).append(
-      $('<h4>',{
-        text: message
-      })
-    ).append(
-      $('<button>',{
-        text: 'X',
-        onclick: 'eliminarAlerta(event)'
-      })
-    ))
 }
 
 function eliminarAlerta(event){
   $(event.target).parent().remove()
 }
 
+function deleteById(id, type){
+  let str = id+","+type
+  $('#inpDeleteId').val(str)
+  $('#divEliminar').css('display','block')
+  
+}
+
+function displayNoneForm(){
+  $('#divEliminar').css('display','none')
+}
+
+function createDivTeachers(){
+  for(var key in usersDic){
+    $("#inputTeachersForAdd").append(
+      $("<button>",{
+        text:usersDic[key]["name"],
+        class: "inputTeacher notAdded",
+        id: key
+      })
+    )
+  }
+}
+
+function createDivQuestions(){
+  for(var key in questionsDic){
+    $("#inputQuestionsForAdd").append(
+      $("<button>",{
+        text:questionsDic[key]["title"],
+        class: "inputQuestion notAdded",
+        id: key
+      })
+    )
+  }
+}
+
+function createDivStudents(){
+  for(var key in studentsDic){
+    $("#inputStudentsForAdd").append(
+      $("<button>",{
+        text:studentsDic[key]["name"],
+        class: "inputStudent notAdded",
+        id: key
+      })
+    )
+  }
+}
+
+function createOrRemoveSubmitButton(remove=false){
+  if(remove){
+    $("#inputSubmitSurvey").remove()
+  }else{
+    if($("#inputSubmitSurvey").val() == undefined){
+      $("#formSurvey").append(
+        $("<input>",{
+          type:"submit",
+          id:"inputSubmitSurvey",
+          value:"Guardar Enquesta",
+          name:"surveySubmit"
+        })
+      )
+    }
+  }
+}
+
+function checkToCreateSubmitButton(){
+  if($("#inputSurveyText").val() == ""){
+    return false
+  }else if($("#inputStartDate").val() == undefined){
+    return false
+  }else if($("#inputEndDate").val() == undefined){
+    return false
+  }else if($("#inputTeachersAdded").children().length == 1){
+    return false
+  }else if($("#inputQuestionsAdded").children().length == 1){
+    return false
+  }else{
+    return true
+  }
+}
+
+function buttonSubmit(){
+  if(checkToCreateSubmitButton()){
+    createOrRemoveSubmitButton()
+  }else{
+    createOrRemoveSubmitButton(remove=true)
+  }
+}
+
+function editQuestion(info){
+  $(".page-poll #divListSurveys").css("display", "none");
+  $(".page-poll #divListQuestions").css("display", "none");
+  let arrayInfo = info.split(',')
+  let id = arrayInfo[0]
+  let type = arrayInfo[1]
+  let text = arrayInfo[2]
+  let divInicio = $('<div>',{
+    id: 'divToRemove',
+  })
+  if(type=='text' || type=='num'){
+    divInicio.append(
+      $('<form>',{
+        method:'post',
+        action:'poll.php',
+        id: 'formUpdateQuestion'
+      }).append(
+        $('<h3>',{
+          text:'Pregunta a editar:'
+        })
+      ).append(
+        $('<label>',{
+          text: 'Títol: '
+        }).append(
+        $('<input>',{
+          type:'text',
+          value: text,
+          name:'updateTitle',
+          id: 'updateTitle'
+        })
+        )
+      ).append(
+        $('<input>',{
+          type:'text',
+          value: id,
+          name:'updateId',
+          style: 'display:none'
+        })
+        ).append(
+          $('<input>',{
+            type:'text',
+            value: type,
+            name:'updateType',
+            style: 'display:none'
+          })
+          ).append(
+        $('<input>',{
+          type: 'submit',
+          value: 'Guardar'
+        })
+      )
+    )
+  }else if(type == 'opcioSimple'){
+
+    let divOptions = $('<div>',{
+      id:'divOptions'
+    })
+    
+    for(var key in optionsDic){
+      if(optionsDic[key]['question_id']==id.toString()){
+        divOptions.append(
+          $('<div>',{
+            class:'divOption'
+          }).append(
+            $('<input>',{
+              class:'inpOption',
+              name:[key],
+              value:optionsDic[key]['opt_text']
+            })
+          ).append(
+            $('<button>',{
+              class:'buttonRemoveOption',
+              onclick: 'eliminarDivUpdate(event)',
+              display: 'inline',
+              type: 'button',
+              text: 'X'
+            })
+          )
+        )
+      }
+    }
+
+    divInicio.append(
+      $('<form>',{
+        method:'post',
+        action:'poll.php',
+        id: 'formUpdateQuestion'
+      }).append(
+        $('<h3>',{
+          text:'Pregunta a editar:'
+        })
+      ).append(
+        $('<label>',{
+          text: 'Títol: '
+        }).append(
+        $('<input>',{
+          type:'text',
+          value: text,
+          name:'updateTitle',
+          id: 'updateTitle'
+        })
+        )
+      ).append(
+        $('<input>',{
+          type:'text',
+          value: id,
+          name:'updateId',
+          style: 'display:none'
+        })
+        ).append(
+          $('<input>',{
+            type:'text',
+            name:'deletedOptions',
+            style: 'display:none',
+            id: 'deletedOptions'
+          })
+          ).append(
+          $('<input>',{
+            type:'text',
+            value: type,
+            name:'updateType',
+            style: 'display:none'
+          })
+          ).append(
+            divOptions
+          ).append(
+        $('<input>',{
+          id: 'submitButtonSaveQuestion',
+          type: 'submit',
+          value: 'Guardar'
+        })
+      )
+    )
+  }
+  $('#principalContent').append(divInicio)
+}

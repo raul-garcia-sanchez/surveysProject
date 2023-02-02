@@ -30,6 +30,11 @@
     align-items: center;
 }
 
+header{
+    position: relative;
+    z-index: 2;
+}
+
 header h1 {
     color: white;
 }
@@ -59,12 +64,10 @@ header p {
     font-size: medium;
 }
 
-.userDiv .logoutSubmit:hover {
-    width: 110px;
-    height: 45px;
+.buttonHover:hover{
     transition: .5s;
+    transform: scale(1.1);
 }
-
 /*
 .page-dashboard .card .card-content button {
     width: 200px;
@@ -120,6 +123,126 @@ footer a {
 i{
     cursor: pointer;
 }
+
+
+/* CSS animacion index.php */
+
+.fa-solid.fa-message.animation1{
+    animation: interactiveChat 10s ease-in-out infinite;
+    position: absolute;
+    top: 70%;
+    left: 1%;
+    color: #00405e;
+    z-index: 1;
+    opacity: 0%;
+}
+
+.fa-solid.fa-message.animation2{
+    animation: interactiveChatReverse 10s ease-in-out infinite;
+    position: absolute;
+    top: 70%;
+    right: 1%;
+    color: #00405e;
+    transform: scaleX(-1);
+    z-index: 1;
+    opacity: 0%;
+}
+
+#icon1{
+    animation-delay: 0ms;
+}
+
+#icon2{
+    animation-delay: 2.1s;
+}
+#icon3{
+    animation-delay: 4.2s;
+}
+#icon4{
+    animation-delay: 6.3s;
+}
+#icon5{
+    animation-delay: 8.4s;
+}
+
+@keyframes interactiveChatReverse {
+    0% {
+        opacity: 100%;
+        display: block;
+    }
+    14% {
+        right: 3%;
+        font-size: 100px;
+        top: 70%;
+    }
+    28% {
+        top: 50%;
+        color: #04a3ec;
+    }
+    35% {
+        top: 50%;
+        opacity: 100%;
+    }
+    49% {
+        top: 32%;
+    }
+    56% {
+        top: 32%;
+    }
+    70% {
+        top: 17%;
+    }
+    77% {
+        top: 17%;
+    }
+    100% {
+        top: -20%;
+        right: 3%;
+        color: #04a3ec;
+        font-size: 100px;
+        opacity: 0%;
+    }
+  }
+
+@keyframes interactiveChat {
+    0% {
+        opacity: 100%;
+      display: block;
+    }
+    14% {
+        left: 3%;
+        font-size: 100px;
+        top: 70%;
+    }
+    28% {
+        top: 50%;
+        color: #04a3ec;
+    }
+    35% {
+        top: 50%;
+        opacity: 100%;
+    }
+    49% {
+        top: 32%;
+    }
+    56% {
+        top: 32%;
+    }
+    70% {
+        top: 17%;
+    }
+    77% {
+        top: 17%;
+    }
+    100% {
+        top: -20%;
+        left: 3%;
+        color: #04a3ec;
+        font-size: 100px;
+        opacity: 0%;
+    }
+  }
+
 
 /* CSS login.php */
 
@@ -228,7 +351,6 @@ i{
 .page-login .buttonSubmit:hover {
     /* border-color: #2691d9; */
     border-color: #29b6f6;
-    transition: .5s;
 }
 
 .page-login .card .messageError {
@@ -251,8 +373,8 @@ i{
     margin-left: 20%;
     width: 60%;
     margin-top: 5%;
-    min-height: 60%;
-    background: white;
+    height: 60%;
+    background: rgb(255, 255, 255);
     border-radius: 10px;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
 }
@@ -261,20 +383,17 @@ i{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    min-height: 550px;
+    min-height: 70%;
 }
 
 .page-landingPage .card .card-content div{
     margin: auto 0;
 }
 
-.page-landingPage .card .card-content div button{
-    margin-top: 40px;
-}
-
 .page-landingPage .buttonGoLogin {
     width: 35%;
     height: 60px;
+    min-height: 30px;
     border: 1px solid;
     background: #29b6f6;
     border-radius: 25px;
@@ -289,8 +408,6 @@ i{
 
 .page-landingPage .buttonGoLogin:hover {
     border-color: #29b6f6;
-    transition: .5s;
-    width: 37%;
 }
 
 .page-landingPage .card h1 {
@@ -320,7 +437,7 @@ i{
 
 .page-dashboard .card {
     top: 50%;
-    margin: 0 7.5%;
+    margin: 3% 7.5%;
     width: 85%;
     height: 600px;
     background: white;
@@ -344,12 +461,6 @@ i{
     cursor: pointer;
 }
 
-.page-dashboard .card .card-content button:hover {
-    width: 220px;
-    height: 220px;
-    transition: .5s;
-}
-
 /* CSS poll.php */
 
 .page-poll .global-container {
@@ -363,7 +474,7 @@ i{
 }
 
 .page-poll .card {
-    margin: 0 7.5% 20px;
+    margin: 2% 7.5%;
     width: 85%;
     min-height: 600px;
     height: auto;
@@ -379,12 +490,17 @@ i{
     align-items: flex-start;
     /*height: 100%;*/
     padding-top: 20px;
-    padding-bottom: 20px;
+}
+
+.page-poll .card #principalContent{
+    padding-bottom: 50px;
 }
 
 .page-poll .card .card-content button {
-    width: auto;
-    height: 50px;
+    font-size: 22px;
+    position: relative;
+    width: 22%;
+    height: 80px;
     border-radius: 10px;
     background-color: #e0e0e0;
     cursor: pointer;
@@ -394,15 +510,10 @@ i{
     align-items: center;
 }
 
-.page-poll .card .card-content button:hover {
-    padding: 40px;
-    transition: .5s;
-}
-
 .page-poll .titlePoll {
     padding: 8px;
     text-align: center;
-    font-size: 40px;
+    font-size: 30px;
     display: flex;
     justify-content: center;
 }
@@ -425,6 +536,7 @@ i{
     border: 1px solid black;
     border-collapse: collapse;
     padding: 4px;
+    font-size: 20px;
 }
 
 .page-poll table th{
@@ -459,7 +571,7 @@ i{
     border: 0.5px solid black;
 }
 
-.page-poll .saveQuestion {
+.page-poll #formQuestion .saveQuestion {
     width: 200px;
     height: 200px;
     border-radius: 10px;
@@ -474,10 +586,9 @@ i{
     font-weight: bold;
 }
 
-.page-poll .saveQuestion:hover {
+.page-poll #formQuestion .saveQuestion:hover {
     width: 220px;
     height: 220px;
-    transition: .5s;
     display: block;
     font-size: 2em;
     font-weight: bold;
@@ -487,8 +598,8 @@ i{
     padding-top: 20px;
     padding-bottom: 60px;
     border: 1px solid black;
-    width: 70%;
-    margin: 40px 15% 0;
+    width: 80%;
+    margin: 40px 10% 0;
     border-radius: 10px;
     background-color: #adadad;
 }
@@ -497,6 +608,7 @@ i{
     display: flex;
     min-height: 450px;
     flex-direction: column;
+    padding-top: 26px;
 }
 
 .page-poll .divLlistat{
@@ -508,26 +620,171 @@ i{
     font-weight: bold;
 }
 
+.page-poll #divToRemove .titlePoll{
+    font-size: 28px;
+    padding: 20px 0px 30px;
+}
+
 .page-poll #divToRemove form{
+    width: 80%;
+    margin: 0 10%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    width: 30%;
-    margin: 0 35%;
+    width: 70%;
+    margin: 0 15%;
+}
 
+.page-poll #divToRemove form label{
+    font-size: 21px;
+    font-weight: bolder;
+    padding: 0px 0px 10px;
+    display: block;
+}
+
+.page-poll #divToRemove form input{
+    font-size: 21px;
+    height: 31px;
+    margin: 10px 0px 10px;
+    width: 97%;
+}
+
+.page-poll #divToRemove #formQuestion .divOption{
+    display: flex;
 }
 
 .page-poll #divToRemove form #questionInput{
-    height: 35px;
+    height: 40px;
+    width: 100%;
     font-size: 28px;
+    text-align: center;
+    margin-bottom: 15px;
 }
 .page-poll #divToRemove form #selectTypeQuestion{
-    height: 35px;
+    height: 40px;
     font-size: 28px;
+    text-align: center;
 }
 
+.page-poll .inpOption{
+    margin-top: 2px;
+    width: 97%;
+    height: 30px;
+}
 
+.page-poll .buttonRemoveOption{
+    margin-top: 10px;
+    width: 3%;
+    height: 30px;
+}
+
+.page-poll #divEliminar{
+    position:absolute;
+    z-index: 3;
+    bottom:25%;
+    width: 100%;
+    background-color: rgb(255, 110, 110);
+    border-top: 10px solid red;
+    border-bottom: 10px solid red;
+    height: 50%;
+    display: none;
+}
+
+.page-poll #divEliminar #divOptionsBeforeDelete{
+    text-align: center;
+    }
+
+.page-poll #divEliminar #divOptionsBeforeDelete #textoAvisoBorrado{
+    margin: 4.5% 0 4.5%;
+    }
+
+.page-poll #divEliminar #divOptionsBeforeDelete #buttonSubmitDelete{
+    width: 180px;
+    height: 60px;
+    background-color: rgb(124, 0, 0);
+    color: white;
+    font-size: 25px;
+    font-weight: bolder;
+    border-radius: 10px;
+    border: 4px solid rgb(255, 230, 0);
+    margin-right: 40px;
+}
+
+.page-poll #divEliminar #divOptionsBeforeDelete #buttonCancel{
+    width: 180px;
+    height: 60px;
+    background-color: rgb(65, 255, 138);
+    color: black;
+    font-size: 25px;
+    font-weight: bolder;
+    border-radius: 10px;
+    border: 4px solid rgb(0, 88, 37);
+    margin-left: 40px;
+}
+
+.page-poll #divQuestions, #divTeachers ,#divStudents{
+    display: flex;
+    flex-direction: row;
+}
+
+.page-poll #formSurvey div>div{
+    border: solid black 1px;
+    border-radius: 5px;
+    margin: 10px;
+    width: 50%;
+    min-height: 150px;
+    background-color: #ffffff;
+}
+
+.page-poll #formSurvey div>div label{
+    border-bottom: solid black 1px;
+    margin-top: 5px;
+}
+
+.page-poll #formSurvey div>div input, .page-poll #formSurvey div>div button{
+    width: 90% !important;
+    margin: 20px 5% !important;
+    height: 30px;
+}
+
+.page-poll .notAdded:hover{
+    background-color: greenyellow;
+}
+
+.page-poll .added:hover{
+    background-color: rgb(255, 102, 0);
+}
+
+.page-poll #divToRemove form #divStartDate{
+    width: 45%;
+    display: inline-block;
+    text-align: center;
+    margin: 20px;
+}
+
+.page-poll #divToRemove form #divFinishDate{
+    width: 45%;
+    display: inline-block;
+    text-align: center;
+    margin: 20px;
+}
+
+.page-poll #divToRemove #formSurvey #divDates div{
+    min-height: auto;
+}
+
+.page-poll #divToRemove #formSurvey #divDates div input{
+    width: 99% !important;
+    margin: 0px 0.5% !important;
+    border: none;
+}
+
+.page-poll #divToRemove #formUpdateQuestion #updateTitle{
+    display: inline;
+    width: 80%;
+    margin-top: 45px;
+}
 
 #divAlertas{
     width: 100%;
@@ -543,7 +800,7 @@ i{
 }
 
 .divAlerta button{
-    position: inherit;
+    position: relative;
     margin-top: 0px;
     background-color: #29b5f600;
     width: 19px;

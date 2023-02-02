@@ -83,7 +83,7 @@ include './resources/auxFunctions.php';
                 <label>Contrasenya</label>
             </div>
             <div class="recoverPassword">Has oblidat la teva contrasenya?</div>
-            <input class="buttonSubmit" type="submit" value="Inciar sessió" name="submit">
+            <input class="buttonSubmit  buttonHover" type="submit" value="Inciar sessió" name="submit">
         </form>
         <p class="messageError">
         </p>
