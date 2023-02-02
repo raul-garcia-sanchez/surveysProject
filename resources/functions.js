@@ -535,6 +535,7 @@ function createDivStudents(){
     )
   }
 }
+
 function createOrRemoveSubmitButton(remove=false){
   if(remove){
     $("#inputSubmitSurvey").remove()

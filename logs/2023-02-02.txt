@@ -595,3 +595,15 @@ S - 1:36:11 - 127.0.0.1 - Successful update of the option: OPC2 - UPDATE options
 S - 1:36:11 - 127.0.0.1 - Successful connection to the database
 S - 1:36:12 - 127.0.0.1 - Successful update of the question: Pregunta opcional223 - UPDATE questions set title = Pregunta opcional223 where id = 78
 S - 1:36:13 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 11:05:16 - ::1 - The page /surveysProject/index.php has loaded successfully
+S - 11:05:18 - ::1 - Successful connection to the database
+S - 11:05:18 - ::1 - The page /surveysProject/login.php has loaded successfully
+S - 11:05:21 - ::1 - Successful connection to the database
+S - 11:05:21 - ::1 - The user successfully connected with the username raul@gmail.com and the encrypted password bbb0b5b15842af2a3f42072a418c908e8a63caab2120d15cfea68e433cfe68dd - select id, username, password, role from users where username = 'raul@gmail.com' and password = 'bbb0b5b15842af2a3f42072a418c908e8a63caab2120d15cfea68e433cfe68dd'
+S - 11:05:21 - ::1 - The page /surveysProject/dashboard.php has loaded successfully by user raul@gmail.com
+S - 11:05:24 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 11:15:46 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 11:20:52 - ::1 - Successful insertion of the question: T'agrada què estàs estudiant? - INSERT INTO questions (title, active, type) VALUES(T'agrada què estàs estudiant?,1,text)
+S - 11:20:53 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 11:21:10 - ::1 - Successful insertion of the question: Quan t'agrada? - INSERT INTO questions (title, active, type) VALUES(Quan t'agrada?,1,number)
+S - 11:21:11 - ::1 - The page /surveysProject/poll.php has loaded successfully by user raul@gmail.com
