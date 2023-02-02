@@ -446,7 +446,7 @@ function crearInputPregunta(){
     }else{
       $('#submitButtonSaveQuestion').remove()
       $('.inpOption:last').on('keyup',function(){
-        if($('.inpOption:last').val()!=""&&$('.inpOption').length>1){
+        if($('.inpOption:last').val()!=""&&$('.inpOption').length>=1){
           createButtonSubmit()
           addNameInputs()
         }
@@ -459,6 +459,22 @@ function eliminarDiv(event){
   $(event.target).parent().remove()
   addNameInputs()
   if($('.inpOption').length<=2){
+    $('#submitButtonSaveQuestion').remove()
+  }
+}
+
+function eliminarDivUpdate(event){
+  if($('#deletedOptions').val()!=''){
+    var hijos = $(event.target).parent().children()
+    var textoInsertar = $('#deletedOptions').val()+","+hijos.eq(0).attr('name')
+  }else{
+    var hijos = $(event.target).parent().children()
+    var textoInsertar = hijos.eq(0).attr('name')
+  }
+  $('#deletedOptions').val(textoInsertar)
+  $(event.target).parent().remove()
+  
+  if($('.inpOption').length<=1){
     $('#submitButtonSaveQuestion').remove()
   }
 }
@@ -563,13 +579,12 @@ function buttonSubmit(){
 function editQuestion(info){
   $(".page-poll #divListSurveys").css("display", "none");
   $(".page-poll #divListQuestions").css("display", "none");
-  alert(info)
   let arrayInfo = info.split(',')
   let id = arrayInfo[0]
   let type = arrayInfo[1]
   let text = arrayInfo[2]
   let divInicio = $('<div>',{
-    id: 'divRemovible',
+    id: 'divToRemove',
   })
   if(type=='text' || type=='num'){
     divInicio.append(
@@ -615,6 +630,85 @@ function editQuestion(info){
     )
   }else if(type == 'opcioSimple'){
 
+    let divOptions = $('<div>',{
+      id:'divOptions'
+    })
+    
+    for(var key in optionsDic){
+      if(optionsDic[key]['question_id']==id.toString()){
+        divOptions.append(
+          $('<div>',{
+            class:'divOption'
+          }).append(
+            $('<input>',{
+              class:'inpOption',
+              name:[key],
+              value:optionsDic[key]['opt_text']
+            })
+          ).append(
+            $('<button>',{
+              class:'buttonRemoveOption',
+              onclick: 'eliminarDivUpdate(event)',
+              display: 'inline',
+              type: 'button',
+              text: 'X'
+            })
+          )
+        )
+      }
+    }
+
+    divInicio.append(
+      $('<form>',{
+        method:'post',
+        action:'poll.php',
+        id: 'formUpdateQuestion'
+      }).append(
+        $('<h3>',{
+          text:'Pregunta a editar:'
+        })
+      ).append(
+        $('<label>',{
+          text: 'Títol: '
+        }).append(
+        $('<input>',{
+          type:'text',
+          value: text,
+          name:'updateTitle',
+          id: 'updateTitle'
+        })
+        )
+      ).append(
+        $('<input>',{
+          type:'text',
+          value: id,
+          name:'updateId',
+          style: 'display:none'
+        })
+        ).append(
+          $('<input>',{
+            type:'text',
+            name:'deletedOptions',
+            style: 'display:none',
+            id: 'deletedOptions'
+          })
+          ).append(
+          $('<input>',{
+            type:'text',
+            value: type,
+            name:'updateType',
+            style: 'display:none'
+          })
+          ).append(
+            divOptions
+          ).append(
+        $('<input>',{
+          id: 'submitButtonSaveQuestion',
+          type: 'submit',
+          value: 'Guardar'
+        })
+      )
+    )
   }
   $('#principalContent').append(divInicio)
 }

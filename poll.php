@@ -1,16 +1,29 @@
 <?php session_start();
 include './resources/auxFunctions.php';
-if (isset($_POST['submitButtonSaveQuestion']) && isset($_POST['selectTypeQuestion']) && isset($_SESSION['user']['username'])) {
-    addQuestion();
-}if (isset($_POST['deleteId'])) {
+if (isset($_POST['deleteId'])) {
     $array = explode(',',$_POST['deleteId']);
     deleteById($array[0],$array[1]);
 }if (isset($_POST['updateId']) && isset($_POST['updateTitle'])){
-    if(strlen($_POST['updateTitle'])>0){
-        updateQuestion($_POST['updateId'],$_POST['updateTitle'],$_POST['updateType']);
-    }else{
-        printAlertJs("L'enquesta no s'hi ha actualitzat perquè el títol estava buit",'e');
-    }
+        if(strlen($_POST['updateTitle'])>0){
+            if($_POST['updateType'] == 'opcioSimple'){
+                $keys = array_keys($_POST);
+                foreach($keys as $key){
+                    if(is_numeric($key)){
+                        updateOptionById($key,$_POST[$key]);
+                    }
+                }
+                if(!empty($_POST['deletedOptions'])){
+                    $arrayIds = explode(',',$_POST['deletedOptions']);
+                    foreach($arrayIds as $id){
+                        deleteOptionById($id);
+                    }
+                }
+            }
+            updateQuestion($_POST['updateId'],$_POST['updateTitle'],$_POST['updateType']);
+        }else{
+            printAlertJs("La pregunta no s'hi ha actualitzat perquè el títol estava buit",'e');
+        }
+    
 }
 ?><!DOCTYPE html>
 <html lang="en">
@@ -48,6 +61,25 @@ if (isset($_POST['submitButtonSaveQuestion']) && isset($_POST['selectTypeQuestio
         </div>';
         if ($_SESSION['user']["role"] == "admin") {
         echo '<div id="divAlertas"></div>';
+        
+        echo "
+        <div class='card' id='dashboard-professor'>
+        <div class='card-content'>
+                <button class='buttonHover' id='butonCreateQuestionForm' onclick='formAddQuestion()'>
+                    <h3>Crear pregunta</h3>
+                </button>
+                
+                <button class='buttonHover' id='butonListQuestions' onclick='printListQuestions()'>
+                    <h3>Llistat de preguntes</h3>
+                </button>
+                <button class='buttonHover' id='butonListSurveys' onclick='printListSurveys()'>
+                    <h3>Llistat d'enquestes</h3>
+                </button>
+                
+                <button class='buttonHover' id='butonCreateSurveys' onclick='formAddSurvey()'>
+                    <h3>Crear enquesta</h3>
+                </button>
+        </div>";
         if (isset($_POST['submitButtonSaveQuestion']) && isset($_POST['selectTypeQuestion']) && isset($_SESSION['user']['username'])) {
             addQuestion();
             printAlertJs("Pregunta afegida correctament",'s');
@@ -60,25 +92,7 @@ if (isset($_POST['submitButtonSaveQuestion']) && isset($_POST['selectTypeQuestio
             addSurvey($listOfSurvey);
             printAlertJs("Enquesta carregada correctament",'s');
         }
-        echo "
-        <div class='card' id='dashboard-professor'>
-        <div class='card-content'>
-                <button class='buttonHover' onclick='formAddQuestion()'>
-                    <h3>Crear pregunta</h3>
-                </button>
-                
-                <button class='buttonHover' onclick='printListQuestions()'>
-                    <h3>Llistat de preguntes</h3>
-                </button>
-                <button class='buttonHover' onclick='printListSurveys()'>
-                    <h3>Llistat d'enquestes</h3>
-                </button>
-                
-                <button class='buttonHover' onclick='formAddSurvey()'>
-                    <h3>Crear enquesta</h3>
-                </button>
-        </div>
-        <div id='principalContent'>" . printSurveys() . printQuestions() . "</div>";
+        echo "<div id='principalContent'>" . printSurveys() . printQuestions() . "</div>";
             echo "</div>";
         }
         createFooter();
@@ -88,6 +102,7 @@ if (isset($_POST['submitButtonSaveQuestion']) && isset($_POST['selectTypeQuestio
         var usersDic = <?php createUsersDic()?>;
         var questionsDic = <?php createQuestionsDic()?>;
         var studentsDic = <?php createStudentsDic()?>;
+        var optionsDic = <?php createOptionsDic()?>;
     </script>
 </body>
 </html>

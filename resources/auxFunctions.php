@@ -212,6 +212,35 @@ function addQuestion()
     unset($query);
     unset($pdo);
 }
+function updateOptionById($id,$text){
+    try {
+        $hostname = "20.107.55.123";
+        $dbname = "surveys_database";
+        $username = "database_survey_user";
+        $pw = "surv3ys_d@t2b@s3 database";
+        $pdo = new PDO("mysql:host=$hostname;dbname=$dbname", "$username", "$pw");
+        appendLog("S", "Successful connection to the database");
+    } catch (PDOException $e) {
+        printAlertJs("Hi ha hagut un problema en connectar-te amb la base de dades",'e');
+        echo "Failed to get DB handle: " . $e->getMessage() . "\n";
+        appendLog("E", "Failed to get DB handle: " . $e->getMessage());
+        exit;
+    }   
+    try {
+        $query = $pdo->prepare('UPDATE options set option_text = ? where id = ?');
+        $query->bindParam(1, $text); 
+        $query->bindParam(2, $id);
+        $query->execute();
+
+        $queryText = 'UPDATE options set title = '.$text.' where id = '.$id.'';
+        appendLog("S", "Successful update of the option: ".$text." - ".$queryText);
+    } catch (PDOException $e) {
+        $queryText = 'UPDATE options set title = '.$text.' where id = '.$id.'';
+        printAlertJs("No s'ha pogut actualitzar la questio a la base de dades",'e');
+        appendLog("E", "Failed to add question ".$text." in the database: " . $e->getMessage() . " - ". $queryText);
+        return;
+    }
+}
 
 function updateQuestion($id,$title,$type){
     try {
@@ -266,6 +295,29 @@ function getClientIP(){
 
 function printAlertJs($message,$type){
     echo '<script>alertCss("'.$message.'","'.$type.'")</script>';
+}
+
+function deleteOptionById($id){
+    try {
+        $hostname = "20.107.55.123";
+        $dbname = "surveys_database";
+        $username = "database_survey_user";
+        $pw = "surv3ys_d@t2b@s3 database";
+        $pdo = new PDO("mysql:host=$hostname;dbname=$dbname", "$username", "$pw");
+    } catch (PDOException $e) {
+        printAlertJs("Hi ha hagut un problema en connectar-te amb la base de dades",'e');
+        echo "Failed to get DB handle: " . $e->getMessage() . "\n";
+        appendLog("E", "Failed to get DB handle: " . $e->getMessage());
+        exit;
+    }   
+    try{
+        $query = $pdo->prepare("DELETE from options where id = $id");
+        $query->execute();
+        appendLog("S", "Successful delete option with id: ".$id);
+    }catch (PDOException $e) {
+        $queryText = "DELETE from options where id = $id";
+        appendLog("E", "Failed drop of the option of the database:".$e->getMessage()." - ".$queryText);
+    }
 }
 
 function deleteById($id,$type){
@@ -400,6 +452,37 @@ function createStudentsDic() {
         echo "}";
     } catch (PDOException $e) {
         appendLog("E", "Error trying to load students in the dictionary: " . $e->getMessage() . " - " . $queryText);
+        printAlertJs("Hi ha hagut un error en carregar la pàgina",'e');
+        return;
+    }
+}
+
+function createOptionsDic() {
+    try {
+        $hostname = "20.107.55.123";
+        $dbname = "surveys_database";
+        $username = "database_survey_user";
+        $pw = "surv3ys_d@t2b@s3 database";
+        $pdo = new PDO("mysql:host=$hostname;dbname=$dbname", "$username", "$pw");
+    } catch (PDOException $e) {
+        echo "Failed to get DB handle: " . $e->getMessage() . "\n";
+        appendLog("E", "Failed to get DB handle: " . $e->getMessage());
+        exit;
+    }
+
+    //Print parte alumnos
+    try {
+        $queryText = 'select id,option_text,id_question from options';
+        $query = $pdo->prepare($queryText);
+        $query->execute();
+
+        echo "{";
+        while($row = $query->fetch()){
+            echo $row['id'] . ":{'opt_text':'" . $row['option_text'] . "','question_id':'". $row['id_question'] ."'},\n";
+        }
+        echo "}";
+    } catch (PDOException $e) {
+        appendLog("E", "Error trying to load options in the dictionary: " . $e->getMessage() . " - " . $queryText);
         printAlertJs("Hi ha hagut un error en carregar la pàgina",'e');
         return;
     }

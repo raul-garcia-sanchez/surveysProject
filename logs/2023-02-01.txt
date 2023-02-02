@@ -290,3 +290,275 @@ S - 20:47:35 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded succ
 S - 20:48:23 - 127.0.0.1 - User raul@gmail.com has successfully logout
 S - 20:48:23 - 127.0.0.1 - Successful connection to the database
 S - 20:48:23 - 127.0.0.1 - The page /app/surveysProject/login.php has loaded successfully
+S - 20:50:38 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 20:52:00 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 20:52:35 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 20:54:49 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 20:55:36 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 20:55:50 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 20:56:52 - 127.0.0.1 - Successful insertion of the question: 123 - INSERT INTO questions (title, active, type) VALUES(123,1,opcioSimple)
+S - 20:56:52 - 127.0.0.1 - Successful insertion of the option: 123 - INSERT INTO options (option_text, id_question) VALUES(123,(select id from questions where title = "123" and type = "opcioSimple" limit 1))
+S - 20:56:52 - 127.0.0.1 - Successful insertion of the option: 123 - INSERT INTO options (option_text, id_question) VALUES(123,(select id from questions where title = "123" and type = "opcioSimple" limit 1))
+S - 20:56:52 - 127.0.0.1 - Successful insertion of the question: 123 - INSERT INTO questions (title, active, type) VALUES(123,1,opcioSimple)
+S - 20:56:52 - 127.0.0.1 - Successful insertion of the option: 123 - INSERT INTO options (option_text, id_question) VALUES(123,(select id from questions where title = "123" and type = "opcioSimple" limit 1))
+S - 20:56:53 - 127.0.0.1 - Successful insertion of the option: 123 - INSERT INTO options (option_text, id_question) VALUES(123,(select id from questions where title = "123" and type = "opcioSimple" limit 1))
+S - 20:56:53 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 21:10:23 - 127.0.0.1 - Successful connection to the database
+S - 21:10:23 - 127.0.0.1 - Successful update of the question: Quants anys té?? - UPDATE questions set title = Quants anys té?? where id = 1
+S - 21:10:24 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 21:13:15 - 127.0.0.1 - Successful connection to the database
+S - 21:13:15 - 127.0.0.1 - Successful update of the question: Quants anys té?? - UPDATE questions set title = Quants anys té?? where id = 1
+S - 21:13:16 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 21:13:21 - 127.0.0.1 - Successful connection to the database
+S - 21:13:21 - 127.0.0.1 - Successful update of the question: Quants anys té?? - UPDATE questions set title = Quants anys té?? where id = 1
+S - 21:13:22 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 21:17:15 - 127.0.0.1 - Successful connection to the database
+S - 21:17:15 - 127.0.0.1 - Successful update of the question: Quants anys té?? - UPDATE questions set title = Quants anys té?? where id = 1
+S - 21:17:16 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 21:17:23 - 127.0.0.1 - Successful insertion of the question: Pregunta nueva - INSERT INTO questions (title, active, type) VALUES(Pregunta nueva,1,number)
+S - 21:17:23 - 127.0.0.1 - Successful insertion of the question: Pregunta nueva - INSERT INTO questions (title, active, type) VALUES(Pregunta nueva,1,number)
+S - 21:17:24 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 21:17:44 - 127.0.0.1 - Successful insertion of the question: 123 - INSERT INTO questions (title, active, type) VALUES(123,1,text)
+S - 21:17:44 - 127.0.0.1 - Successful insertion of the question: 123 - INSERT INTO questions (title, active, type) VALUES(123,1,text)
+S - 21:17:45 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 21:20:17 - 127.0.0.1 - Successful insertion of the question: 123 - INSERT INTO questions (title, active, type) VALUES(123,1,text)
+S - 21:20:18 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 21:22:45 - 127.0.0.1 - Successful insertion of the question: 123 - INSERT INTO questions (title, active, type) VALUES(123,1,text)
+S - 21:22:46 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 21:23:02 - 127.0.0.1 - Successful insertion of the question: Pregunta nueva - INSERT INTO questions (title, active, type) VALUES(Pregunta nueva,1,text)
+S - 21:23:02 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 21:23:31 - 127.0.0.1 - Successful insertion of the question: Pregunta nueva - INSERT INTO questions (title, active, type) VALUES(Pregunta nueva,1,text)
+S - 21:23:31 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 21:23:35 - 127.0.0.1 - Successful insertion of the question: Pregunta nueva - INSERT INTO questions (title, active, type) VALUES(Pregunta nueva,1,text)
+S - 21:23:36 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 21:23:43 - 127.0.0.1 - Successful insertion of the question: Pregunta alerta 123 - INSERT INTO questions (title, active, type) VALUES(Pregunta alerta 123,1,text)
+S - 21:23:44 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 21:24:19 - 127.0.0.1 - Successful insertion of the question: Pregunta alerta 123 - INSERT INTO questions (title, active, type) VALUES(Pregunta alerta 123,1,text)
+S - 21:24:20 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 21:24:44 - 127.0.0.1 - Successful insertion of the question: Pregunta alerta 123 - INSERT INTO questions (title, active, type) VALUES(Pregunta alerta 123,1,text)
+S - 21:24:44 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 22:01:10 - 127.0.0.1 - Successful insertion of the question: Pregunta alerta 123 - INSERT INTO questions (title, active, type) VALUES(Pregunta alerta 123,1,text)
+S - 22:01:11 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 22:06:01 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user 
+S - 22:14:43 - 127.0.0.1 - Successful insertion of the question: Pregunta alerta 123 - INSERT INTO questions (title, active, type) VALUES(Pregunta alerta 123,1,text)
+S - 22:14:44 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 22:27:12 - 127.0.0.1 - Successful insertion of the question: Pregunta alerta 123 - INSERT INTO questions (title, active, type) VALUES(Pregunta alerta 123,1,text)
+S - 22:27:13 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 22:30:17 - 127.0.0.1 - Successful insertion of the question: Pregunta alerta 123 - INSERT INTO questions (title, active, type) VALUES(Pregunta alerta 123,1,text)
+S - 22:30:18 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 22:30:40 - 127.0.0.1 - Successful insertion of the question: Pregunta opcional - INSERT INTO questions (title, active, type) VALUES(Pregunta opcional,1,opcioSimple)
+S - 22:30:40 - 127.0.0.1 - Successful insertion of the option: OPC1 - INSERT INTO options (option_text, id_question) VALUES(OPC1,(select id from questions where title = "Pregunta opcional" and type = "opcioSimple" limit 1))
+S - 22:30:40 - 127.0.0.1 - Successful insertion of the option: OPC2 - INSERT INTO options (option_text, id_question) VALUES(OPC2,(select id from questions where title = "Pregunta opcional" and type = "opcioSimple" limit 1))
+S - 22:30:41 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 22:32:21 - 127.0.0.1 - Successful insertion of the question: Pregunta opcional - INSERT INTO questions (title, active, type) VALUES(Pregunta opcional,1,opcioSimple)
+S - 22:32:21 - 127.0.0.1 - Successful insertion of the option: OPC1 - INSERT INTO options (option_text, id_question) VALUES(OPC1,(select id from questions where title = "Pregunta opcional" and type = "opcioSimple" limit 1))
+S - 22:32:21 - 127.0.0.1 - Successful insertion of the option: OPC2 - INSERT INTO options (option_text, id_question) VALUES(OPC2,(select id from questions where title = "Pregunta opcional" and type = "opcioSimple" limit 1))
+S - 22:32:23 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 22:32:34 - 127.0.0.1 - Successful insertion of the question: Pregunta opcional - INSERT INTO questions (title, active, type) VALUES(Pregunta opcional,1,opcioSimple)
+S - 22:32:34 - 127.0.0.1 - Successful insertion of the option: OPC1 - INSERT INTO options (option_text, id_question) VALUES(OPC1,(select id from questions where title = "Pregunta opcional" and type = "opcioSimple" limit 1))
+S - 22:32:34 - 127.0.0.1 - Successful insertion of the option: OPC2 - INSERT INTO options (option_text, id_question) VALUES(OPC2,(select id from questions where title = "Pregunta opcional" and type = "opcioSimple" limit 1))
+S - 22:32:35 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 22:33:07 - 127.0.0.1 - Successful insertion of the question: Pregunta opcional - INSERT INTO questions (title, active, type) VALUES(Pregunta opcional,1,opcioSimple)
+S - 22:33:07 - 127.0.0.1 - Successful insertion of the option: OPC1 - INSERT INTO options (option_text, id_question) VALUES(OPC1,(select id from questions where title = "Pregunta opcional" and type = "opcioSimple" limit 1))
+S - 22:33:07 - 127.0.0.1 - Successful insertion of the option: OPC2 - INSERT INTO options (option_text, id_question) VALUES(OPC2,(select id from questions where title = "Pregunta opcional" and type = "opcioSimple" limit 1))
+S - 22:33:08 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 22:33:37 - 127.0.0.1 - Successful insertion of the question: Pregunta opcional - INSERT INTO questions (title, active, type) VALUES(Pregunta opcional,1,opcioSimple)
+S - 22:33:37 - 127.0.0.1 - Successful insertion of the option: OPC1 - INSERT INTO options (option_text, id_question) VALUES(OPC1,(select id from questions where title = "Pregunta opcional" and type = "opcioSimple" limit 1))
+S - 22:33:37 - 127.0.0.1 - Successful insertion of the option: OPC2 - INSERT INTO options (option_text, id_question) VALUES(OPC2,(select id from questions where title = "Pregunta opcional" and type = "opcioSimple" limit 1))
+S - 22:33:38 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 22:33:51 - 127.0.0.1 - Successful insertion of the question: Pregunta opcional - INSERT INTO questions (title, active, type) VALUES(Pregunta opcional,1,opcioSimple)
+S - 22:33:51 - 127.0.0.1 - Successful insertion of the option: OPC1 - INSERT INTO options (option_text, id_question) VALUES(OPC1,(select id from questions where title = "Pregunta opcional" and type = "opcioSimple" limit 1))
+S - 22:33:51 - 127.0.0.1 - Successful insertion of the option: OPC2 - INSERT INTO options (option_text, id_question) VALUES(OPC2,(select id from questions where title = "Pregunta opcional" and type = "opcioSimple" limit 1))
+S - 22:33:52 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 22:34:09 - 127.0.0.1 - Successful insertion of the question: Pregunta opcional - INSERT INTO questions (title, active, type) VALUES(Pregunta opcional,1,opcioSimple)
+S - 22:34:09 - 127.0.0.1 - Successful insertion of the option: OPC1 - INSERT INTO options (option_text, id_question) VALUES(OPC1,(select id from questions where title = "Pregunta opcional" and type = "opcioSimple" limit 1))
+S - 22:34:09 - 127.0.0.1 - Successful insertion of the option: OPC2 - INSERT INTO options (option_text, id_question) VALUES(OPC2,(select id from questions where title = "Pregunta opcional" and type = "opcioSimple" limit 1))
+S - 22:34:10 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 22:37:55 - 127.0.0.1 - Successful insertion of the question: Pregunta opcional - INSERT INTO questions (title, active, type) VALUES(Pregunta opcional,1,opcioSimple)
+S - 22:37:55 - 127.0.0.1 - Successful insertion of the option: OPC1 - INSERT INTO options (option_text, id_question) VALUES(OPC1,(select id from questions where title = "Pregunta opcional" and type = "opcioSimple" limit 1))
+S - 22:37:55 - 127.0.0.1 - Successful insertion of the option: OPC2 - INSERT INTO options (option_text, id_question) VALUES(OPC2,(select id from questions where title = "Pregunta opcional" and type = "opcioSimple" limit 1))
+S - 22:37:56 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 22:38:37 - 127.0.0.1 - Successful insertion of the question: Pregunta opcional - INSERT INTO questions (title, active, type) VALUES(Pregunta opcional,1,opcioSimple)
+S - 22:38:37 - 127.0.0.1 - Successful insertion of the option: OPC1 - INSERT INTO options (option_text, id_question) VALUES(OPC1,(select id from questions where title = "Pregunta opcional" and type = "opcioSimple" limit 1))
+S - 22:38:37 - 127.0.0.1 - Successful insertion of the option: OPC2 - INSERT INTO options (option_text, id_question) VALUES(OPC2,(select id from questions where title = "Pregunta opcional" and type = "opcioSimple" limit 1))
+S - 22:38:38 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 22:39:05 - 127.0.0.1 - Successful insertion of the question: Pregunta opcional - INSERT INTO questions (title, active, type) VALUES(Pregunta opcional,1,opcioSimple)
+S - 22:39:05 - 127.0.0.1 - Successful insertion of the option: OPC1 - INSERT INTO options (option_text, id_question) VALUES(OPC1,(select id from questions where title = "Pregunta opcional" and type = "opcioSimple" limit 1))
+S - 22:39:05 - 127.0.0.1 - Successful insertion of the option: OPC2 - INSERT INTO options (option_text, id_question) VALUES(OPC2,(select id from questions where title = "Pregunta opcional" and type = "opcioSimple" limit 1))
+S - 22:39:06 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 22:39:31 - 127.0.0.1 - Successful connection to the database
+S - 22:39:31 - 127.0.0.1 - Successful update of the question: Pregunta opcional - UPDATE questions set title = Pregunta opcional where id = 87
+S - 22:39:32 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 22:40:34 - 127.0.0.1 - Successful connection to the database
+S - 22:40:34 - 127.0.0.1 - Successful update of the question: Pregunta opcional - UPDATE questions set title = Pregunta opcional where id = 87
+S - 22:40:35 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 22:40:57 - 127.0.0.1 - Successful connection to the database
+S - 22:40:57 - 127.0.0.1 - Successful update of the question: Pregunta opcional - UPDATE questions set title = Pregunta opcional where id = 87
+S - 22:40:58 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 22:41:00 - 127.0.0.1 - Successful connection to the database
+S - 22:41:00 - 127.0.0.1 - Successful update of the question: Pregunta opcional - UPDATE questions set title = Pregunta opcional where id = 87
+S - 22:41:01 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 22:41:10 - 127.0.0.1 - Successful connection to the database
+S - 22:41:10 - 127.0.0.1 - Successful update of the question: Pregunta opcional - UPDATE questions set title = Pregunta opcional where id = 87
+S - 22:41:11 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 22:41:24 - 127.0.0.1 - Successful connection to the database
+S - 22:41:24 - 127.0.0.1 - Successful update of the question: Pregunta opcional - UPDATE questions set title = Pregunta opcional where id = 87
+S - 22:41:25 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 22:41:52 - 127.0.0.1 - Successful update active-inactive of the option with id: 81
+S - 22:41:53 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 22:42:10 - 127.0.0.1 - Successful update active-inactive of the option with id: 12
+S - 22:42:11 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 22:42:33 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user 
+S - 22:44:04 - 127.0.0.1 - Successful update active-inactive of the option with id: 12
+S - 22:44:05 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 22:45:52 - 127.0.0.1 - Successful update active-inactive of the option with id: 12
+S - 22:45:53 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 22:46:14 - 127.0.0.1 - Successful update active-inactive of the option with id: 12
+S - 22:46:15 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 22:46:47 - 127.0.0.1 - Successful update active-inactive of the option with id: 12
+S - 22:46:48 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 22:47:23 - 127.0.0.1 - Successful update active-inactive of the option with id: 12
+S - 22:47:24 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 22:48:20 - 127.0.0.1 - Successful update active-inactive of the option with id: 12
+S - 22:48:21 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 22:57:57 - 127.0.0.1 - Successful update active-inactive of the option with id: 12
+S - 22:57:58 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 23:00:00 - 127.0.0.1 - Successful update active-inactive of the option with id: 12
+S - 23:00:01 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 23:11:27 - 127.0.0.1 - Successful update active-inactive of the option with id: 12
+S - 23:11:28 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 23:14:42 - 127.0.0.1 - Successful update active-inactive of the option with id: 12
+S - 23:14:43 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 23:15:04 - 127.0.0.1 - Successful update active-inactive of the option with id: 12
+S - 23:15:05 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 23:16:13 - 127.0.0.1 - Successful update active-inactive of the option with id: 12
+S - 23:16:14 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 23:17:04 - 127.0.0.1 - Successful update active-inactive of the option with id: 12
+S - 23:17:05 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 23:18:30 - 127.0.0.1 - Successful update active-inactive of the option with id: 12
+S - 23:18:31 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 23:19:10 - 127.0.0.1 - Successful update active-inactive of the option with id: 12
+S - 23:19:11 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 23:19:43 - 127.0.0.1 - Successful update active-inactive of the option with id: 12
+S - 23:19:44 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 23:20:48 - 127.0.0.1 - Successful update active-inactive of the option with id: 12
+S - 23:20:49 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 23:21:34 - 127.0.0.1 - Successful update active-inactive of the option with id: 12
+S - 23:21:35 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 23:22:10 - 127.0.0.1 - Successful update active-inactive of the option with id: 12
+S - 23:22:11 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 23:22:41 - 127.0.0.1 - Successful update active-inactive of the option with id: 12
+S - 23:22:42 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 23:23:30 - 127.0.0.1 - Successful update active-inactive of the option with id: 12
+S - 23:23:31 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 23:51:52 - 127.0.0.1 - Successful update active-inactive of the option with id: 12
+S - 23:51:53 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 23:52:13 - 127.0.0.1 - Successful connection to the database
+S - 23:52:13 - 127.0.0.1 - Successful update of the question: Pregunta opcional2 - UPDATE questions set title = Pregunta opcional2 where id = 78
+S - 23:52:15 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 23:52:36 - 127.0.0.1 - Successful connection to the database
+S - 23:52:36 - 127.0.0.1 - Successful update of the question: Pregunta opcional2 - UPDATE questions set title = Pregunta opcional2 where id = 78
+S - 23:52:37 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 23:53:05 - 127.0.0.1 - Successful connection to the database
+S - 23:53:05 - 127.0.0.1 - Successful update of the option:  - UPDATE options set title = OPC1 where id = 22
+S - 23:53:05 - 127.0.0.1 - Successful connection to the database
+S - 23:53:05 - 127.0.0.1 - Successful update of the option:  - UPDATE options set title = OPC2 where id = 23
+S - 23:53:05 - 127.0.0.1 - Successful connection to the database
+S - 23:53:05 - 127.0.0.1 - Successful update of the option:  - UPDATE options set title = OPC2 where id = 27
+S - 23:53:06 - 127.0.0.1 - Successful connection to the database
+S - 23:53:06 - 127.0.0.1 - Successful update of the option:  - UPDATE options set title = OPC1 where id = 28
+S - 23:53:06 - 127.0.0.1 - Successful connection to the database
+S - 23:53:06 - 127.0.0.1 - Successful update of the option:  - UPDATE options set title = OPC2 where id = 29
+S - 23:53:06 - 127.0.0.1 - Successful connection to the database
+S - 23:53:06 - 127.0.0.1 - Successful update of the option:  - UPDATE options set title = OPC1 where id = 30
+S - 23:53:06 - 127.0.0.1 - Successful connection to the database
+S - 23:53:06 - 127.0.0.1 - Successful update of the option:  - UPDATE options set title = OPC2 where id = 31
+S - 23:53:06 - 127.0.0.1 - Successful connection to the database
+S - 23:53:06 - 127.0.0.1 - Successful update of the option:  - UPDATE options set title = OPC1 where id = 32
+S - 23:53:06 - 127.0.0.1 - Successful connection to the database
+S - 23:53:07 - 127.0.0.1 - Successful update of the option:  - UPDATE options set title = OPC2 where id = 33
+S - 23:53:07 - 127.0.0.1 - Successful connection to the database
+S - 23:53:07 - 127.0.0.1 - Successful update of the option:  - UPDATE options set title = OPC1 where id = 34
+S - 23:53:07 - 127.0.0.1 - Successful connection to the database
+S - 23:53:07 - 127.0.0.1 - Successful update of the option:  - UPDATE options set title = OPC2 where id = 35
+S - 23:53:07 - 127.0.0.1 - Successful connection to the database
+S - 23:53:07 - 127.0.0.1 - Successful update of the option:  - UPDATE options set title = OPC1 where id = 36
+S - 23:53:07 - 127.0.0.1 - Successful connection to the database
+S - 23:53:07 - 127.0.0.1 - Successful update of the option:  - UPDATE options set title = OPC2 where id = 37
+S - 23:53:07 - 127.0.0.1 - Successful connection to the database
+S - 23:53:07 - 127.0.0.1 - Successful update of the option:  - UPDATE options set title = OPC1 where id = 38
+S - 23:53:08 - 127.0.0.1 - Successful connection to the database
+S - 23:53:08 - 127.0.0.1 - Successful update of the option:  - UPDATE options set title = OPC2 where id = 39
+S - 23:53:08 - 127.0.0.1 - Successful connection to the database
+S - 23:53:08 - 127.0.0.1 - Successful update of the option:  - UPDATE options set title = OPC1 where id = 40
+S - 23:53:08 - 127.0.0.1 - Successful connection to the database
+S - 23:53:08 - 127.0.0.1 - Successful update of the option:  - UPDATE options set title = OPC2 where id = 41
+E - 23:53:08 - 127.0.0.1 - Failed drop of the option of the database:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 - DELETE from options where id = 
+E - 23:53:08 - 127.0.0.1 - Failed drop of the option of the database:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 - DELETE from options where id = 
+E - 23:53:08 - 127.0.0.1 - Failed drop of the option of the database:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 - DELETE from options where id = 
+S - 23:53:09 - 127.0.0.1 - Successful connection to the database
+S - 23:53:09 - 127.0.0.1 - Successful update of the question: Pregunta opcional2 - UPDATE questions set title = Pregunta opcional2 where id = 78
+S - 23:53:10 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 23:53:49 - 127.0.0.1 - Successful connection to the database
+S - 23:53:49 - 127.0.0.1 - Successful update of the option: OPC1 - UPDATE options set title = OPC1 where id = 22
+S - 23:53:50 - 127.0.0.1 - Successful connection to the database
+S - 23:53:50 - 127.0.0.1 - Successful update of the option: OPC2 - UPDATE options set title = OPC2 where id = 23
+S - 23:53:50 - 127.0.0.1 - Successful connection to the database
+S - 23:53:50 - 127.0.0.1 - Successful update of the option: OPC2 - UPDATE options set title = OPC2 where id = 27
+S - 23:53:50 - 127.0.0.1 - Successful connection to the database
+S - 23:53:50 - 127.0.0.1 - Successful update of the option: OPC1 - UPDATE options set title = OPC1 where id = 28
+S - 23:53:50 - 127.0.0.1 - Successful connection to the database
+S - 23:53:50 - 127.0.0.1 - Successful update of the option: OPC2 - UPDATE options set title = OPC2 where id = 29
+S - 23:53:50 - 127.0.0.1 - Successful connection to the database
+S - 23:53:50 - 127.0.0.1 - Successful update of the option: OPC1 - UPDATE options set title = OPC1 where id = 30
+S - 23:53:50 - 127.0.0.1 - Successful connection to the database
+S - 23:53:50 - 127.0.0.1 - Successful update of the option: OPC2 - UPDATE options set title = OPC2 where id = 31
+S - 23:53:51 - 127.0.0.1 - Successful connection to the database
+S - 23:53:51 - 127.0.0.1 - Successful update of the option: OPC1 - UPDATE options set title = OPC1 where id = 32
+S - 23:53:51 - 127.0.0.1 - Successful connection to the database
+S - 23:53:51 - 127.0.0.1 - Successful update of the option: OPC2 - UPDATE options set title = OPC2 where id = 33
+S - 23:53:51 - 127.0.0.1 - Successful connection to the database
+S - 23:53:51 - 127.0.0.1 - Successful update of the option: OPC1 - UPDATE options set title = OPC1 where id = 34
+S - 23:53:51 - 127.0.0.1 - Successful connection to the database
+S - 23:53:51 - 127.0.0.1 - Successful update of the option: OPC2 - UPDATE options set title = OPC2 where id = 35
+S - 23:53:51 - 127.0.0.1 - Successful connection to the database
+S - 23:53:51 - 127.0.0.1 - Successful update of the option: OPC1 - UPDATE options set title = OPC1 where id = 36
+S - 23:53:52 - 127.0.0.1 - Successful connection to the database
+S - 23:53:52 - 127.0.0.1 - Successful update of the option: OPC2 - UPDATE options set title = OPC2 where id = 37
+S - 23:53:52 - 127.0.0.1 - Successful connection to the database
+S - 23:53:52 - 127.0.0.1 - Successful update of the option: OPC1 - UPDATE options set title = OPC1 where id = 38
+S - 23:53:52 - 127.0.0.1 - Successful connection to the database
+S - 23:53:52 - 127.0.0.1 - Successful update of the option: OPC2 - UPDATE options set title = OPC2 where id = 39
+S - 23:53:52 - 127.0.0.1 - Successful connection to the database
+S - 23:53:52 - 127.0.0.1 - Successful update of the option: OPC1 - UPDATE options set title = OPC1 where id = 40
+S - 23:53:52 - 127.0.0.1 - Successful connection to the database
+S - 23:53:52 - 127.0.0.1 - Successful update of the option: OPC2 - UPDATE options set title = OPC2 where id = 41
+S - 23:53:52 - 127.0.0.1 - Successful delete option with id: 24
+S - 23:53:53 - 127.0.0.1 - Successful delete option with id: 25
+S - 23:53:53 - 127.0.0.1 - Successful delete option with id: 26
+S - 23:53:53 - 127.0.0.1 - Successful connection to the database
+S - 23:53:53 - 127.0.0.1 - Successful update of the question: Pregunta opcional2 - UPDATE questions set title = Pregunta opcional2 where id = 78
+S - 23:53:54 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
+S - 23:54:33 - 127.0.0.1 - Successful connection to the database
+S - 23:54:34 - 127.0.0.1 - Successful update of the option: OPC1cambiada - UPDATE options set title = OPC1cambiada where id = 22
+S - 23:54:34 - 127.0.0.1 - Successful connection to the database
+S - 23:54:34 - 127.0.0.1 - Successful update of the option: OPC1 - UPDATE options set title = OPC1 where id = 40
+S - 23:54:34 - 127.0.0.1 - Successful connection to the database
+S - 23:54:34 - 127.0.0.1 - Successful update of the option: OPC2 - UPDATE options set title = OPC2 where id = 41
+S - 23:54:34 - 127.0.0.1 - Successful delete option with id: 23
+S - 23:54:34 - 127.0.0.1 - Successful delete option with id: 27
+S - 23:54:34 - 127.0.0.1 - Successful delete option with id: 28
+S - 23:54:35 - 127.0.0.1 - Successful delete option with id: 29
+S - 23:54:35 - 127.0.0.1 - Successful delete option with id: 30
+S - 23:54:35 - 127.0.0.1 - Successful delete option with id: 31
+S - 23:54:35 - 127.0.0.1 - Successful delete option with id: 32
+S - 23:54:35 - 127.0.0.1 - Successful delete option with id: 33
+S - 23:54:36 - 127.0.0.1 - Successful delete option with id: 34
+S - 23:54:36 - 127.0.0.1 - Successful delete option with id: 35
+S - 23:54:36 - 127.0.0.1 - Successful delete option with id: 36
+S - 23:54:36 - 127.0.0.1 - Successful delete option with id: 37
+S - 23:54:36 - 127.0.0.1 - Successful delete option with id: 38
+S - 23:54:37 - 127.0.0.1 - Successful delete option with id: 39
+S - 23:54:37 - 127.0.0.1 - Successful connection to the database
+S - 23:54:37 - 127.0.0.1 - Successful update of the question: Pregunta opcional2 - UPDATE questions set title = Pregunta opcional2 where id = 78
+S - 23:54:38 - 127.0.0.1 - The page /app/surveysProject/poll.php has loaded successfully by user raul@gmail.com
